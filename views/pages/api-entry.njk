@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include "partials/head.njk" %}
+  <title>{{appname}} - API</title>
+</head>
+<body style="padding:5%;">
+  <h1 class="title">{{appname}}</h1>
+  <h2 class="subtitle">API Entry Point</h2>
+  <p style="padding-bottom: 30px">
+    Welcome to the API for this application.
+    This is a JSON API with routes listed below.
+  </p>
+  <table class="table is-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Route Name</th>
+        <th>Methods</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for route in routes %}
+      <tr>
+        <td>{{route.title}}</td>
+        <td><a href="/api{{route.routename}}" title="{{route.routename}}">{{route.routename}}</a></td>
+        <td>{{ route.methods.join(", ") }}</td>
+        <td>
+          {% for line in route.description %}
+            {{ line }}<br>
+          {% endfor %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
