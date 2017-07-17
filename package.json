@@ -1,6 +1,10 @@
 {
   "name": "react-express-template",
   "version": "1.0.0",
+  "repository": { 
+    "type" : "git",
+    "url" : "https://github.com/nathandalal/react-express-template.git"
+  },
   "description": "A simple template with Node, Express, and React that exposes a self-documenting API.",
   "main": "app.js",
   "dependencies": {
