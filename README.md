@@ -1,4 +1,4 @@
-# Basic Website Template
+# React and Express Template
 Comes with Node.JS, Express, and React ready out of the box.
 Supported with Nunjucks and Bulma for HTML templating and CSS respectively.
 
