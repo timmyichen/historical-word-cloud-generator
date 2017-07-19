@@ -40,7 +40,11 @@
     "node",
     "express",
     "api",
-    "router"
+    "router",
+    "react",
+    "nunjucks",
+    "babel",
+    "webpack"
   ],
   "author": "Nathan Dalal",
   "license": "ISC"
