@@ -9,7 +9,7 @@ export default class About extends React.Component {
 		}
 	}
 
-	componentWillMount() {
+	componentDidMount() {
 		axios.get('/api/helloworld')
 		.then(({data}) => this.setState({
 			text: data.text
