@@ -14,9 +14,9 @@ app.set('views', __dirname + '/views')
 app.use(express.static('public'))
 
 app.get('*', (req, res) => {
-    res.render('pages/index', {
-		appname: config.APPNAME
-    })
+  res.render('pages/index', {
+    appname: config.APPNAME
+  })
 })
 
 app.listen(config.PORT, function () {
