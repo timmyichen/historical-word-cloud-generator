@@ -16,7 +16,7 @@ app.set('views', __dirname + '/views');
 app.use(express.static('public'));
 
 app.get('/bundle.js', (req,res) => {
-  fs.readdir('/', (err,items) => {
+  fs.readdir('/app', (err,items) => {
     console.log(items);
   })
   res.sendFile('/public/bundle.js')
