@@ -1,0 +1,73 @@
+body {
+  padding: 20px !important;
+}
+.hidden {
+  display: none;
+}
+.highlight {
+  background: #ff0;
+}
+.d3-tip {
+  color: #fff;
+  padding: 5px;
+  background: rgba(0,0,0,0.7);
+}
+textarea {
+  resize: none !important;
+}
+#cloud-elements {
+  display: flex;
+  justify-content: space-around;
+}
+#cloud-elements #cloud-controls {
+  min-width: 500px;
+}
+#cloud-elements #cloud-controls #main-input-container {
+  position: relative;
+}
+#cloud-elements #cloud-controls #main-input-container textarea,
+#cloud-elements #cloud-controls #main-input-container div {
+  height: 250px;
+}
+#cloud-elements #cloud-controls #main-input-container #main-text-input {
+  z-index: 1;
+  background: transparent;
+}
+#cloud-elements #cloud-controls #main-input-container #main-text-input-highlight {
+  width: 500px;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: normal !important;
+  word-wrap: normal !important;
+  overflow: auto;
+}
+#cloud-elements #cloud-output {
+  border: 2px solid #808080;
+  width: 100%;
+  height: 500px;
+}
+#cloud-elements #cloud-output text {
+  transition: all 200ms;
+}
+#cloud-elements #cloud-output text:hover {
+  fill: #f00 !important;
+  cursor: pointer;
+}
+#main-text-input-highlight {
+  margin: 0em;
+  -webkit-appearance: none;
+  tap-highlight-color: rgba(255,255,255,0);
+  padding: 0.78571429em 1em;
+  background: #fff;
+  border: 1px solid rgba(34,36,38,0.15);
+  outline: none;
+  color: rgba(0,0,0,0.87);
+  border-radius: 0.28571429rem;
+  box-shadow: 0em 0em 0em 0em transparent inset;
+  -webkit-transition: color 0.1s ease, border-color 0.1s ease;
+  transition: color 0.1s ease, border-color 0.1s ease;
+  font-size: 1em;
+  line-height: 1.2857;
+}

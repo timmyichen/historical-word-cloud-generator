@@ -1,21 +1,27 @@
 {
   "name": "react-express-template",
   "version": "1.0.0",
-  "repository": { 
-    "type" : "git",
-    "url" : "https://github.com/nathandalal/react-express-template.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timmyichen/cs4all-exemplars"
   },
-  "description": "A simple template with Node, Express, and React that exposes a self-documenting API.",
+  "description": "todo",
   "main": "app.js",
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
     "consolidate": "^0.14.5",
+    "d3": "^4.10.0",
+    "d3-cloud": "^1.2.4",
+    "d3-scale": "^1.0.6",
+    "d3-tip": "^0.7.1",
     "express": "^4.15.3",
+    "mongodb": "^2.2.30",
     "nunjucks": "^3.0.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-router-dom": "^4.1.2"
+    "react-router-dom": "^4.1.2",
+    "semantic-ui-react": "^0.71.2"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -27,12 +33,14 @@
     "webpack": "^3.3.0"
   },
   "scripts": {
+    "stylus": "stylus -w ./client/css/App.styl -o ./public/css/style.css",
     "test": "node test/test.js",
     "server:watch": "nodemon app.js",
     "build:watch": "./node_modules/.bin/webpack -d --watch",
     "build": "./node_modules/.bin/webpack -p",
     "server": "node app.js",
-    "dev": "npm run build:watch & npm run server:watch",
+    "watch": "npm run build:watch & npm run server:watch",
+    "dev": "concurrently \"npm run watch\" \"npm run stylus\" ",
     "start": "npm run server"
   },
   "keywords": [
