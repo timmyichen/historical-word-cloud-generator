@@ -9,7 +9,7 @@ var config = {
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: 'BUILD_DIR'
   },
   module : {
     loaders : [
