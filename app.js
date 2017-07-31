@@ -6,8 +6,6 @@ const apiRoutes = require('./api/index');
 
 const app = express();
 
-const fs = require('fs');
-
 app.use('/api', apiRoutes);
 
 app.engine('njk', engines.nunjucks);
@@ -16,14 +14,6 @@ app.set('views', __dirname + '/views');
 app.use(express.static('/app/public'));
 
 app.get('/bundle.js', (req,res) => {
-  fs.readdir('/app/public/assets', (err,items) => {
-    console.log(items);
-  })
-  
-  fs.readdir('/app/public/', (err,items) => {
-    console.log(items);
-  })
-  
   res.sendFile('/public/bundle.js')
 })
 
