@@ -11,7 +11,8 @@ app.use('/api', apiRoutes);
 app.engine('njk', engines.nunjucks);
 app.set('view engine', 'njk');
 app.set('views', __dirname + '/views');
-app.use('/', express.static(__dirname + '/public'));
+app.use(express.static('public'));
+app.use('/dist', express.static(__dirname + '/dist'));
 
 app.get('/', (req, res) => {
   res.render('pages/index', {
