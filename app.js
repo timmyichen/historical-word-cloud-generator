@@ -14,7 +14,7 @@ app.set('views', __dirname + '/views');
 app.use(express.static('public'));
 
 app.get('/bundle.js', (req,res) => {
-  res.sendFile('/public/bundle.js')
+  res.sendFile(__dirname + '/bundle.js')
 })
 
 app.get('*', (req, res) => {
