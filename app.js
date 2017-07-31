@@ -6,12 +6,18 @@ const apiRoutes = require('./api/index');
 
 const app = express();
 
+const fs = require('fs');
+
 app.use('/api', apiRoutes);
 
 app.engine('njk', engines.nunjucks);
 app.set('view engine', 'njk');
 app.set('views', __dirname + '/views');
-app.use(express.static('/app/public'));
+if (config.DEVMODE) {
+  app.use(express.static('public'));
+} else {
+  app.use(express.static('/app/public'));
+}
 
 app.get('/bundle.js', (req,res) => {
   res.sendFile('/public/bundle.js')
