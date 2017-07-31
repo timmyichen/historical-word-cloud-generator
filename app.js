@@ -6,8 +6,6 @@ const apiRoutes = require('./api/index');
 
 const app = express();
 
-const fs = require('fs');
-
 app.use('/api', apiRoutes);
 
 app.engine('njk', engines.nunjucks);
