@@ -5,6 +5,10 @@
     "type": "git",
     "url": "https://github.com/timmyichen/cs4all-exemplars"
   },
+  "engines": {
+    "node": "8.1.1",
+    "npm": "5.0.3"
+  },
   "description": "todo",
   "main": "app.js",
   "dependencies": {
