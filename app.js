@@ -13,7 +13,19 @@ app.use('/api', apiRoutes);
 app.engine('njk', engines.nunjucks);
 app.set('view engine', 'njk');
 app.set('views', __dirname + '/views');
-app.use(express.static('/public'));
+app.use(express.static('/app/public'));
+
+app.get('/bundle.js', (req,res) => {
+  fs.readdir('/app/public/assets', (err,items) => {
+    console.log(items);
+  })
+  
+  fs.readdir('/app/public/', (err,items) => {
+    console.log(items);
+  })
+  
+  res.sendFile('/public/bundle.js')
+})
 
 app.get('*', (req, res) => {
   res.render('pages/index', {
