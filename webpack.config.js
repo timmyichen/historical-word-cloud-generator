@@ -8,8 +8,7 @@ var config = {
   entry: APP_DIR + '/index.js',
   output: {
     path: BUILD_DIR,
-    filename: 'bundle.js',
-    publicPath: BUILD_DIR
+    filename: 'bundle.js'
   },
   module : {
     loaders : [
@@ -21,5 +20,7 @@ var config = {
     ]
   }
 }
+
+console.log(config.output.path)
 
 module.exports = config;
