@@ -1,3 +1,74 @@
+
+// copying styles for textarea from semantic
+#main-text-input-highlight, #main-input-container
+    margin: 0em;
+    -webkit-appearance: none;
+    tap-highlight-color: rgba(255, 255, 255, 0);
+    // padding: 0.78571429em 1em;
+    padding: 2px;
+    background: #FFFFFF;
+    border: 1px solid rgba(34, 36, 38, 0.15);
+    outline: none;
+    color: rgba(0, 0, 0, 0.87);
+    border-radius: 0.28571429rem;
+    box-shadow: 0em 0em 0em 0em transparent inset;
+    -webkit-transition: color 0.1s ease, border-color 0.1s ease;
+    transition: color 0.1s ease, border-color 0.1s ease;
+    font-size: 1em;
+    line-height: 1.2857;
+    font-family: "Lucida Console", Monaco, monospace;
+
+// from highlight within textarea.css for jquery
+.hwt-container {
+	display: inline-block;
+	position: relative;
+	overflow: hidden !important;
+	-webkit-text-size-adjust: none !important;
+}
+
+.hwt-backdrop {
+	position: absolute !important;
+	top: 0 !important;
+	right: -99px !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	padding-right: 99px !important;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+}
+
+.hwt-highlights {
+	width: auto !important;
+	height: auto !important;
+	border-color: transparent !important;
+	white-space: pre-wrap !important;
+	word-wrap: break-word !important;
+	color: transparent !important;
+	overflow: hidden !important;
+}
+
+.hwt-input {
+	display: block !important;
+	position: relative !important;
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
+	font: inherit;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+}
+
+.hwt-content {
+	border: 1px solid;
+	background: none transparent !important;
+}
+
+.hwt-content mark {
+	padding: 0 !important;
+	color: inherit;
+}
+
+//MAIN STYLES
 body
     padding 20px !important
 
@@ -19,27 +90,30 @@ textarea
     display flex
     justify-content space-around
     #cloud-controls
-        min-width 500px
+        width 500px
         margin-right 30px
         display flex
         flex-direction column
-        #main-input-container
-            position relative
-            textarea, div
-                height 250px
-            #main-text-input
-                width 100%
-                z-index 1
-                background transparent
-            #main-text-input-highlight
-                width 500px
-                z-index -1
-                position absolute
-                left 0
-                top 0
-                white-space normal !important
-                word-wrap normal !important
-                overflow auto
+        #text-input textarea
+            height 250px
+            width 500px
+        // #main-input-container
+        //     position relative
+        //     textarea, div
+        //         height 250px
+        //     #main-text-input-highlight
+        //         width 100%
+        //         padding 0.2px
+        //         white-space normal !important
+        //         word-wrap normal !important
+        //         overflow auto
+        //         y-overflow scroll
+        //     #main-text-input
+        //         background transparent
+        //         width 100%
+        //         position absolute
+        //         left 0
+        //         top 0
         #controls
             display flex
             flex-direction column
@@ -55,7 +129,7 @@ textarea
             flex-grow 1
             flex: 1
             textarea
-                width: 50%
+                width 50%
     #cloud-output
         border 2px solid grey
         width 100%
@@ -73,19 +147,3 @@ textarea
     .ui.radio.checkbox
         padding-top 6px
     
-// copying styles for textarea from semantic
-#main-text-input-highlight
-    margin: 0em;
-    -webkit-appearance: none;
-    tap-highlight-color: rgba(255, 255, 255, 0);
-    padding: 0.78571429em 1em;
-    background: #FFFFFF;
-    border: 1px solid rgba(34, 36, 38, 0.15);
-    outline: none;
-    color: rgba(0, 0, 0, 0.87);
-    border-radius: 0.28571429rem;
-    box-shadow: 0em 0em 0em 0em transparent inset;
-    -webkit-transition: color 0.1s ease, border-color 0.1s ease;
-    transition: color 0.1s ease, border-color 0.1s ease;
-    font-size: 1em;
-    line-height: 1.2857;

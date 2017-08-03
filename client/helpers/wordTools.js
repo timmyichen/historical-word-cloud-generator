@@ -58,7 +58,7 @@ function prepareText(string) {
             return 0;
         }
     });
-    return final.slice(0,100);
+    return final.slice(0,200);
 }
 
 function prepareStopWords(string) {

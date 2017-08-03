@@ -6,6 +6,7 @@ import d3tip from 'd3-tip';
 
 import { Loader, Dimmer } from 'semantic-ui-react';
 import CloudControls from './cloud/CloudControls';
+import PubSub from 'pubsub-js';
 
 import { prepareText, prepareStopWords, removeStopWords, removePossibleErrors } from '../helpers/wordTools';
 
@@ -27,6 +28,7 @@ class CloudContainer extends Component {
             words: [],
             loading: false,
             removeErrors: false,
+            highlightedWord: '',
         };
         
         this.renderCloud = this.renderCloud.bind(this);
@@ -104,6 +106,11 @@ class CloudContainer extends Component {
             })
             .text(function(d) { return d.text; })
             .call(tip)
+            .on('click', (d) => {
+                this.setState({ highlightedWord: d.text }, () => {
+                    PubSub.publish('highlight');
+                })
+            })
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide);
     }
@@ -122,6 +129,7 @@ class CloudContainer extends Component {
                     setText={this.props.setText}
                     updateWordRemoval={this.updateWordRemoval}
                     wordRemoval={this.state.removeErrors}
+                    highlightedWord={this.state.highlightedWord}
                 />
                 
                 <div id="cloud-output" ref="cloudOutRef" className="dimmable">
