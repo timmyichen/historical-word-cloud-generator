@@ -1,83 +1,51 @@
-const axios = require('axios');
-
-function getStopWords() {
-    return new Promise((resolve, reject) => {
-        axios.get('./assets/stopWords.txt').then((response) => {
-            resolve(response.data);
-        })
-        .catch((reason) => {
-            reject(`error in parsing stop words\n${reason}`);
-        });
-    });
+function isDateInvalid(year, month, day) {
+    if (isNaN(year) || isNaN(month) || isNaN(day)) return true;
+    
+    year = parseFloat(year);
+    month = parseFloat(month);
+    day = parseFloat(day);
+    return (!Number.isInteger(year)) ||
+        (!Number.isInteger(month)) ||
+        (!Number.isInteger(day)) ||
+        (year < 1836) || (year > 1924) ||
+        (month < 1) || (month > 12) ||
+        (day < 1) || (day > 31);
 }
 
-function prepareText(string) {
-    let words = string.replace(/[.,;:!?"]+/g, '').split(/[\s/]+/g);
-    
-    //check for and remove symbols
-    const new_words = [];
-    words.forEach((word) => {
-        const word_split = word.split(/[']+/g);
-        if (word_split[word_split.length-1].length <= 2) {
-            word_split.splice(-1);
-            new_words.push(word_split.join(''));
-        } else {
-            new_words.push(word);
-        }
-    });
-    words = new_words;
-    
-    // remove only numbers and empty spaces
-    words = words.filter((word) => word === '' || !(word.search(/^[0-9]*$/g) === 0) );
-    
-    const count = {};
-    words.forEach((word) => {
-        if (word.replace(/[^A-Z]/g, '').length < 2) word = word.toLowerCase();
-
-        if (word in count) {
-            count[word]++;
-        } else {
-            count[word] = 1;
-        }
-    });
-    
-    const final = [];
-    const wordKeys = Object.keys(count);
-    for (let word in wordKeys) {
-        final.push({
-            text: wordKeys[word],
-            size: count[wordKeys[word]],
-        });
+function parseDate(dateString) {
+    const split = dateString.split('-');
+    try {
+        return {
+            year: split[0],
+            month: split[1],
+            day: split[2]
+        };
+    } catch(e) {
+        console.error('error in parsing date: ' + e);
     }
-    final.sort((a,b) => {
-        if (a.size > b.size) {
-            return -1;
-        } else if (a.size < b.size) {
-            return 1;
-        } else {
-            return 0;
-        }
-    });
-    return final.slice(0,100);
 }
 
-function prepareStopWords(string) {
-    return string.replace(/ /g, '').split('\n');
-}
-
-function removeStopWords(wordsObj, stopWords) {
-    return wordsObj.filter(word => stopWords.indexOf(word.text.toLowerCase()) < 0 && word.text !== '');
+function dateToFullString(year, month, day) {
+    const monthStr = ['Jan', 'Feb', 'Mar', 'Apr',
+                    'May', 'Jun', 'Jul', 'Aug',
+                    'Sep', 'Oct', 'Nov', 'Dec'][parseInt(month, 10) - 1];
+    let ordinal;
+    const dayInt = parseInt(day, 10);
+    if (dayInt % 10 === 1 && dayInt !== 11) {
+        ordinal = 'st';
+    } else if (dayInt % 10 === 2 && dayInt !== 12) {
+        ordinal = 'nd';
+    } else if (dayInt % 10 === 3 && dayInt !== 13) {
+        ordinal = 'rd';
+    } else {
+        ordinal = 'th';
+    }
+    
+    return `${monthStr} ${dayInt}${ordinal}, ${year}`;
 }
 
 module.exports = {
-    getStopWords,
-    prepareText,
-    prepareStopWords,
-    removeStopWords,
+    isDateInvalid,
+    parseDate,
+    dateToFullString,
 }
-
-//need to:
-// - replace words with highlighted spans (JSX)
-// - determine whether to be case insensitive
-// - determine whether word is possessive
-// - fix spaces with nbsp

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import CloudContainer from './CloudContainer';
 import CsContainer from './CsContainer';
 
-import { getStopWords } from '../helpers/helpers';
+import { getStopWords } from '../helpers/wordTools';
 import { Header } from 'semantic-ui-react';
 
 const axios = require('axios');
@@ -14,6 +14,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            newsInfo: null,
             cloudText: defaultText,
             stopWords: '',
             tabIndex: 0,
@@ -23,7 +24,7 @@ class App extends Component {
         });
         this.changeText = this.changeText.bind(this);
         this.changeStopWords = this.changeStopWords.bind(this);
-        this.loadFileText = this.loadFileText.bind(this);
+        this.setText = this.setText.bind(this);
     }
     changeText(event) {
         this.setState({ cloudText: event.target.value });
@@ -31,11 +32,8 @@ class App extends Component {
     changeStopWords(event) {
         this.setState({ stopWords: event.target.value });
     }
-    loadFileText() {
-        const fname = prompt("enter file name:")
-        axios.get(`/news_dump/${fname}.json`).then((data) => {
-            this.setState({ cloudText: data.data.contents })
-        });
+    setText(newsInfo) {
+        this.setState({ newsInfo, cloudText: newsInfo.contents });
     }
     render() {
         return (
@@ -46,7 +44,7 @@ class App extends Component {
                     stopWords={this.state.stopWords}
                     changeText={this.changeText}
                     changeStopWords={this.changeStopWords}
-                    loadFileText={this.loadFileText}
+                    setText={this.setText}
                 />
                 <CsContainer
                 />

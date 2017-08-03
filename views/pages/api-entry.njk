@@ -5,8 +5,8 @@
   <title>{{appname}} - API</title>
 </head>
 <body style="padding:5%;">
-  <h1 class="title">{{appname}}</h1>
-  <h2 class="subtitle">API Entry Point</h2>
+  <h1 class="ui header">{{appname}}</h1>
+  <h2 class="ui header">API Entry Point</h2>
   <p style="padding-bottom: 30px">
     Welcome to the API for this application.
     This is a JSON API with routes listed below.
@@ -24,7 +24,7 @@
       {% for route in routes %}
       <tr>
         <td>{{route.title}}</td>
-        <td><a href="/api{{route.routename}}" title="{{route.routename}}">{{route.routename}}</a></td>
+        <td>{{route.routename}}</td>
         <td>{{ route.methods.join(", ") }}</td>
         <td>
           {% for line in route.description %}

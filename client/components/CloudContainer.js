@@ -5,9 +5,15 @@ import cloud from 'd3-cloud';
 import d3tip from 'd3-tip';
 
 import { Loader, Dimmer } from 'semantic-ui-react';
-import CloudControls from './CloudControls';
+import CloudControls from './cloud/CloudControls';
 
-import { prepareText, prepareStopWords, removeStopWords } from '../helpers/helpers';
+import { prepareText, prepareStopWords, removeStopWords, removePossibleErrors } from '../helpers/wordTools';
+
+const axios = require('axios');
+let englishWords;
+axios.get('/assets/words-eng.json').then((response) => {
+    englishWords = response.data;
+});
 
 class CloudContainer extends Component {
     constructor(props) {
@@ -20,9 +26,11 @@ class CloudContainer extends Component {
             cloud: null,
             words: [],
             loading: false,
+            removeErrors: false,
         };
         
         this.renderCloud = this.renderCloud.bind(this);
+        this.updateWordRemoval = this.updateWordRemoval.bind(this);
     }
     makeCloud(wordData) {
         return cloud()
@@ -30,7 +38,7 @@ class CloudContainer extends Component {
             // -4px to account for the border (2px on each side)
             .words(wordData)
             .padding(5)
-            .rotate(function() { return ~~(Math.random() * 2) * 90; })
+            .rotate(function() { return (~~(Math.random() * 6) - 3) * 20; })
             .font("Impact")
             .fontSize(function(d) { return d.size; })
             .on("end", this.draw);
@@ -40,7 +48,11 @@ class CloudContainer extends Component {
             const wordData = prepareText(this.props.text);
             
             const stopWords = prepareStopWords(this.props.stopWords);
-            const cloudData = removeStopWords(wordData, stopWords);
+            let cloudData = removeStopWords(wordData, stopWords);
+            
+            if (this.state.removeErrors) {
+                cloudData = removePossibleErrors(cloudData, 4, englishWords)
+            }
             
             const values = cloudData.map(data => data.size);
             const scale = d3.scaleLinear()
@@ -95,6 +107,9 @@ class CloudContainer extends Component {
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide);
     }
+    updateWordRemoval() {
+        this.setState((prevState) => ({ removeErrors: !prevState.removeErrors }));
+    }
     render() {
         return (
             <div id="cloud-elements">
@@ -104,7 +119,9 @@ class CloudContainer extends Component {
                     changeText={this.props.changeText}
                     changeStopWords={this.props.changeStopWords}
                     renderCloud={this.renderCloud}
-                    loadFileText={this.props.loadFileText}
+                    setText={this.props.setText}
+                    updateWordRemoval={this.updateWordRemoval}
+                    wordRemoval={this.state.removeErrors}
                 />
                 
                 <div id="cloud-output" ref="cloudOutRef" className="dimmable">

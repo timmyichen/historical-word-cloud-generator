@@ -19,12 +19,16 @@ textarea
     display flex
     justify-content space-around
     #cloud-controls
-       min-width 500px
-       #main-input-container
+        min-width 500px
+        margin-right 30px
+        display flex
+        flex-direction column
+        #main-input-container
             position relative
             textarea, div
                 height 250px
             #main-text-input
+                width 100%
                 z-index 1
                 background transparent
             #main-text-input-highlight
@@ -36,6 +40,22 @@ textarea
                 white-space normal !important
                 word-wrap normal !important
                 overflow auto
+        #controls
+            display flex
+            flex-direction column
+            #buttons
+                display flex
+                button
+                    width 33%
+            #checkboxes
+                text-align center
+                padding 3px 0px
+        #controls-bottom
+            display flex
+            flex-grow 1
+            flex: 1
+            textarea
+                width: 50%
     #cloud-output
         border 2px solid grey
         width 100%
@@ -46,6 +66,13 @@ textarea
                 fill red !important
                 cursor pointer
 
+#compsci-container
+    margin-top 20px
+
+#choose-papers
+    .ui.radio.checkbox
+        padding-top 6px
+    
 // copying styles for textarea from semantic
 #main-text-input-highlight
     margin: 0em;

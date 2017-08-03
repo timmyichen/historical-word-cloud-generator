@@ -7,11 +7,12 @@ router.use(bodyParser.urlencoded({ extended: true }))
 router.use(bodyParser.json())
 
 const config = require('../config')
-const credentials = require('../credentials')
+const credentials = require('../.credentials')
 
 const MongoClient = require('mongodb').MongoClient;
 
 const scrapeNews = require('./scrapeNews').scrapeNews;
+const helpers = require('../client/helpers/helpers');
 
 var availableRoutes = [
     {
@@ -34,19 +35,20 @@ router.get('/', (req, res) => {
 const internalServerError = 
     (res, reason, source) => res.status(500).send({ error: `Error retrieving data from ${source}.`, reason: reason })
 const badUserRequestError = 
-    (res, reason) => res.status(400).send({ error: `Invalid user request to ${route} API endpoint.`, reason: reason })
+    (res, reason) => res.status(400).send({ error: `Invalid user request.`, reason: reason })
 
 router.get(availableRoutes[0].routename, (req, res) => {
     const { year, month, day } = req.params;
     
-    if (parseInt(year, 10) > 1924 || parseInt(year, 10) < 1800) {
-        res.status(500).send({ error: 'cannot retrieve dates with years > 1924 or < 1800 '})
+    if (helpers.isDateInvalid(year, month, day)) {
+        res.status(500).send({ error: 'invalid query: out of range or includes text'})
+        return;
     }
     const dateString = `${year}-${month}-${day}`;
     const query = { dateString: {$eq: dateString} };
     
     const dbName = 'articles';
-    const uri = `mongodb://admin:${credentials.db.password}@historical-word-cloud-shard-00-00-knue8.mongodb.net:27017,historical-word-cloud-shard-00-01-knue8.mongodb.net:27017,historical-word-cloud-shard-00-02-knue8.mongodb.net:27017/${dbName}?ssl=true&replicaSet=historical-word-cloud-shard-0&authSource=admin`;
+    const uri = credentials.db.uri;
     MongoClient.connect(uri, (err,db) => {
         if (err) console.log(err);
         console.log('successfully connected to db');
@@ -61,7 +63,23 @@ router.get(availableRoutes[0].routename, (req, res) => {
                         db.close();
                     });
                     res.send(data);
+                }).catch((msg) => {
+                    console.log(`promise rejected: ${msg}`);
+                    res.send({ empty: true })
+                    const emptyObject = {
+                        dateString,
+                        flag: "empty"
+                    };
+                    db.collection('articles').insertOne(emptyObject, (err, res) => {
+                        if (err) console.log(err);
+                        console.log(`inserted object with EMPTY flag for ${dateString}`);
+                        db.close();
+                    })
                 })
+            } else if (result.length === 1 && result[0].flag) {
+                console.log(`db shows that previous scrapes returned zero results. no data was scraped or returned.`)
+                res.send({ empty: true })
+                db.close();
             } else {
                 console.log(`successfully retrieved ${result.length} documents`)
                 res.send(result);
