@@ -94,10 +94,9 @@ export default class HighlightedTextarea extends Component {
   }
 
   findFirstHighlight() {
-    // if (this.refs.)
-    // if (this.refs.backdrop) {
-      this.refs.textarea.scrollTop = this.refs.backdrop.querySelector('mark').offsetTop;
-    // }
+    
+    this.refs.textarea.scrollTop = this.refs.backdrop.querySelector('mark').offsetTop;
+    
   }
   render() {
     return (
