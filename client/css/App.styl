@@ -68,6 +68,17 @@
 	color: inherit;
 }
 
+//disable selection
+svg g text {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                        supported by Chrome and Opera */
+}
+
 //MAIN STYLES
 body
     padding 20px !important
@@ -77,6 +88,9 @@ body
 
 .highlight
     background yellow
+
+.bordered
+    border 1px solid black
 
 .d3-tip
     color white

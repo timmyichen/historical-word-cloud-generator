@@ -59,6 +59,15 @@
   padding: 0 !important;
   color: inherit;
 }
+svg g text {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                        supported by Chrome and Opera */
+}
 body {
   padding: 20px !important;
 }
@@ -67,6 +76,9 @@ body {
 }
 .highlight {
   background: #ff0;
+}
+.bordered {
+  border: 1px solid #000;
 }
 .d3-tip {
   color: #fff;

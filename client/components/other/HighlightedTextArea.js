@@ -16,6 +16,7 @@ export default class HighlightedTextarea extends Component {
       input: props.value,
       currentHighlightIndex: 0,
       lastHighlightedWord: '',
+      highlightedElement: null,
     };
     this._handleInputChange = this._handleInputChange.bind(this);
     this._handleScroll = this._handleScroll.bind(this);
@@ -94,9 +95,22 @@ export default class HighlightedTextarea extends Component {
   }
 
   findFirstHighlight() {
+    let { currentHighlightIndex, lastHighlightedWord, highlightedElement } = this.state;
+    const currentHighLightedWord = this.refs.backdrop.querySelector('mark').innerHTML;
+    if (lastHighlightedWord !== currentHighLightedWord) {
+      currentHighlightIndex = 0;
+      lastHighlightedWord = currentHighLightedWord;
+    }
+    if (highlightedElement) {
+      highlightedElement.classList.remove('bordered');
+    }
+    const elemList = this.refs.backdrop.querySelectorAll('mark');
+    highlightedElement = elemList[currentHighlightIndex % elemList.length]
+    this.refs.textarea.scrollTop = highlightedElement.offsetTop;
+    highlightedElement.classList.add('bordered');
+    currentHighlightIndex++;
     
-    this.refs.textarea.scrollTop = this.refs.backdrop.querySelector('mark').offsetTop;
-    
+    this.setState({ currentHighlightIndex, lastHighlightedWord, highlightedElement });
   }
   render() {
     return (
