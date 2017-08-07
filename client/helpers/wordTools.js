@@ -1,5 +1,12 @@
 const axios = require('axios');
 
+function simplePrepareText(text) {
+    return text.toLowerCase()
+        .replace(/[.,;:!?'"]+/g, '')
+        .replace(/\n/g,' ')
+        .replace(/\s\s+/g, ' ');
+}
+
 function getStopWords() {
     return new Promise((resolve, reject) => {
         axios.get('./assets/stopWords.txt').then((response) => {
@@ -78,6 +85,7 @@ function removePossibleErrors(wordsObj, charThreshold, wordsList) {
 }
 
 module.exports = {
+    simplePrepareText,
     getStopWords,
     prepareText,
     prepareStopWords,

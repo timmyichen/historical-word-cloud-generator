@@ -139,6 +139,62 @@ textarea {
 #compsci-container {
   margin-top: 20px;
 }
+#compsci-container .tabular.menu {
+  margin-bottom: 20px;
+}
+#compsci-container #tab-count {
+  display: flex;
+}
+#compsci-container #tab-count #step-instructions {
+  flex: 1;
+}
+#compsci-container #tab-count #counting-left {
+  flex: 2;
+  width: 50%;
+  display: flex;
+}
+#compsci-container #tab-count #counting-left #text-and-controls {
+  flex: 1;
+  padding: 0 5px 0 0;
+}
+#compsci-container #tab-count #counting-left #text-and-controls textarea,
+#compsci-container #tab-count #counting-left #text-and-controls #static-text {
+  display: inline-block;
+  width: 100%;
+  height: 200px;
+  border: 1px solid #000;
+  margin-top: 5px;
+  padding: 3px;
+}
+#compsci-container #tab-count #counting-left #text-and-controls textarea .counting-mark,
+#compsci-container #tab-count #counting-left #text-and-controls #static-text .counting-mark {
+  background: #fff;
+}
+#compsci-container #tab-count #counting-left #text-and-controls textarea .counting-mark.highlight,
+#compsci-container #tab-count #counting-left #text-and-controls #static-text .counting-mark.highlight {
+  background: #ff0;
+  border: 1px solid #000;
+}
+#compsci-container #tab-count #counting-left #text-and-controls #controls {
+  display: flex;
+  width: 100%;
+}
+#compsci-container #tab-count #counting-left #text-and-controls #controls button {
+  flex: 1;
+  height: 65px;
+}
+#compsci-container #tab-count #counting-left #text-and-controls #controls buttonlast-of-type {
+  margin: 0 !important;
+}
+#compsci-container #tab-count #counting-left #word-table {
+  flex: 1;
+}
+#compsci-container #tab-count #counting-left #word-table .ui.checkbox {
+  font-size: 10px;
+}
+#compsci-container #tab-count #python-code {
+  flex: 1;
+}
 #choose-papers .ui.radio.checkbox {
   padding-top: 6px;
 }

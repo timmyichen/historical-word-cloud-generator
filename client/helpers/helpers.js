@@ -44,8 +44,21 @@ function dateToFullString(year, month, day) {
     return `${monthStr} ${dayInt}${ordinal}, ${year}`;
 }
 
+function objectToArray(obj) {
+    const arr = [];
+    Object.keys(obj).forEach(o => {
+        const newObj = {
+            word: o,
+            count: obj[o],
+        }
+        arr.push(newObj);
+    })
+    return arr;
+}
+
 module.exports = {
     isDateInvalid,
     parseDate,
     dateToFullString,
+    objectToArray,
 }

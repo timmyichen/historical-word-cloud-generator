@@ -29,6 +29,7 @@ function scrapeNews(year, month, day) {
     
     return new Promise((resolve, reject) => {
         const data = []
+        console.log(`begin scrape for ${year}-${month}-${day}`)
         
         newsList.forEach((paper, i) => {
             setTimeout(() => {

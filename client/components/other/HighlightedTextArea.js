@@ -106,7 +106,7 @@ export default class HighlightedTextarea extends Component {
     }
     const elemList = this.refs.backdrop.querySelectorAll('mark');
     highlightedElement = elemList[currentHighlightIndex % elemList.length]
-    this.refs.textarea.scrollTop = highlightedElement.offsetTop;
+    this.refs.textarea.scrollTop = highlightedElement.offsetTop - 70;
     highlightedElement.classList.add('bordered');
     currentHighlightIndex++;
     

@@ -62,7 +62,6 @@ class NewsPicker extends Component {
             result.newspaperName = currentPaper.newspaperName;
             result.location = currentPaper.location;
             result.contents = currentPaper.contents;
-            console.log(result.contents);
         }
         this.props.setText(result);
         this.props.closeParent();
