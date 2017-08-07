@@ -34,6 +34,7 @@ class NewsPicker extends Component {
                         open: true,
                         papers: res.data,
                     });
+                    this.props.clearCloud();
                 }
             });
         })

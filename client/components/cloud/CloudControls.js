@@ -86,7 +86,10 @@ class CloudControls extends Component {
                             type="submit"
                             onClick={this.props.renderCloud}
                         >Generate Wordcloud</Button>
-                        <DatePicker setText={this.props.setText} />
+                        <DatePicker
+                            setText={this.props.setText}
+                            clearCloud={this.props.clearCloud}
+                        />
                     </div>
                     <div id="checkboxes">
                         <Checkbox

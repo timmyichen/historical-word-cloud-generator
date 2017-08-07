@@ -14,6 +14,8 @@ export default class HighlightedTextarea extends Component {
     super(props);
     this.state = {
       input: props.value,
+      currentHighlightIndex: 0,
+      lastHighlightedWord: '',
     };
     this._handleInputChange = this._handleInputChange.bind(this);
     this._handleScroll = this._handleScroll.bind(this);
@@ -92,9 +94,10 @@ export default class HighlightedTextarea extends Component {
   }
 
   findFirstHighlight() {
-    if (this.refs.backdrop) {
+    // if (this.refs.)
+    // if (this.refs.backdrop) {
       this.refs.textarea.scrollTop = this.refs.backdrop.querySelector('mark').offsetTop;
-    }
+    // }
   }
   render() {
     return (

@@ -32,6 +32,7 @@ class CloudContainer extends Component {
         };
         
         this.renderCloud = this.renderCloud.bind(this);
+        this.clearCloud = this.clearCloud.bind(this);
         this.updateWordRemoval = this.updateWordRemoval.bind(this);
     }
     makeCloud(wordData) {
@@ -76,6 +77,10 @@ class CloudContainer extends Component {
             () => { this.state.cloud.start() });
         })
         
+    }
+    clearCloud() {
+        this.setState({ cloud: this.makeCloud([{word:0}]) },
+        () => { this.state.cloud.start() });
     }
     draw(words) {
         const tip = d3tip()
@@ -130,6 +135,7 @@ class CloudContainer extends Component {
                     updateWordRemoval={this.updateWordRemoval}
                     wordRemoval={this.state.removeErrors}
                     highlightedWord={this.state.highlightedWord}
+                    clearCloud={this.clearCloud}
                 />
                 
                 <div id="cloud-output" ref="cloudOutRef" className="dimmable">

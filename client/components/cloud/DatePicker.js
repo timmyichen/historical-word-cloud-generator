@@ -66,6 +66,7 @@ class DatePicker extends Component {
                         setText={this.props.setText}
                         closeParent={this.close}
                         date={this.state.dateFull}
+                        clearCloud={this.props.clearCloud}
                     />
                 </Modal.Actions>
             </Modal>
