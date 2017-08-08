@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Table, Checkbox } from 'semantic-ui-react';
+import { Table, Checkbox, Header } from 'semantic-ui-react';
 
 class WordTable extends Component {
     constructor(props) {
@@ -9,6 +9,9 @@ class WordTable extends Component {
             limitWords: false,
         }
         this.toggleLimit = this.toggleLimit.bind(this);
+    }
+    componentDidMount() {
+        this.props.sendRef('table', this.refs.table);
     }
     toggleLimit() {
         this.setState((prevState) => ({ limitWords: !prevState.limitWords }))
@@ -25,7 +28,8 @@ class WordTable extends Component {
             wordFreq = wordFreq.slice(0,10);
         }
         return (
-            <div id="word-table">
+            <div id="word-table" ref="table">
+                <Header as="h3">Word Counting Table</Header>
                 <Table celled>
                     <Table.Header>
                         <Table.Row>

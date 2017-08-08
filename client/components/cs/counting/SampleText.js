@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Button } from 'semantic-ui-react';
+import { Button, Header } from 'semantic-ui-react';
 
 import WordTable from './WordTable';
 
@@ -38,6 +38,9 @@ class SampleText extends Component {
             });
         }
     }
+    componentDidMount() {
+        this.props.sendRef('input', this.refs.input);
+    }
     processNextWord() {
         let { wordFreq, wordIndex, wordArray } = this.state;
         if (wordIndex >= 0) {
@@ -66,8 +69,8 @@ class SampleText extends Component {
     }
     textToSpans(text) {
         const final = [];
-        text.split(' ').forEach(word => {
-            final.push(<mark className="counting-mark">{word}</mark>);
+        text.split(' ').forEach((word, i) => {
+            final.push(<mark key={`word${i}`} className="counting-mark">{word}</mark>);
             final.push(' ');
         });
         return final;
@@ -77,7 +80,8 @@ class SampleText extends Component {
         const { stepping } = this.props;
         return (
             <div id="counting-left">
-                <div id="text-and-controls">
+                <div id="text-and-controls" ref="input">
+                    <Header as="h3">Text Input and Controls</Header>
                     <div id="controls">
                         <Button
                             toggle
@@ -92,7 +96,7 @@ class SampleText extends Component {
                             onClick={this.processNextWord}
                             icon={wordIndex > wordArray.length - 1 ? 'stop' : 'forward'}
                             labelPosition="right"
-                            content={wordIndex >= wordArray.length - 1 ? 'Last Step' : 'Next Step'}
+                            content={wordIndex < wordArray.length - 1 || wordIndex === -1 ? 'Next Step' : 'Last Step'}
                         />
                     </div>
                     {editing && !stepping ? 
@@ -114,6 +118,7 @@ class SampleText extends Component {
                 </div>
                 <WordTable
                     wordFreq={objectToArray(wordFreq) || []}
+                    sendRef={this.props.sendRef}
                 />
             </div>
         );

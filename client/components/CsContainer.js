@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Tab } from 'semantic-ui-react';
 
 import CountingTab from './cs/CountingTab';
+import DatabaseTab from './cs/DatabaseTab';
 
 class CsContainer extends Component {
     constructor(props) {
@@ -26,7 +27,11 @@ class CsContainer extends Component {
                     />
                 ) },
             { menuItem: {key: 'scrape', content: 'Web Scraping', icon: "barcode"},
-                render: () => (<p>scrape</p>) },
+                render: () => (
+                    <DatabaseTab
+                    
+                    />
+                ) },
             { menuItem: {key: 'database', content: 'Databases', icon: "database"},
                 render: () => (<p>dbs</p>) },
         ]

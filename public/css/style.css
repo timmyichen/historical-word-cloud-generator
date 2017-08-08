@@ -88,6 +88,9 @@ body {
 textarea {
   resize: none !important;
 }
+#app {
+  margin-bottom: 50px;
+}
 #cloud-elements {
   display: flex;
   justify-content: space-around;
@@ -145,7 +148,22 @@ textarea {
 #compsci-container #tab-count {
   display: flex;
 }
+#compsci-container #tab-count h3:hover {
+  cursor: pointer;
+}
+#compsci-container #tab-count #text-and-controls,
+#compsci-container #tab-count #word-table,
+#compsci-container #tab-count #python-code {
+  transition: all 300ms;
+  padding: 5px;
+}
+#compsci-container #tab-count #text-and-controls.highlight,
+#compsci-container #tab-count #word-table.highlight,
+#compsci-container #tab-count #python-code.highlight {
+  background: rgba(255,255,0,0.5) !important;
+}
 #compsci-container #tab-count #step-instructions {
+  width: 25%;
   flex: 1;
 }
 #compsci-container #tab-count #counting-left {
@@ -155,7 +173,6 @@ textarea {
 }
 #compsci-container #tab-count #counting-left #text-and-controls {
   flex: 1;
-  padding: 0 5px 0 0;
 }
 #compsci-container #tab-count #counting-left #text-and-controls textarea,
 #compsci-container #tab-count #counting-left #text-and-controls #static-text {
@@ -193,7 +210,18 @@ textarea {
   font-size: 10px;
 }
 #compsci-container #tab-count #python-code {
+  margin-left: 10px;
+  width: 25%;
   flex: 1;
+}
+#compsci-container #tab-count #python-code code span {
+  cursor: pointer;
+}
+#compsci-container #tab-count #python-code .python.hljs,
+#compsci-container #tab-count #python-code pre {
+  padding: 0;
+  padding-left: 3px;
+  margin: 0 !important;
 }
 #choose-papers .ui.radio.checkbox {
   padding-top: 6px;

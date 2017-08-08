@@ -100,6 +100,9 @@ body
 textarea
     resize none !important
 
+#app
+    margin-bottom 50px
+
 #cloud-elements
     display flex
     justify-content space-around
@@ -111,23 +114,6 @@ textarea
         #text-input textarea
             height 250px
             width 500px
-        // #main-input-container
-        //     position relative
-        //     textarea, div
-        //         height 250px
-        //     #main-text-input-highlight
-        //         width 100%
-        //         padding 0.2px
-        //         white-space normal !important
-        //         word-wrap normal !important
-        //         overflow auto
-        //         y-overflow scroll
-        //     #main-text-input
-        //         background transparent
-        //         width 100%
-        //         position absolute
-        //         left 0
-        //         top 0
         #controls
             display flex
             flex-direction column
@@ -161,7 +147,15 @@ textarea
         margin-bottom 20px
     #tab-count
         display flex
+        h3:hover
+            cursor pointer
+        #text-and-controls, #word-table, #python-code
+            transition all 300ms
+            padding 5px
+            &.highlight
+                background rgba(255,255,0,0.5) !important
         #step-instructions
+            width 25%
             flex 1
         #counting-left
             flex 2
@@ -169,7 +163,6 @@ textarea
             display flex
             #text-and-controls
                 flex 1
-                padding 0 5px 0 0
                 textarea, #static-text
                     display inline-block
                     width 100%
@@ -195,7 +188,17 @@ textarea
                 .ui.checkbox
                     font-size 10px
         #python-code
+            margin-left 10px
+            width 25%
             flex 1
+            
+            code span
+                cursor pointer
+            .python.hljs, pre
+                padding 0
+                padding-left 3px
+                margin 0 !important
+                // background transparent
 #choose-papers
     .ui.radio.checkbox
         padding-top 6px

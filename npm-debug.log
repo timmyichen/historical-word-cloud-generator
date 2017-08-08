@@ -2,8 +2,8 @@
 1 verbose cli [ '/home/ubuntu/.nvm/versions/node/v4.4.5/bin/node',
 1 verbose cli   '/home/ubuntu/.nvm/versions/node/v4.4.5/bin/npm',
 1 verbose cli   'install',
-1 verbose cli   'pubsub-js',
-1 verbose cli   '--save' ]
+1 verbose cli   '--save',
+1 verbose cli   'react-hljs' ]
 2 info using npm@2.15.5
 3 info using node@v4.4.5
 4 verbose install initial load of /home/ubuntu/workspace/exemplars/wordcloud-node/package.json
@@ -432,380 +432,1357 @@
 427 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/ps-tree/package.json
 428 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/pseudomap/package.json
 429 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/public-encrypt/package.json
-430 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/punycode/package.json
-431 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/python-shell/package.json
-432 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/qs/package.json
-433 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/querystring/package.json
-434 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/querystring-es3/package.json
-435 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/randomatic/package.json
-436 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/randombytes/package.json
-437 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/range-parser/package.json
-438 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/raw-body/package.json
-439 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/rc/package.json
-440 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react/package.json
-441 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-dom/package.json
-442 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-highlighted-textarea/package.json
-443 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-router/package.json
-444 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-router-dom/package.json
-445 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/read-all-stream/package.json
-446 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/read-pkg/package.json
-447 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/read-pkg-up/package.json
-448 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/readable-stream/package.json
-449 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/readdirp/package.json
-450 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/regenerate/package.json
-451 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/regenerator-runtime/package.json
-452 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/regenerator-transform/package.json
-453 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/regex-cache/package.json
-454 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/regexpu-core/package.json
-455 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/registry-url/package.json
-456 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/regjsgen/package.json
-457 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/regjsparser/package.json
-458 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/remove-trailing-separator/package.json
-459 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/repeat-element/package.json
-460 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/repeat-string/package.json
-461 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/repeating/package.json
-462 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/request/package.json
-463 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/require-directory/package.json
-464 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/require-main-filename/package.json
-465 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/require_optional/package.json
-466 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/resolve-from/package.json
-467 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/resolve-pathname/package.json
-468 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/right-align/package.json
-469 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/ripemd160/package.json
-470 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/rw/package.json
-471 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/safe-buffer/package.json
-472 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/semantic-ui-react/package.json
-473 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/semver/package.json
-474 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/semver-diff/package.json
-475 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/send/package.json
-476 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/serve-static/package.json
-477 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/set-blocking/package.json
-478 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/set-immediate-shim/package.json
-479 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/setimmediate/package.json
-480 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/setprototypeof/package.json
-481 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/sha.js/package.json
-482 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/shebang-command/package.json
-483 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/shebang-regex/package.json
-484 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/signal-exit/package.json
-485 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/slash/package.json
-486 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/slide/package.json
-487 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/sntp/package.json
-488 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/source-list-map/package.json
-489 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/source-map/package.json
-490 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/source-map-support/package.json
-491 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/spdx-correct/package.json
-492 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/spdx-expression-parse/package.json
-493 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/spdx-license-ids/package.json
-494 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/split/package.json
-495 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/sshpk/package.json
-496 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/statuses/package.json
-497 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/stream-browserify/package.json
-498 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/stream-combiner/package.json
-499 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/stream-http/package.json
-500 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/stream-shift/package.json
-501 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/string-length/package.json
-502 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/string-width/package.json
-503 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/string_decoder/package.json
-504 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/stringstream/package.json
-505 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/strip-ansi/package.json
-506 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/strip-bom/package.json
-507 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/strip-eof/package.json
-508 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/strip-json-comments/package.json
-509 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/supports-color/package.json
-510 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/tapable/package.json
-511 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/through/package.json
-512 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/timed-out/package.json
-513 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/timers-browserify/package.json
-514 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/to-arraybuffer/package.json
-515 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/to-fast-properties/package.json
-516 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/touch/package.json
-517 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/tough-cookie/package.json
-518 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/trim-right/package.json
-519 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/tty-browserify/package.json
-520 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/tunnel-agent/package.json
-521 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/tweetnacl/package.json
-522 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/type-is/package.json
-523 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/ua-parser-js/package.json
-524 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/uglify-js/package.json
-525 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/uglify-to-browserify/package.json
-526 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/uglifyjs-webpack-plugin/package.json
-527 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/undefsafe/package.json
-528 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/unpipe/package.json
-529 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/update-notifier/package.json
-530 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/url/package.json
-531 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/util/package.json
-532 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/util-deprecate/package.json
-533 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/utils-merge/package.json
-534 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/uuid/package.json
-535 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/validate-npm-package-license/package.json
-536 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/value-equal/package.json
-537 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/vary/package.json
-538 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/verror/package.json
-539 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/vm-browserify/package.json
-540 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/warning/package.json
-541 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/watchpack/package.json
-542 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/webpack/package.json
-543 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/webpack-sources/package.json
-544 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/whatwg-fetch/package.json
-545 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/which/package.json
-546 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/which-module/package.json
-547 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/window-size/package.json
-548 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/wordwrap/package.json
-549 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/wrap-ansi/package.json
-550 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/wrappy/package.json
-551 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/write-file-atomic/package.json
-552 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/xdg-basedir/package.json
-553 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/xmlhttprequest/package.json
-554 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/xtend/package.json
-555 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/y18n/package.json
-556 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/yallist/package.json
-557 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/yargs/package.json
-558 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/yargs-parser/package.json
-559 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/@types/node/package.json
-560 info package.json core-js@1.2.7 No README data
-561 info package.json dom-serializer@0.1.0 No README data
-562 info package.json estraverse@4.2.0 No README data
-563 info package.json jsesc@1.3.0 No README data
-564 info package.json react-highlighted-textarea@0.0.2 No README data
-565 info package.json setimmediate@1.0.5 No README data
-566 info package.json a-sync-waterfall@1.0.0 No license field.
-567 info package.json array-unique@0.2.1 license should be a valid SPDX license expression
-568 info package.json assert@1.4.1 assert is also the name of a node core module.
-569 info package.json buffer@4.9.1 buffer is also the name of a node core module.
+430 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/pubsub-js/package.json
+431 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/punycode/package.json
+432 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/python-shell/package.json
+433 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/qs/package.json
+434 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/querystring/package.json
+435 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/querystring-es3/package.json
+436 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/randomatic/package.json
+437 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/randombytes/package.json
+438 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/range-parser/package.json
+439 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/raw-body/package.json
+440 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/rc/package.json
+441 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react/package.json
+442 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-dom/package.json
+443 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-highlighted-textarea/package.json
+444 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-router/package.json
+445 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-router-dom/package.json
+446 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/read-all-stream/package.json
+447 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/read-pkg/package.json
+448 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/read-pkg-up/package.json
+449 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/readable-stream/package.json
+450 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/readdirp/package.json
+451 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/regenerate/package.json
+452 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/regenerator-runtime/package.json
+453 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/regenerator-transform/package.json
+454 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/regex-cache/package.json
+455 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/regexpu-core/package.json
+456 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/registry-url/package.json
+457 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/regjsgen/package.json
+458 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/regjsparser/package.json
+459 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/remove-trailing-separator/package.json
+460 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/repeat-element/package.json
+461 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/repeat-string/package.json
+462 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/repeating/package.json
+463 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/request/package.json
+464 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/require-directory/package.json
+465 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/require-main-filename/package.json
+466 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/require_optional/package.json
+467 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/resolve-from/package.json
+468 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/resolve-pathname/package.json
+469 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/right-align/package.json
+470 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/ripemd160/package.json
+471 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/rw/package.json
+472 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/safe-buffer/package.json
+473 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/semantic-ui-react/package.json
+474 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/semver/package.json
+475 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/semver-diff/package.json
+476 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/send/package.json
+477 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/serve-static/package.json
+478 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/set-blocking/package.json
+479 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/set-immediate-shim/package.json
+480 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/setimmediate/package.json
+481 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/setprototypeof/package.json
+482 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/sha.js/package.json
+483 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/shebang-command/package.json
+484 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/shebang-regex/package.json
+485 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/signal-exit/package.json
+486 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/slash/package.json
+487 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/slide/package.json
+488 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/sntp/package.json
+489 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/source-list-map/package.json
+490 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/source-map/package.json
+491 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/source-map-support/package.json
+492 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/spdx-correct/package.json
+493 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/spdx-expression-parse/package.json
+494 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/spdx-license-ids/package.json
+495 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/split/package.json
+496 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/sshpk/package.json
+497 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/statuses/package.json
+498 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/stream-browserify/package.json
+499 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/stream-combiner/package.json
+500 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/stream-http/package.json
+501 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/stream-shift/package.json
+502 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/string-length/package.json
+503 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/string-width/package.json
+504 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/string_decoder/package.json
+505 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/stringstream/package.json
+506 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/strip-ansi/package.json
+507 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/strip-bom/package.json
+508 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/strip-eof/package.json
+509 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/strip-json-comments/package.json
+510 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/supports-color/package.json
+511 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/tapable/package.json
+512 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/through/package.json
+513 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/timed-out/package.json
+514 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/timers-browserify/package.json
+515 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/to-arraybuffer/package.json
+516 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/to-fast-properties/package.json
+517 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/touch/package.json
+518 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/tough-cookie/package.json
+519 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/trim-right/package.json
+520 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/tty-browserify/package.json
+521 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/tunnel-agent/package.json
+522 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/tweetnacl/package.json
+523 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/type-is/package.json
+524 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/ua-parser-js/package.json
+525 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/uglify-js/package.json
+526 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/uglify-to-browserify/package.json
+527 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/uglifyjs-webpack-plugin/package.json
+528 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/undefsafe/package.json
+529 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/unpipe/package.json
+530 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/update-notifier/package.json
+531 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/url/package.json
+532 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/util/package.json
+533 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/util-deprecate/package.json
+534 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/utils-merge/package.json
+535 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/uuid/package.json
+536 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/validate-npm-package-license/package.json
+537 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/value-equal/package.json
+538 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/vary/package.json
+539 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/verror/package.json
+540 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/vm-browserify/package.json
+541 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/warning/package.json
+542 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/watchpack/package.json
+543 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/webpack/package.json
+544 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/webpack-sources/package.json
+545 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/whatwg-fetch/package.json
+546 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/which/package.json
+547 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/which-module/package.json
+548 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/window-size/package.json
+549 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/wordwrap/package.json
+550 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/wrap-ansi/package.json
+551 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/wrappy/package.json
+552 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/write-file-atomic/package.json
+553 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/xdg-basedir/package.json
+554 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/xmlhttprequest/package.json
+555 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/xtend/package.json
+556 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/y18n/package.json
+557 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/yallist/package.json
+558 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/yargs/package.json
+559 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/yargs-parser/package.json
+560 verbose installManyTop reading scoped package data from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/@types/node/package.json
+561 info package.json core-js@1.2.7 No README data
+562 info package.json dom-serializer@0.1.0 No README data
+563 info package.json estraverse@4.2.0 No README data
+564 info package.json jsesc@1.3.0 No README data
+565 info package.json react-highlighted-textarea@0.0.2 No README data
+566 info package.json setimmediate@1.0.5 No README data
+567 info package.json a-sync-waterfall@1.0.0 No license field.
+568 info package.json array-unique@0.2.1 license should be a valid SPDX license expression
+569 info package.json assert@1.4.1 assert is also the name of a node core module.
 570 info package.json bcrypt-pbkdf@1.0.1 No repository field.
-571 info package.json console-browserify@1.1.0 No license field.
-572 info package.json css-select@1.2.0 license should be a valid SPDX license expression
+571 info package.json buffer@4.9.1 buffer is also the name of a node core module.
+572 info package.json console-browserify@1.1.0 No license field.
 573 info package.json css-what@2.1.0 license should be a valid SPDX license expression
-574 info package.json date-now@0.1.4 No license field.
-575 info package.json domelementtype@1.3.0 No license field.
-576 info package.json duplexer@0.1.1 No license field.
+574 info package.json css-select@1.2.0 license should be a valid SPDX license expression
+575 info package.json date-now@0.1.4 No license field.
+576 info package.json domelementtype@1.3.0 No license field.
 577 info package.json domutils@1.5.1 No license field.
 578 info package.json dom-walk@0.1.1 No license field.
-579 info package.json enhanced-resolve@3.4.1 No license field.
+579 info package.json duplexer@0.1.1 No license field.
 580 info package.json entities@1.1.1 license should be a valid SPDX license expression
-581 info package.json esutils@2.0.2 No license field.
-582 info package.json events@1.1.1 events is also the name of a node core module.
-583 info package.json extsprintf@1.0.2 No license field.
-584 info package.json glob-base@0.3.0 license should be a valid SPDX license expression
-585 info package.json hoist-non-react-statics@1.2.0 No license field.
-586 info package.json is-primitive@2.0.0 license should be a valid SPDX license expression
+581 info package.json enhanced-resolve@3.4.1 No license field.
+582 info package.json esutils@2.0.2 No license field.
+583 info package.json events@1.1.1 events is also the name of a node core module.
+584 info package.json extsprintf@1.0.2 No license field.
+585 info package.json glob-base@0.3.0 license should be a valid SPDX license expression
+586 info package.json hoist-non-react-statics@1.2.0 No license field.
 587 info package.json indexof@0.0.1 No repository field.
 588 info package.json indexof@0.0.1 No license field.
-589 info package.json json-schema@0.2.3 No license field.
-590 info package.json jsonify@0.0.0 license should be a valid SPDX license expression
-591 info package.json map-stream@0.1.0 No license field.
-592 info package.json mime@1.3.4 No license field.
-593 info package.json longest@1.0.1 license should be a valid SPDX license expression
-594 info package.json nth-check@1.0.1 license should be a valid SPDX license expression
+589 info package.json is-primitive@2.0.0 license should be a valid SPDX license expression
+590 info package.json json-schema@0.2.3 No license field.
+591 info package.json jsonify@0.0.0 license should be a valid SPDX license expression
+592 info package.json longest@1.0.1 license should be a valid SPDX license expression
+593 info package.json map-stream@0.1.0 No license field.
+594 info package.json mime@1.3.4 No license field.
 595 info package.json min-document@2.19.0 No license field.
-596 info package.json nopt@1.0.10 license should be a valid SPDX license expression
-597 info package.json pause-stream@0.0.11 license should be a valid SPDX license expression
-598 info package.json preserve@0.2.0 license should be a valid SPDX license expression
-599 info package.json process@0.11.10 process is also the name of a node core module.
-600 info package.json querystring-es3@0.2.1 No license field.
-601 info package.json punycode@1.4.1 punycode is also the name of a node core module.
-602 info package.json querystring@0.2.0 querystring is also the name of a node core module.
-603 info package.json querystring@0.2.0 No license field.
-604 info package.json regenerator-transform@0.9.11 license should be a valid SPDX license expression
-605 info package.json regjsparser@0.1.5 license should be a valid SPDX license expression
+596 info package.json nth-check@1.0.1 license should be a valid SPDX license expression
+597 info package.json nopt@1.0.10 license should be a valid SPDX license expression
+598 info package.json pause-stream@0.0.11 license should be a valid SPDX license expression
+599 info package.json preserve@0.2.0 license should be a valid SPDX license expression
+600 info package.json process@0.11.10 process is also the name of a node core module.
+601 info package.json querystring@0.2.0 querystring is also the name of a node core module.
+602 info package.json querystring@0.2.0 No license field.
+603 info package.json querystring-es3@0.2.1 No license field.
+604 info package.json punycode@1.4.1 punycode is also the name of a node core module.
+605 info package.json regenerator-transform@0.9.11 license should be a valid SPDX license expression
 606 info package.json repeat-element@1.1.2 license should be a valid SPDX license expression
-607 info package.json sntp@1.0.9 No license field.
-608 info package.json timers-browserify@2.0.3 No license field.
+607 info package.json regjsparser@0.1.5 license should be a valid SPDX license expression
+608 info package.json sntp@1.0.9 No license field.
 609 info package.json string_decoder@1.0.3 string_decoder is also the name of a node core module.
-610 info package.json undefsafe@0.0.3 license should be a valid SPDX license expression
-611 info package.json url@0.11.0 url is also the name of a node core module.
-612 info package.json utils-merge@1.0.0 No license field.
-613 info package.json verror@1.3.6 No license field.
-614 info package.json util@0.10.3 util is also the name of a node core module.
-615 info package.json wordwrap@0.0.2 license should be a valid SPDX license expression
-616 verbose readDependencies loading dependencies from /home/ubuntu/workspace/exemplars/wordcloud-node/package.json
-617 silly cache add args [ 'pubsub-js', null ]
-618 verbose cache add spec pubsub-js
-619 silly cache add parsed spec Result {
-619 silly cache add   raw: 'pubsub-js',
-619 silly cache add   scope: null,
-619 silly cache add   name: 'pubsub-js',
-619 silly cache add   rawSpec: '',
-619 silly cache add   spec: 'latest',
-619 silly cache add   type: 'tag' }
-620 silly addNamed pubsub-js@latest
-621 verbose addNamed "latest" is being treated as a dist-tag for pubsub-js
-622 info addNameTag [ 'pubsub-js', 'latest' ]
-623 silly mapToRegistry name pubsub-js
-624 silly mapToRegistry using default registry
-625 silly mapToRegistry registry https://registry.npmjs.org/
-626 silly mapToRegistry data Result {
-626 silly mapToRegistry   raw: 'pubsub-js',
-626 silly mapToRegistry   scope: null,
-626 silly mapToRegistry   name: 'pubsub-js',
-626 silly mapToRegistry   rawSpec: '',
-626 silly mapToRegistry   spec: 'latest',
-626 silly mapToRegistry   type: 'tag' }
-627 silly mapToRegistry uri https://registry.npmjs.org/pubsub-js
-628 verbose addNameTag registry:https://registry.npmjs.org/pubsub-js not in flight; fetching
-629 verbose request uri https://registry.npmjs.org/pubsub-js
-630 verbose request no auth needed
-631 info attempt registry request try #1 at 9:15:41 PM
-632 verbose request id 2e7dc918cde002a3
-633 verbose etag W/"5916b68d-726e"
-634 verbose lastModified Sat, 13 May 2017 07:32:29 GMT
-635 http request GET https://registry.npmjs.org/pubsub-js
-636 http 304 https://registry.npmjs.org/pubsub-js
-637 verbose headers { date: 'Thu, 03 Aug 2017 21:15:41 GMT',
-637 verbose headers   via: '1.1 varnish',
-637 verbose headers   'cache-control': 'max-age=300',
-637 verbose headers   etag: 'W/"5916b68d-726e"',
-637 verbose headers   age: '0',
-637 verbose headers   connection: 'keep-alive',
-637 verbose headers   'x-served-by': 'cache-ord1727-ORD',
-637 verbose headers   'x-cache': 'HIT',
-637 verbose headers   'x-cache-hits': '1',
-637 verbose headers   'x-timer': 'S1501794942.961216,VS0,VE20',
-637 verbose headers   vary: 'Accept-Encoding, Accept' }
-638 silly get cb [ 304,
-638 silly get   { date: 'Thu, 03 Aug 2017 21:15:41 GMT',
-638 silly get     via: '1.1 varnish',
-638 silly get     'cache-control': 'max-age=300',
-638 silly get     etag: 'W/"5916b68d-726e"',
-638 silly get     age: '0',
-638 silly get     connection: 'keep-alive',
-638 silly get     'x-served-by': 'cache-ord1727-ORD',
-638 silly get     'x-cache': 'HIT',
-638 silly get     'x-cache-hits': '1',
-638 silly get     'x-timer': 'S1501794942.961216,VS0,VE20',
-638 silly get     vary: 'Accept-Encoding, Accept' } ]
-639 verbose etag https://registry.npmjs.org/pubsub-js from cache
-640 verbose get saving pubsub-js to /home/ubuntu/.npm/registry.npmjs.org/pubsub-js/.cache.json
-641 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
-642 silly addNameTag next cb for pubsub-js with tag latest
-643 silly addNamed pubsub-js@1.5.7
-644 verbose addNamed "1.5.7" is a plain semver version for pubsub-js
-645 silly cache afterAdd pubsub-js@1.5.7
-646 verbose afterAdd /home/ubuntu/.npm/pubsub-js/1.5.7/package/package.json not in flight; writing
-647 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
-648 verbose afterAdd /home/ubuntu/.npm/pubsub-js/1.5.7/package/package.json written
-649 silly install resolved [ { name: 'pubsub-js',
-649 silly install resolved     version: '1.5.7',
-649 silly install resolved     description: 'Dependency free publish/subscribe library',
-649 silly install resolved     main: './src/pubsub.js',
-649 silly install resolved     directories: { lib: 'src', test: 'test' },
-649 silly install resolved     scripts:
-649 silly install resolved      { lint: '$(npm bin)/jslint src/**/*.js test/**/*.js',
-649 silly install resolved        test: 'npm run lint && $(npm bin)/grunt test' },
-649 silly install resolved     repository: { type: 'git', url: 'git://github.com/mroderick/PubSubJS.git' },
-649 silly install resolved     keywords:
-649 silly install resolved      [ 'pub/sub',
-649 silly install resolved        'pubsub',
-649 silly install resolved        'publish/subscribe',
-649 silly install resolved        'publish',
-649 silly install resolved        'subscribe' ],
-649 silly install resolved     author:
-649 silly install resolved      { name: 'Morgan Roderick',
-649 silly install resolved        email: 'morgan@roderick.dk',
-649 silly install resolved        url: 'http://roderick.dk' },
-649 silly install resolved     license: 'MIT',
-649 silly install resolved     devDependencies:
-649 silly install resolved      { buster: '0.7.18',
-649 silly install resolved        grunt: '0.4.5',
-649 silly install resolved        'grunt-buster': '0.3.2',
-649 silly install resolved        'grunt-cli': '0.1.13',
-649 silly install resolved        'grunt-contrib-concat': '0.5.0',
-649 silly install resolved        jslint: '0.7.2',
-649 silly install resolved        phantomjs: '1.9.13' },
-649 silly install resolved     gitHead: 'dda23484896e9e07b94c9770853a3c9ed1fdad3a',
-649 silly install resolved     bugs: { url: 'https://github.com/mroderick/PubSubJS/issues' },
-649 silly install resolved     homepage: 'https://github.com/mroderick/PubSubJS#readme',
-649 silly install resolved     _id: 'pubsub-js@1.5.7',
-649 silly install resolved     _shasum: 'a9f386ac141b0905b19cbb2dd57256265f975744',
-649 silly install resolved     _from: 'pubsub-js@latest',
-649 silly install resolved     _npmVersion: '3.10.8',
-649 silly install resolved     _nodeVersion: '6.8.1',
-649 silly install resolved     _npmUser: { name: 'mrgnrdrck', email: 'morgan@roderick.dk' },
-649 silly install resolved     maintainers: [ [Object] ],
-649 silly install resolved     dist:
-649 silly install resolved      { shasum: 'a9f386ac141b0905b19cbb2dd57256265f975744',
-649 silly install resolved        tarball: 'https://registry.npmjs.org/pubsub-js/-/pubsub-js-1.5.7.tgz' },
-649 silly install resolved     _npmOperationalInternal:
-649 silly install resolved      { host: 'packages-18-east.internal.npmjs.com',
-649 silly install resolved        tmp: 'tmp/pubsub-js-1.5.7.tgz_1494660747622_0.3005882785655558' },
-649 silly install resolved     _resolved: 'https://registry.npmjs.org/pubsub-js/-/pubsub-js-1.5.7.tgz',
-649 silly install resolved     readme: 'ERROR: No README data found!' } ]
-650 info install pubsub-js@1.5.7 into /home/ubuntu/workspace/exemplars/wordcloud-node
-651 info installOne pubsub-js@1.5.7
-652 verbose installOne of pubsub-js to /home/ubuntu/workspace/exemplars/wordcloud-node not in flight; installing
-653 verbose correctMkdir /home/ubuntu/.npm/_locks correctMkdir not in flight; initializing
-654 verbose lock using /home/ubuntu/.npm/_locks/pubsub-js-1e790f3a2a1bdaa5.lock for /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/pubsub-js
-655 silly install write writing pubsub-js 1.5.7 to /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/pubsub-js
-656 verbose unbuild node_modules/pubsub-js
-657 silly gentlyRm /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/pubsub-js is being purged from base /home/ubuntu/workspace/exemplars/wordcloud-node
-658 verbose gentlyRm don't care about contents; nuking /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/pubsub-js
-659 verbose tar unpack /home/ubuntu/.npm/pubsub-js/1.5.7/package.tgz
-660 verbose tar unpacking to /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/pubsub-js
-661 silly gentlyRm /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/pubsub-js is being purged
-662 verbose gentlyRm don't care about contents; nuking /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/pubsub-js
-663 silly gunzTarPerm modes [ '755', '644' ]
-664 silly gunzTarPerm extractEntry package.json
-665 silly gunzTarPerm extractEntry .npmignore
-666 silly gunzTarPerm extractEntry README.md
-667 silly gunzTarPerm extractEntry Gruntfile.js
-668 silly gunzTarPerm extractEntry autolint.js
-669 silly gunzTarPerm extractEntry composer.json
-670 silly gunzTarPerm extractEntry .editorconfig
-671 silly gunzTarPerm extractEntry .jslintrc
-672 silly gunzTarPerm extractEntry Rakefile
-673 silly gunzTarPerm extractEntry .travis.yml
-674 silly gunzTarPerm extractEntry iframe/pubsub-bridge.js
-675 silly gunzTarPerm extractEntry iframe/frame1.html
-676 silly gunzTarPerm extractEntry iframe/frame2.html
-677 silly gunzTarPerm extractEntry iframe/index.html
-678 silly gunzTarPerm extractEntry jquery-integration.html
-679 silly gunzTarPerm extractEntry lib/jquery-1.7.2.js
-680 silly gunzTarPerm extractEntry test/buster.js
-681 silly gunzTarPerm extractEntry test/helper.js
-682 silly gunzTarPerm extractEntry test/test-bug-9.js
-683 silly gunzTarPerm extractEntry test/test-clearSubscriptions.js
-684 silly gunzTarPerm extractEntry test/test-hierarchical-addressing.js
-685 silly gunzTarPerm extractEntry test/test-issue-54.js
-686 silly gunzTarPerm extractEntry test/test-jquery-integration.js
-687 silly gunzTarPerm extractEntry test/test-publish.js
-688 silly gunzTarPerm extractEntry test/test-subscribe.js
-689 silly gunzTarPerm extractEntry test/test-unsubscribe.js
-690 silly gunzTarPerm extractEntry CONTRIBUTING.md
-691 silly gunzTarPerm extractEntry src/pubsub.js
-692 silly gunzTarPerm extractEntry wrappers/jquery/pubsub.js.post.txt
-693 silly gunzTarPerm extractEntry wrappers/jquery/pubsub.js.pre.txt
-694 verbose write writing to /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/pubsub-js/package.json
-695 info preinstall pubsub-js@1.5.7
-696 verbose readDependencies loading dependencies from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/pubsub-js/package.json
-697 verbose readDependencies loading dependencies from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/pubsub-js/package.json
-698 silly install resolved []
-699 verbose about to build /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/pubsub-js
-700 info build /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/pubsub-js
-701 info linkStuff pubsub-js@1.5.7
-702 silly linkStuff pubsub-js@1.5.7 has /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules as its parent node_modules
-703 verbose linkBins pubsub-js@1.5.7
-704 verbose linkMans pubsub-js@1.5.7
-705 verbose rebuildBundles pubsub-js@1.5.7
-706 info install pubsub-js@1.5.7
-707 info postinstall pubsub-js@1.5.7
-708 verbose unlock done using /home/ubuntu/.npm/_locks/pubsub-js-1e790f3a2a1bdaa5.lock for /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/pubsub-js
-709 verbose validateInstall loading /home/ubuntu/workspace/exemplars/wordcloud-node/package.json for validation
-710 verbose stack Error: The package ajv@4.11.8 does not satisfy its siblings' peerDependencies requirements!
-710 verbose stack     at /home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/lib/install.js:125:32
-710 verbose stack     at /home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/lib/install.js:268:7
-710 verbose stack     at /home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
-710 verbose stack     at /home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
-710 verbose stack     at cb (/home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
-710 verbose stack     at /home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
-710 verbose stack     at cb (/home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
-710 verbose stack     at /home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
-710 verbose stack     at cb (/home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
-710 verbose stack     at /home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
-711 verbose cwd /home/ubuntu/workspace/exemplars/wordcloud-node
-712 error Linux 4.9.17-c9
-713 error argv "/home/ubuntu/.nvm/versions/node/v4.4.5/bin/node" "/home/ubuntu/.nvm/versions/node/v4.4.5/bin/npm" "install" "pubsub-js" "--save"
-714 error node v4.4.5
-715 error npm  v2.15.5
-716 error code EPEERINVALID
-717 error peerinvalid The package ajv@4.11.8 does not satisfy its siblings' peerDependencies requirements!
-718 verbose exit [ 1, true ]
+610 info package.json timers-browserify@2.0.3 No license field.
+611 info package.json utils-merge@1.0.0 No license field.
+612 info package.json url@0.11.0 url is also the name of a node core module.
+613 info package.json undefsafe@0.0.3 license should be a valid SPDX license expression
+614 info package.json verror@1.3.6 No license field.
+615 info package.json util@0.10.3 util is also the name of a node core module.
+616 info package.json wordwrap@0.0.2 license should be a valid SPDX license expression
+617 verbose readDependencies loading dependencies from /home/ubuntu/workspace/exemplars/wordcloud-node/package.json
+618 silly cache add args [ 'react-hljs', null ]
+619 verbose cache add spec react-hljs
+620 silly cache add parsed spec Result {
+620 silly cache add   raw: 'react-hljs',
+620 silly cache add   scope: null,
+620 silly cache add   name: 'react-hljs',
+620 silly cache add   rawSpec: '',
+620 silly cache add   spec: 'latest',
+620 silly cache add   type: 'tag' }
+621 silly addNamed react-hljs@latest
+622 verbose addNamed "latest" is being treated as a dist-tag for react-hljs
+623 info addNameTag [ 'react-hljs', 'latest' ]
+624 silly mapToRegistry name react-hljs
+625 silly mapToRegistry using default registry
+626 silly mapToRegistry registry https://registry.npmjs.org/
+627 silly mapToRegistry data Result {
+627 silly mapToRegistry   raw: 'react-hljs',
+627 silly mapToRegistry   scope: null,
+627 silly mapToRegistry   name: 'react-hljs',
+627 silly mapToRegistry   rawSpec: '',
+627 silly mapToRegistry   spec: 'latest',
+627 silly mapToRegistry   type: 'tag' }
+628 silly mapToRegistry uri https://registry.npmjs.org/react-hljs
+629 verbose addNameTag registry:https://registry.npmjs.org/react-hljs not in flight; fetching
+630 verbose request uri https://registry.npmjs.org/react-hljs
+631 verbose request no auth needed
+632 info attempt registry request try #1 at 5:54:07 PM
+633 verbose request id 63efe4c64fe836b3
+634 verbose etag W/"58358d63-22f5"
+635 verbose lastModified Wed, 23 Nov 2016 12:36:51 GMT
+636 http request GET https://registry.npmjs.org/react-hljs
+637 http 304 https://registry.npmjs.org/react-hljs
+638 verbose headers { date: 'Tue, 08 Aug 2017 17:54:07 GMT',
+638 verbose headers   via: '1.1 varnish',
+638 verbose headers   'cache-control': 'max-age=300',
+638 verbose headers   etag: 'W/"58358d63-22f5"',
+638 verbose headers   age: '0',
+638 verbose headers   connection: 'keep-alive',
+638 verbose headers   'x-served-by': 'cache-ord1722-ORD',
+638 verbose headers   'x-cache': 'MISS',
+638 verbose headers   'x-cache-hits': '0',
+638 verbose headers   'x-timer': 'S1502214848.873387,VS0,VE45',
+638 verbose headers   vary: 'Accept-Encoding, Accept' }
+639 silly get cb [ 304,
+639 silly get   { date: 'Tue, 08 Aug 2017 17:54:07 GMT',
+639 silly get     via: '1.1 varnish',
+639 silly get     'cache-control': 'max-age=300',
+639 silly get     etag: 'W/"58358d63-22f5"',
+639 silly get     age: '0',
+639 silly get     connection: 'keep-alive',
+639 silly get     'x-served-by': 'cache-ord1722-ORD',
+639 silly get     'x-cache': 'MISS',
+639 silly get     'x-cache-hits': '0',
+639 silly get     'x-timer': 'S1502214848.873387,VS0,VE45',
+639 silly get     vary: 'Accept-Encoding, Accept' } ]
+640 verbose etag https://registry.npmjs.org/react-hljs from cache
+641 verbose get saving react-hljs to /home/ubuntu/.npm/registry.npmjs.org/react-hljs/.cache.json
+642 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
+643 silly addNameTag next cb for react-hljs with tag latest
+644 silly addNamed react-hljs@1.0.0
+645 verbose addNamed "1.0.0" is a plain semver version for react-hljs
+646 warn deprecated react-hljs@1.0.0: Deprecated! See https://github.com/simonkberg/react-hljs for alternatives
+647 silly cache afterAdd react-hljs@1.0.0
+648 verbose afterAdd /home/ubuntu/.npm/react-hljs/1.0.0/package/package.json not in flight; writing
+649 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
+650 verbose afterAdd /home/ubuntu/.npm/react-hljs/1.0.0/package/package.json written
+651 silly install resolved [ { name: 'react-hljs',
+651 silly install resolved     version: '1.0.0',
+651 silly install resolved     description: 'Highlight.js for React',
+651 silly install resolved     main: 'index.js',
+651 silly install resolved     scripts:
+651 silly install resolved      { test: 'jest',
+651 silly install resolved        lint: 'eslint src',
+651 silly install resolved        build: 'node bin/compile',
+651 silly install resolved        'build:minify': 'npm run build -- --minify',
+651 silly install resolved        'build:release': 'npm run build -- --release',
+651 silly install resolved        prepublish: 'npm run lint && npm test && npm run build:release' },
+651 silly install resolved     jest: { automock: false },
+651 silly install resolved     repository:
+651 silly install resolved      { type: 'git',
+651 silly install resolved        url: 'git+https://github.com/simonkberg/react-hljs.git' },
+651 silly install resolved     keywords:
+651 silly install resolved      [ 'react',
+651 silly install resolved        'component',
+651 silly install resolved        'highlight.js',
+651 silly install resolved        'syntax',
+651 silly install resolved        'highlight',
+651 silly install resolved        'hljs' ],
+651 silly install resolved     author: { name: 'Simon Kjellberg', email: 'simon.kjellberg@gmail.com' },
+651 silly install resolved     license: 'MIT',
+651 silly install resolved     bugs: { url: 'https://github.com/simonkberg/react-hljs/issues' },
+651 silly install resolved     homepage: 'https://github.com/simonkberg/react-hljs#readme',
+651 silly install resolved     devDependencies:
+651 silly install resolved      { archiver: '^1.0.0',
+651 silly install resolved        'babel-core': '^6.7.6',
+651 silly install resolved        'babel-eslint': '^6.0.2',
+651 silly install resolved        'babel-jest': '^11.0.0',
+651 silly install resolved        'babel-plugin-add-module-exports': '^0.1.2',
+651 silly install resolved        'babel-plugin-transform-es2015-modules-umd': '^6.6.5',
+651 silly install resolved        'babel-polyfill': '^6.7.4',
+651 silly install resolved        'babel-preset-es2015': '^6.6.0',
+651 silly install resolved        'babel-preset-react': '^6.5.0',
+651 silly install resolved        'babel-preset-stage-0': '^6.5.0',
+651 silly install resolved        del: '^2.2.0',
+651 silly install resolved        eslint: '^2.7.0',
+651 silly install resolved        'eslint-config-standard': '^5.1.0',
+651 silly install resolved        'eslint-plugin-promise': '^1.1.0',
+651 silly install resolved        'eslint-plugin-react': '^4.3.0',
+651 silly install resolved        'eslint-plugin-standard': '^1.3.2',
+651 silly install resolved        'jest-cli': '^11.0.0',
+651 silly install resolved        react: '^15.0.1',
+651 silly install resolved        'react-addons-test-utils': '^15.0.1',
+651 silly install resolved        'react-dom': '^15.0.1',
+651 silly install resolved        yargs: '^4.6.0' },
+651 silly install resolved     peerDependencies: { react: '^0.14.0 || ^15.0.0-0' },
+651 silly install resolved     dependencies: { 'highlight.js': '^9.0.0' },
+651 silly install resolved     files: [ 'index.js', 'lib/react-hljs.js', 'LICENSE', 'readme.md' ],
+651 silly install resolved     gitHead: '5eb4321f88398a12334eee02c2e7074de2dca1cf',
+651 silly install resolved     _id: 'react-hljs@1.0.0',
+651 silly install resolved     _shasum: 'db6c5076742e635f11f428dbe209e361dbcee845',
+651 silly install resolved     _from: 'react-hljs@latest',
+651 silly install resolved     _npmVersion: '3.8.7',
+651 silly install resolved     _nodeVersion: '5.10.1',
+651 silly install resolved     _npmUser: { name: 'simonkberg', email: 'simon.kjellberg@gmail.com' },
+651 silly install resolved     dist:
+651 silly install resolved      { shasum: 'db6c5076742e635f11f428dbe209e361dbcee845',
+651 silly install resolved        tarball: 'https://registry.npmjs.org/react-hljs/-/react-hljs-1.0.0.tgz' },
+651 silly install resolved     maintainers: [ [Object] ],
+651 silly install resolved     _npmOperationalInternal:
+651 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+651 silly install resolved        tmp: 'tmp/react-hljs-1.0.0.tgz_1460664402635_0.6439182348549366' },
+651 silly install resolved     deprecated: 'Deprecated! See https://github.com/simonkberg/react-hljs for alternatives',
+651 silly install resolved     directories: {},
+651 silly install resolved     _resolved: 'https://registry.npmjs.org/react-hljs/-/react-hljs-1.0.0.tgz',
+651 silly install resolved     readme: 'ERROR: No README data found!' } ]
+652 info install react-hljs@1.0.0 into /home/ubuntu/workspace/exemplars/wordcloud-node
+653 info installOne react-hljs@1.0.0
+654 verbose installOne of react-hljs to /home/ubuntu/workspace/exemplars/wordcloud-node not in flight; installing
+655 verbose correctMkdir /home/ubuntu/.npm/_locks correctMkdir not in flight; initializing
+656 verbose lock using /home/ubuntu/.npm/_locks/react-hljs-c5aa56ad59653810.lock for /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs
+657 silly install write writing react-hljs 1.0.0 to /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs
+658 verbose unbuild node_modules/react-hljs
+659 silly gentlyRm /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs is being purged from base /home/ubuntu/workspace/exemplars/wordcloud-node
+660 verbose gentlyRm don't care about contents; nuking /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs
+661 verbose tar unpack /home/ubuntu/.npm/react-hljs/1.0.0/package.tgz
+662 verbose tar unpacking to /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs
+663 silly gentlyRm /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs is being purged
+664 verbose gentlyRm don't care about contents; nuking /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs
+665 silly gunzTarPerm modes [ '755', '644' ]
+666 silly gunzTarPerm extractEntry package.json
+667 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+668 silly gunzTarPerm extractEntry LICENSE
+669 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+670 silly gunzTarPerm extractEntry index.js
+671 silly gunzTarPerm modified mode [ 'index.js', 436, 420 ]
+672 silly gunzTarPerm extractEntry lib/react-hljs.js
+673 silly gunzTarPerm modified mode [ 'lib/react-hljs.js', 436, 420 ]
+674 silly gunzTarPerm extractEntry readme.md
+675 silly gunzTarPerm modified mode [ 'readme.md', 436, 420 ]
+676 verbose write writing to /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs/package.json
+677 info preinstall react-hljs@1.0.0
+678 verbose readDependencies loading dependencies from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs/package.json
+679 silly prepareForInstallMany adding highlight.js@^9.0.0 from react-hljs dependencies
+680 verbose readDependencies loading dependencies from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs/package.json
+681 silly cache add args [ 'highlight.js@^9.0.0', null ]
+682 verbose cache add spec highlight.js@^9.0.0
+683 silly cache add parsed spec Result {
+683 silly cache add   raw: 'highlight.js@^9.0.0',
+683 silly cache add   scope: null,
+683 silly cache add   name: 'highlight.js',
+683 silly cache add   rawSpec: '^9.0.0',
+683 silly cache add   spec: '>=9.0.0 <10.0.0',
+683 silly cache add   type: 'range' }
+684 silly addNamed highlight.js@>=9.0.0 <10.0.0
+685 verbose addNamed ">=9.0.0 <10.0.0" is a valid semver range for highlight.js
+686 silly addNameRange { name: 'highlight.js',
+686 silly addNameRange   range: '>=9.0.0 <10.0.0',
+686 silly addNameRange   hasData: false }
+687 silly mapToRegistry name highlight.js
+688 silly mapToRegistry using default registry
+689 silly mapToRegistry registry https://registry.npmjs.org/
+690 silly mapToRegistry data Result {
+690 silly mapToRegistry   raw: 'highlight.js',
+690 silly mapToRegistry   scope: null,
+690 silly mapToRegistry   name: 'highlight.js',
+690 silly mapToRegistry   rawSpec: '',
+690 silly mapToRegistry   spec: 'latest',
+690 silly mapToRegistry   type: 'tag' }
+691 silly mapToRegistry uri https://registry.npmjs.org/highlight.js
+692 verbose addNameRange registry:https://registry.npmjs.org/highlight.js not in flight; fetching
+693 verbose request uri https://registry.npmjs.org/highlight.js
+694 verbose request no auth needed
+695 info attempt registry request try #1 at 5:54:08 PM
+696 verbose etag W/"596881ad-5339f"
+697 verbose lastModified Fri, 14 Jul 2017 08:32:45 GMT
+698 http request GET https://registry.npmjs.org/highlight.js
+699 http 304 https://registry.npmjs.org/highlight.js
+700 verbose headers { date: 'Tue, 08 Aug 2017 17:54:08 GMT',
+700 verbose headers   via: '1.1 varnish',
+700 verbose headers   'cache-control': 'max-age=300',
+700 verbose headers   etag: 'W/"596881ad-5339f"',
+700 verbose headers   age: '283',
+700 verbose headers   connection: 'keep-alive',
+700 verbose headers   'x-served-by': 'cache-ord1722-ORD',
+700 verbose headers   'x-cache': 'HIT',
+700 verbose headers   'x-cache-hits': '1',
+700 verbose headers   'x-timer': 'S1502214848.066018,VS0,VE0',
+700 verbose headers   vary: 'Accept-Encoding, Accept' }
+701 silly get cb [ 304,
+701 silly get   { date: 'Tue, 08 Aug 2017 17:54:08 GMT',
+701 silly get     via: '1.1 varnish',
+701 silly get     'cache-control': 'max-age=300',
+701 silly get     etag: 'W/"596881ad-5339f"',
+701 silly get     age: '283',
+701 silly get     connection: 'keep-alive',
+701 silly get     'x-served-by': 'cache-ord1722-ORD',
+701 silly get     'x-cache': 'HIT',
+701 silly get     'x-cache-hits': '1',
+701 silly get     'x-timer': 'S1502214848.066018,VS0,VE0',
+701 silly get     vary: 'Accept-Encoding, Accept' } ]
+702 verbose etag https://registry.npmjs.org/highlight.js from cache
+703 verbose get saving highlight.js to /home/ubuntu/.npm/registry.npmjs.org/highlight.js/.cache.json
+704 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
+705 silly addNameRange number 2 { name: 'highlight.js', range: '>=9.0.0 <10.0.0', hasData: true }
+706 silly addNameRange versions [ 'highlight.js',
+706 silly addNameRange   [ '1.0.0',
+706 silly addNameRange     '1.0.1',
+706 silly addNameRange     '1.0.2',
+706 silly addNameRange     '1.0.3',
+706 silly addNameRange     '1.0.4',
+706 silly addNameRange     '1.1.0',
+706 silly addNameRange     '1.1.1',
+706 silly addNameRange     '1.2.0',
+706 silly addNameRange     '7.0.1',
+706 silly addNameRange     '7.1.0',
+706 silly addNameRange     '7.2.0',
+706 silly addNameRange     '7.3.0',
+706 silly addNameRange     '7.4.0',
+706 silly addNameRange     '7.5.0',
+706 silly addNameRange     '8.0.0',
+706 silly addNameRange     '8.1.0',
+706 silly addNameRange     '8.2.0',
+706 silly addNameRange     '8.3.0',
+706 silly addNameRange     '8.4.0',
+706 silly addNameRange     '8.5.0',
+706 silly addNameRange     '8.6.0',
+706 silly addNameRange     '8.7.0',
+706 silly addNameRange     '8.8.0',
+706 silly addNameRange     '8.9.0',
+706 silly addNameRange     '8.9.1',
+706 silly addNameRange     '9.0.0',
+706 silly addNameRange     '9.1.0',
+706 silly addNameRange     '9.2.0',
+706 silly addNameRange     '9.3.0',
+706 silly addNameRange     '9.4.0',
+706 silly addNameRange     '9.5.0',
+706 silly addNameRange     '9.6.0',
+706 silly addNameRange     '9.7.0',
+706 silly addNameRange     '9.8.0',
+706 silly addNameRange     '9.9.0',
+706 silly addNameRange     '9.10.0',
+706 silly addNameRange     '9.11.0',
+706 silly addNameRange     '9.12.0' ] ]
+707 silly addNamed highlight.js@9.12.0
+708 verbose addNamed "9.12.0" is a plain semver version for highlight.js
+709 silly cache afterAdd highlight.js@9.12.0
+710 verbose afterAdd /home/ubuntu/.npm/highlight.js/9.12.0/package/package.json not in flight; writing
+711 verbose correctMkdir /home/ubuntu/.npm correctMkdir not in flight; initializing
+712 verbose afterAdd /home/ubuntu/.npm/highlight.js/9.12.0/package/package.json written
+713 silly install resolved [ { name: 'highlight.js',
+713 silly install resolved     description: 'Syntax highlighting with language autodetection.',
+713 silly install resolved     keywords: [ 'highlight', 'syntax' ],
+713 silly install resolved     homepage: 'https://highlightjs.org/',
+713 silly install resolved     version: '9.12.0',
+713 silly install resolved     author: { name: 'Ivan Sagalaev', email: 'maniac@softwaremaniacs.org' },
+713 silly install resolved     contributors:
+713 silly install resolved      [ [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object],
+713 silly install resolved        [Object] ],
+713 silly install resolved     bugs: { url: 'https://github.com/isagalaev/highlight.js/issues' },
+713 silly install resolved     license: 'BSD-3-Clause',
+713 silly install resolved     repository:
+713 silly install resolved      { type: 'git',
+713 silly install resolved        url: 'git://github.com/isagalaev/highlight.js.git' },
+713 silly install resolved     main: './lib/index.js',
+713 silly install resolved     scripts: { test: 'mocha test/', 'test-browser': 'mocha test/browser/' },
+713 silly install resolved     engines: { node: '*' },
+713 silly install resolved     devDependencies:
+713 silly install resolved      { bluebird: '^3.0.1',
+713 silly install resolved        commander: '^2.3.0',
+713 silly install resolved        del: '^2.0.2',
+713 silly install resolved        gear: '^0.9.4',
+713 silly install resolved        'gear-lib': '^0.9.2',
+713 silly install resolved        glob: '^7.0.3',
+713 silly install resolved        jsdom: '^9.2.1',
+713 silly install resolved        lodash: '^4.0.0',
+713 silly install resolved        mocha: '^2.0.1',
+713 silly install resolved        should: '^9.0.2',
+713 silly install resolved        'tiny-worker': '^1.1.1',
+713 silly install resolved        'js-beautify': '^1.5.10' },
+713 silly install resolved     _id: 'highlight.js@9.12.0',
+713 silly install resolved     _shasum: 'e6d9dbe57cbefe60751f02af336195870c90c01e',
+713 silly install resolved     _from: 'highlight.js@>=9.0.0 <10.0.0',
+713 silly install resolved     _resolved: 'https://registry.npmjs.org/highlight.js/-/highlight.js-9.12.0.tgz',
+713 silly install resolved     _npmVersion: '2.15.9',
+713 silly install resolved     _nodeVersion: '4.5.0',
+713 silly install resolved     _npmUser: { name: 'isagalaev', email: 'maniac@softwaremaniacs.org' },
+713 silly install resolved     maintainers: [ [Object], [Object] ],
+713 silly install resolved     dist:
+713 silly install resolved      { shasum: 'e6d9dbe57cbefe60751f02af336195870c90c01e',
+713 silly install resolved        tarball: 'https://registry.npmjs.org/highlight.js/-/highlight.js-9.12.0.tgz' },
+713 silly install resolved     _npmOperationalInternal:
+713 silly install resolved      { host: 's3://npm-registry-packages',
+713 silly install resolved        tmp: 'tmp/highlight.js-9.12.0.tgz_1496198855588_0.04643777245655656' },
+713 silly install resolved     directories: {},
+713 silly install resolved     readme: 'ERROR: No README data found!' } ]
+714 info install highlight.js@9.12.0 into /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs
+715 info installOne highlight.js@9.12.0
+716 verbose installOne of highlight.js to /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs not in flight; installing
+717 verbose correctMkdir /home/ubuntu/.npm/_locks correctMkdir not in flight; initializing
+718 verbose lock using /home/ubuntu/.npm/_locks/highlight-js-440037328837522c.lock for /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs/node_modules/highlight.js
+719 silly install write writing highlight.js 9.12.0 to /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs/node_modules/highlight.js
+720 verbose unbuild node_modules/react-hljs/node_modules/highlight.js
+721 silly gentlyRm /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs/node_modules/highlight.js is being purged from base /home/ubuntu/workspace/exemplars/wordcloud-node
+722 verbose gentlyRm don't care about contents; nuking /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs/node_modules/highlight.js
+723 verbose tar unpack /home/ubuntu/.npm/highlight.js/9.12.0/package.tgz
+724 verbose tar unpacking to /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs/node_modules/highlight.js
+725 silly gentlyRm /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs/node_modules/highlight.js is being purged
+726 verbose gentlyRm don't care about contents; nuking /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs/node_modules/highlight.js
+727 silly gunzTarPerm modes [ '755', '644' ]
+728 silly gunzTarPerm extractEntry package.json
+729 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
+730 silly gunzTarPerm extractEntry README.md
+731 silly gunzTarPerm modified mode [ 'README.md', 438, 420 ]
+732 silly gunzTarPerm extractEntry LICENSE
+733 silly gunzTarPerm modified mode [ 'LICENSE', 438, 420 ]
+734 silly gunzTarPerm extractEntry docs/language-guide.rst
+735 silly gunzTarPerm modified mode [ 'docs/language-guide.rst', 438, 420 ]
+736 silly gunzTarPerm extractEntry docs/api.rst
+737 silly gunzTarPerm modified mode [ 'docs/api.rst', 438, 420 ]
+738 silly gunzTarPerm extractEntry docs/css-classes-reference.rst
+739 silly gunzTarPerm modified mode [ 'docs/css-classes-reference.rst', 438, 420 ]
+740 silly gunzTarPerm extractEntry docs/index.rst
+741 silly gunzTarPerm modified mode [ 'docs/index.rst', 438, 420 ]
+742 silly gunzTarPerm extractEntry docs/language-contribution.rst
+743 silly gunzTarPerm modified mode [ 'docs/language-contribution.rst', 438, 420 ]
+744 silly gunzTarPerm extractEntry docs/building-testing.rst
+745 silly gunzTarPerm modified mode [ 'docs/building-testing.rst', 438, 420 ]
+746 silly gunzTarPerm extractEntry docs/language-requests.rst
+747 silly gunzTarPerm modified mode [ 'docs/language-requests.rst', 438, 420 ]
+748 silly gunzTarPerm extractEntry docs/line-numbers.rst
+749 silly gunzTarPerm modified mode [ 'docs/line-numbers.rst', 438, 420 ]
+750 silly gunzTarPerm extractEntry docs/reference.rst
+751 silly gunzTarPerm modified mode [ 'docs/reference.rst', 438, 420 ]
+752 silly gunzTarPerm extractEntry docs/release-process.rst
+753 silly gunzTarPerm modified mode [ 'docs/release-process.rst', 438, 420 ]
+754 silly gunzTarPerm extractEntry docs/style-guide.rst
+755 silly gunzTarPerm modified mode [ 'docs/style-guide.rst', 438, 420 ]
+756 silly gunzTarPerm extractEntry lib/highlight.js
+757 silly gunzTarPerm modified mode [ 'lib/highlight.js', 438, 420 ]
+758 silly gunzTarPerm extractEntry lib/index.js
+759 silly gunzTarPerm modified mode [ 'lib/index.js', 438, 420 ]
+760 silly gunzTarPerm extractEntry lib/languages/1c.js
+761 silly gunzTarPerm modified mode [ 'lib/languages/1c.js', 438, 420 ]
+762 silly gunzTarPerm extractEntry lib/languages/kotlin.js
+763 silly gunzTarPerm modified mode [ 'lib/languages/kotlin.js', 438, 420 ]
+764 silly gunzTarPerm extractEntry lib/languages/lasso.js
+765 silly gunzTarPerm modified mode [ 'lib/languages/lasso.js', 438, 420 ]
+766 silly gunzTarPerm extractEntry lib/languages/ldif.js
+767 silly gunzTarPerm modified mode [ 'lib/languages/ldif.js', 438, 420 ]
+768 silly gunzTarPerm extractEntry lib/languages/leaf.js
+769 silly gunzTarPerm modified mode [ 'lib/languages/leaf.js', 438, 420 ]
+770 silly gunzTarPerm extractEntry lib/languages/julia.js
+771 silly gunzTarPerm modified mode [ 'lib/languages/julia.js', 438, 420 ]
+772 silly gunzTarPerm extractEntry lib/languages/lisp.js
+773 silly gunzTarPerm modified mode [ 'lib/languages/lisp.js', 438, 420 ]
+774 silly gunzTarPerm extractEntry lib/languages/livecodeserver.js
+775 silly gunzTarPerm modified mode [ 'lib/languages/livecodeserver.js', 438, 420 ]
+776 silly gunzTarPerm extractEntry lib/languages/livescript.js
+777 silly gunzTarPerm modified mode [ 'lib/languages/livescript.js', 438, 420 ]
+778 silly gunzTarPerm extractEntry lib/languages/llvm.js
+779 silly gunzTarPerm modified mode [ 'lib/languages/llvm.js', 438, 420 ]
+780 silly gunzTarPerm extractEntry lib/languages/lsl.js
+781 silly gunzTarPerm modified mode [ 'lib/languages/lsl.js', 438, 420 ]
+782 silly gunzTarPerm extractEntry lib/languages/julia-repl.js
+783 silly gunzTarPerm modified mode [ 'lib/languages/julia-repl.js', 438, 420 ]
+784 silly gunzTarPerm extractEntry lib/languages/lua.js
+785 silly gunzTarPerm modified mode [ 'lib/languages/lua.js', 438, 420 ]
+786 silly gunzTarPerm extractEntry lib/languages/json.js
+787 silly gunzTarPerm modified mode [ 'lib/languages/json.js', 438, 420 ]
+788 silly gunzTarPerm extractEntry lib/languages/makefile.js
+789 silly gunzTarPerm modified mode [ 'lib/languages/makefile.js', 438, 420 ]
+790 silly gunzTarPerm extractEntry lib/languages/jboss-cli.js
+791 silly gunzTarPerm modified mode [ 'lib/languages/jboss-cli.js', 438, 420 ]
+792 silly gunzTarPerm extractEntry lib/languages/markdown.js
+793 silly gunzTarPerm modified mode [ 'lib/languages/markdown.js', 438, 420 ]
+794 silly gunzTarPerm extractEntry lib/languages/javascript.js
+795 silly gunzTarPerm modified mode [ 'lib/languages/javascript.js', 438, 420 ]
+796 silly gunzTarPerm extractEntry lib/languages/mathematica.js
+797 silly gunzTarPerm modified mode [ 'lib/languages/mathematica.js', 438, 420 ]
+798 silly gunzTarPerm extractEntry lib/languages/java.js
+799 silly gunzTarPerm modified mode [ 'lib/languages/java.js', 438, 420 ]
+800 silly gunzTarPerm extractEntry lib/languages/matlab.js
+801 silly gunzTarPerm modified mode [ 'lib/languages/matlab.js', 438, 420 ]
+802 silly gunzTarPerm extractEntry lib/languages/irpf90.js
+803 silly gunzTarPerm modified mode [ 'lib/languages/irpf90.js', 438, 420 ]
+804 silly gunzTarPerm extractEntry lib/languages/maxima.js
+805 silly gunzTarPerm modified mode [ 'lib/languages/maxima.js', 438, 420 ]
+806 silly gunzTarPerm extractEntry lib/languages/ini.js
+807 silly gunzTarPerm modified mode [ 'lib/languages/ini.js', 438, 420 ]
+808 silly gunzTarPerm extractEntry lib/languages/mel.js
+809 silly gunzTarPerm modified mode [ 'lib/languages/mel.js', 438, 420 ]
+810 silly gunzTarPerm extractEntry lib/languages/inform7.js
+811 silly gunzTarPerm modified mode [ 'lib/languages/inform7.js', 438, 420 ]
+812 silly gunzTarPerm extractEntry lib/languages/mercury.js
+813 silly gunzTarPerm modified mode [ 'lib/languages/mercury.js', 438, 420 ]
+814 silly gunzTarPerm extractEntry lib/languages/hy.js
+815 silly gunzTarPerm modified mode [ 'lib/languages/hy.js', 438, 420 ]
+816 silly gunzTarPerm extractEntry lib/languages/mipsasm.js
+817 silly gunzTarPerm modified mode [ 'lib/languages/mipsasm.js', 438, 420 ]
+818 silly gunzTarPerm extractEntry lib/languages/http.js
+819 silly gunzTarPerm modified mode [ 'lib/languages/http.js', 438, 420 ]
+820 silly gunzTarPerm extractEntry lib/languages/mizar.js
+821 silly gunzTarPerm modified mode [ 'lib/languages/mizar.js', 438, 420 ]
+822 silly gunzTarPerm extractEntry lib/languages/htmlbars.js
+823 silly gunzTarPerm modified mode [ 'lib/languages/htmlbars.js', 438, 420 ]
+824 silly gunzTarPerm extractEntry lib/languages/mojolicious.js
+825 silly gunzTarPerm modified mode [ 'lib/languages/mojolicious.js', 438, 420 ]
+826 silly gunzTarPerm extractEntry lib/languages/hsp.js
+827 silly gunzTarPerm modified mode [ 'lib/languages/hsp.js', 438, 420 ]
+828 silly gunzTarPerm extractEntry lib/languages/monkey.js
+829 silly gunzTarPerm modified mode [ 'lib/languages/monkey.js', 438, 420 ]
+830 silly gunzTarPerm extractEntry lib/languages/haxe.js
+831 silly gunzTarPerm modified mode [ 'lib/languages/haxe.js', 438, 420 ]
+832 silly gunzTarPerm extractEntry lib/languages/moonscript.js
+833 silly gunzTarPerm modified mode [ 'lib/languages/moonscript.js', 438, 420 ]
+834 silly gunzTarPerm extractEntry lib/languages/haskell.js
+835 silly gunzTarPerm modified mode [ 'lib/languages/haskell.js', 438, 420 ]
+836 silly gunzTarPerm extractEntry lib/languages/n1ql.js
+837 silly gunzTarPerm modified mode [ 'lib/languages/n1ql.js', 438, 420 ]
+838 silly gunzTarPerm extractEntry lib/languages/handlebars.js
+839 silly gunzTarPerm modified mode [ 'lib/languages/handlebars.js', 438, 420 ]
+840 silly gunzTarPerm extractEntry lib/languages/nginx.js
+841 silly gunzTarPerm modified mode [ 'lib/languages/nginx.js', 438, 420 ]
+842 silly gunzTarPerm extractEntry lib/languages/haml.js
+843 silly gunzTarPerm modified mode [ 'lib/languages/haml.js', 438, 420 ]
+844 silly gunzTarPerm extractEntry lib/languages/nimrod.js
+845 silly gunzTarPerm modified mode [ 'lib/languages/nimrod.js', 438, 420 ]
+846 silly gunzTarPerm extractEntry lib/languages/groovy.js
+847 silly gunzTarPerm modified mode [ 'lib/languages/groovy.js', 438, 420 ]
+848 silly gunzTarPerm extractEntry lib/languages/nix.js
+849 silly gunzTarPerm modified mode [ 'lib/languages/nix.js', 438, 420 ]
+850 silly gunzTarPerm extractEntry lib/languages/gradle.js
+851 silly gunzTarPerm modified mode [ 'lib/languages/gradle.js', 438, 420 ]
+852 silly gunzTarPerm extractEntry lib/languages/nsis.js
+853 silly gunzTarPerm modified mode [ 'lib/languages/nsis.js', 438, 420 ]
+854 silly gunzTarPerm extractEntry lib/languages/golo.js
+855 silly gunzTarPerm modified mode [ 'lib/languages/golo.js', 438, 420 ]
+856 silly gunzTarPerm extractEntry lib/languages/objectivec.js
+857 silly gunzTarPerm modified mode [ 'lib/languages/objectivec.js', 438, 420 ]
+858 silly gunzTarPerm extractEntry lib/languages/go.js
+859 silly gunzTarPerm modified mode [ 'lib/languages/go.js', 438, 420 ]
+860 silly gunzTarPerm extractEntry lib/languages/ocaml.js
+861 silly gunzTarPerm modified mode [ 'lib/languages/ocaml.js', 438, 420 ]
+862 silly gunzTarPerm extractEntry lib/languages/glsl.js
+863 silly gunzTarPerm modified mode [ 'lib/languages/glsl.js', 438, 420 ]
+864 silly gunzTarPerm extractEntry lib/languages/openscad.js
+865 silly gunzTarPerm modified mode [ 'lib/languages/openscad.js', 438, 420 ]
+866 silly gunzTarPerm extractEntry lib/languages/gherkin.js
+867 silly gunzTarPerm modified mode [ 'lib/languages/gherkin.js', 438, 420 ]
+868 silly gunzTarPerm extractEntry lib/languages/oxygene.js
+869 silly gunzTarPerm modified mode [ 'lib/languages/oxygene.js', 438, 420 ]
+870 silly gunzTarPerm extractEntry lib/languages/gcode.js
+871 silly gunzTarPerm modified mode [ 'lib/languages/gcode.js', 438, 420 ]
+872 silly gunzTarPerm extractEntry lib/languages/parser3.js
+873 silly gunzTarPerm modified mode [ 'lib/languages/parser3.js', 438, 420 ]
+874 silly gunzTarPerm extractEntry lib/languages/gauss.js
+875 silly gunzTarPerm modified mode [ 'lib/languages/gauss.js', 438, 420 ]
+876 silly gunzTarPerm extractEntry lib/languages/perl.js
+877 silly gunzTarPerm modified mode [ 'lib/languages/perl.js', 438, 420 ]
+878 silly gunzTarPerm extractEntry lib/languages/gams.js
+879 silly gunzTarPerm modified mode [ 'lib/languages/gams.js', 438, 420 ]
+880 silly gunzTarPerm extractEntry lib/languages/pf.js
+881 silly gunzTarPerm modified mode [ 'lib/languages/pf.js', 438, 420 ]
+882 silly gunzTarPerm extractEntry lib/languages/fsharp.js
+883 silly gunzTarPerm modified mode [ 'lib/languages/fsharp.js', 438, 420 ]
+884 silly gunzTarPerm extractEntry lib/languages/php.js
+885 silly gunzTarPerm modified mode [ 'lib/languages/php.js', 438, 420 ]
+886 silly gunzTarPerm extractEntry lib/languages/fortran.js
+887 silly gunzTarPerm modified mode [ 'lib/languages/fortran.js', 438, 420 ]
+888 silly gunzTarPerm extractEntry lib/languages/pony.js
+889 silly gunzTarPerm modified mode [ 'lib/languages/pony.js', 438, 420 ]
+890 silly gunzTarPerm extractEntry lib/languages/flix.js
+891 silly gunzTarPerm modified mode [ 'lib/languages/flix.js', 438, 420 ]
+892 silly gunzTarPerm extractEntry lib/languages/powershell.js
+893 silly gunzTarPerm modified mode [ 'lib/languages/powershell.js', 438, 420 ]
+894 silly gunzTarPerm extractEntry lib/languages/fix.js
+895 silly gunzTarPerm modified mode [ 'lib/languages/fix.js', 438, 420 ]
+896 silly gunzTarPerm extractEntry lib/languages/processing.js
+897 silly gunzTarPerm modified mode [ 'lib/languages/processing.js', 438, 420 ]
+898 silly gunzTarPerm extractEntry lib/languages/excel.js
+899 silly gunzTarPerm modified mode [ 'lib/languages/excel.js', 438, 420 ]
+900 silly gunzTarPerm extractEntry lib/languages/profile.js
+901 silly gunzTarPerm modified mode [ 'lib/languages/profile.js', 438, 420 ]
+902 silly gunzTarPerm extractEntry lib/languages/erlang.js
+903 silly gunzTarPerm modified mode [ 'lib/languages/erlang.js', 438, 420 ]
+904 silly gunzTarPerm extractEntry lib/languages/prolog.js
+905 silly gunzTarPerm modified mode [ 'lib/languages/prolog.js', 438, 420 ]
+906 silly gunzTarPerm extractEntry lib/languages/erlang-repl.js
+907 silly gunzTarPerm modified mode [ 'lib/languages/erlang-repl.js', 438, 420 ]
+908 silly gunzTarPerm extractEntry lib/languages/protobuf.js
+909 silly gunzTarPerm modified mode [ 'lib/languages/protobuf.js', 438, 420 ]
+910 silly gunzTarPerm extractEntry lib/languages/erb.js
+911 silly gunzTarPerm modified mode [ 'lib/languages/erb.js', 438, 420 ]
+912 silly gunzTarPerm extractEntry lib/languages/puppet.js
+913 silly gunzTarPerm modified mode [ 'lib/languages/puppet.js', 438, 420 ]
+914 silly gunzTarPerm extractEntry lib/languages/elm.js
+915 silly gunzTarPerm modified mode [ 'lib/languages/elm.js', 438, 420 ]
+916 silly gunzTarPerm extractEntry lib/languages/purebasic.js
+917 silly gunzTarPerm modified mode [ 'lib/languages/purebasic.js', 438, 420 ]
+918 silly gunzTarPerm extractEntry lib/languages/elixir.js
+919 silly gunzTarPerm modified mode [ 'lib/languages/elixir.js', 438, 420 ]
+920 silly gunzTarPerm extractEntry lib/languages/python.js
+921 silly gunzTarPerm modified mode [ 'lib/languages/python.js', 438, 420 ]
+922 silly gunzTarPerm extractEntry lib/languages/ebnf.js
+923 silly gunzTarPerm modified mode [ 'lib/languages/ebnf.js', 438, 420 ]
+924 silly gunzTarPerm extractEntry lib/languages/q.js
+925 silly gunzTarPerm modified mode [ 'lib/languages/q.js', 438, 420 ]
+926 silly gunzTarPerm extractEntry lib/languages/dust.js
+927 silly gunzTarPerm modified mode [ 'lib/languages/dust.js', 438, 420 ]
+928 silly gunzTarPerm extractEntry lib/languages/qml.js
+929 silly gunzTarPerm modified mode [ 'lib/languages/qml.js', 438, 420 ]
+930 silly gunzTarPerm extractEntry lib/languages/dts.js
+931 silly gunzTarPerm modified mode [ 'lib/languages/dts.js', 438, 420 ]
+932 silly gunzTarPerm extractEntry lib/languages/r.js
+933 silly gunzTarPerm modified mode [ 'lib/languages/r.js', 438, 420 ]
+934 silly gunzTarPerm extractEntry lib/languages/dsconfig.js
+935 silly gunzTarPerm modified mode [ 'lib/languages/dsconfig.js', 438, 420 ]
+936 silly gunzTarPerm extractEntry lib/languages/rib.js
+937 silly gunzTarPerm modified mode [ 'lib/languages/rib.js', 438, 420 ]
+938 silly gunzTarPerm extractEntry lib/languages/dos.js
+939 silly gunzTarPerm modified mode [ 'lib/languages/dos.js', 438, 420 ]
+940 silly gunzTarPerm extractEntry lib/languages/roboconf.js
+941 silly gunzTarPerm modified mode [ 'lib/languages/roboconf.js', 438, 420 ]
+942 silly gunzTarPerm extractEntry lib/languages/dockerfile.js
+943 silly gunzTarPerm modified mode [ 'lib/languages/dockerfile.js', 438, 420 ]
+944 silly gunzTarPerm extractEntry lib/languages/routeros.js
+945 silly gunzTarPerm modified mode [ 'lib/languages/routeros.js', 438, 420 ]
+946 silly gunzTarPerm extractEntry lib/languages/dns.js
+947 silly gunzTarPerm modified mode [ 'lib/languages/dns.js', 438, 420 ]
+948 silly gunzTarPerm extractEntry lib/languages/rsl.js
+949 silly gunzTarPerm modified mode [ 'lib/languages/rsl.js', 438, 420 ]
+950 silly gunzTarPerm extractEntry lib/languages/django.js
+951 silly gunzTarPerm modified mode [ 'lib/languages/django.js', 438, 420 ]
+952 silly gunzTarPerm extractEntry lib/languages/ruby.js
+953 silly gunzTarPerm modified mode [ 'lib/languages/ruby.js', 438, 420 ]
+954 silly gunzTarPerm extractEntry lib/languages/diff.js
+955 silly gunzTarPerm modified mode [ 'lib/languages/diff.js', 438, 420 ]
+956 silly gunzTarPerm extractEntry lib/languages/ruleslanguage.js
+957 silly gunzTarPerm modified mode [ 'lib/languages/ruleslanguage.js', 438, 420 ]
+958 silly gunzTarPerm extractEntry lib/languages/delphi.js
+959 silly gunzTarPerm modified mode [ 'lib/languages/delphi.js', 438, 420 ]
+960 silly gunzTarPerm extractEntry lib/languages/rust.js
+961 silly gunzTarPerm modified mode [ 'lib/languages/rust.js', 438, 420 ]
+962 silly gunzTarPerm extractEntry lib/languages/dart.js
+963 silly gunzTarPerm modified mode [ 'lib/languages/dart.js', 438, 420 ]
+964 silly gunzTarPerm extractEntry lib/languages/scala.js
+965 silly gunzTarPerm modified mode [ 'lib/languages/scala.js', 438, 420 ]
+966 silly gunzTarPerm extractEntry lib/languages/d.js
+967 silly gunzTarPerm modified mode [ 'lib/languages/d.js', 438, 420 ]
+968 silly gunzTarPerm extractEntry lib/languages/scheme.js
+969 silly gunzTarPerm modified mode [ 'lib/languages/scheme.js', 438, 420 ]
+970 silly gunzTarPerm extractEntry lib/languages/css.js
+971 silly gunzTarPerm modified mode [ 'lib/languages/css.js', 438, 420 ]
+972 silly gunzTarPerm extractEntry lib/languages/scilab.js
+973 silly gunzTarPerm modified mode [ 'lib/languages/scilab.js', 438, 420 ]
+974 silly gunzTarPerm extractEntry lib/languages/csp.js
+975 silly gunzTarPerm modified mode [ 'lib/languages/csp.js', 438, 420 ]
+976 silly gunzTarPerm extractEntry lib/languages/scss.js
+977 silly gunzTarPerm modified mode [ 'lib/languages/scss.js', 438, 420 ]
+978 silly gunzTarPerm extractEntry lib/languages/cs.js
+979 silly gunzTarPerm modified mode [ 'lib/languages/cs.js', 438, 420 ]
+980 silly gunzTarPerm extractEntry lib/languages/shell.js
+981 silly gunzTarPerm modified mode [ 'lib/languages/shell.js', 438, 420 ]
+982 silly gunzTarPerm extractEntry lib/languages/crystal.js
+983 silly gunzTarPerm modified mode [ 'lib/languages/crystal.js', 438, 420 ]
+984 silly gunzTarPerm extractEntry lib/languages/smali.js
+985 silly gunzTarPerm modified mode [ 'lib/languages/smali.js', 438, 420 ]
+986 silly gunzTarPerm extractEntry lib/languages/crmsh.js
+987 silly gunzTarPerm modified mode [ 'lib/languages/crmsh.js', 438, 420 ]
+988 silly gunzTarPerm extractEntry lib/languages/smalltalk.js
+989 silly gunzTarPerm modified mode [ 'lib/languages/smalltalk.js', 438, 420 ]
+990 silly gunzTarPerm extractEntry lib/languages/cpp.js
+991 silly gunzTarPerm modified mode [ 'lib/languages/cpp.js', 438, 420 ]
+992 silly gunzTarPerm extractEntry lib/languages/sml.js
+993 silly gunzTarPerm modified mode [ 'lib/languages/sml.js', 438, 420 ]
+994 silly gunzTarPerm extractEntry lib/languages/cos.js
+995 silly gunzTarPerm modified mode [ 'lib/languages/cos.js', 438, 420 ]
+996 silly gunzTarPerm extractEntry lib/languages/sqf.js
+997 silly gunzTarPerm modified mode [ 'lib/languages/sqf.js', 438, 420 ]
+998 silly gunzTarPerm extractEntry lib/languages/coq.js
+999 silly gunzTarPerm modified mode [ 'lib/languages/coq.js', 438, 420 ]
+1000 silly gunzTarPerm extractEntry lib/languages/sql.js
+1001 silly gunzTarPerm modified mode [ 'lib/languages/sql.js', 438, 420 ]
+1002 silly gunzTarPerm extractEntry lib/languages/coffeescript.js
+1003 silly gunzTarPerm modified mode [ 'lib/languages/coffeescript.js', 438, 420 ]
+1004 silly gunzTarPerm extractEntry lib/languages/stan.js
+1005 silly gunzTarPerm modified mode [ 'lib/languages/stan.js', 438, 420 ]
+1006 silly gunzTarPerm extractEntry lib/languages/cmake.js
+1007 silly gunzTarPerm modified mode [ 'lib/languages/cmake.js', 438, 420 ]
+1008 silly gunzTarPerm extractEntry lib/languages/stata.js
+1009 silly gunzTarPerm modified mode [ 'lib/languages/stata.js', 438, 420 ]
+1010 silly gunzTarPerm extractEntry lib/languages/clojure.js
+1011 silly gunzTarPerm modified mode [ 'lib/languages/clojure.js', 438, 420 ]
+1012 silly gunzTarPerm extractEntry lib/languages/step21.js
+1013 silly gunzTarPerm modified mode [ 'lib/languages/step21.js', 438, 420 ]
+1014 silly gunzTarPerm extractEntry lib/languages/clojure-repl.js
+1015 silly gunzTarPerm modified mode [ 'lib/languages/clojure-repl.js', 438, 420 ]
+1016 silly gunzTarPerm extractEntry lib/languages/stylus.js
+1017 silly gunzTarPerm modified mode [ 'lib/languages/stylus.js', 438, 420 ]
+1018 silly gunzTarPerm extractEntry lib/languages/clean.js
+1019 silly gunzTarPerm modified mode [ 'lib/languages/clean.js', 438, 420 ]
+1020 silly gunzTarPerm extractEntry lib/languages/subunit.js
+1021 silly gunzTarPerm modified mode [ 'lib/languages/subunit.js', 438, 420 ]
+1022 silly gunzTarPerm extractEntry lib/languages/ceylon.js
+1023 silly gunzTarPerm modified mode [ 'lib/languages/ceylon.js', 438, 420 ]
+1024 silly gunzTarPerm extractEntry lib/languages/swift.js
+1025 silly gunzTarPerm modified mode [ 'lib/languages/swift.js', 438, 420 ]
+1026 silly gunzTarPerm extractEntry lib/languages/capnproto.js
+1027 silly gunzTarPerm modified mode [ 'lib/languages/capnproto.js', 438, 420 ]
+1028 silly gunzTarPerm extractEntry lib/languages/taggerscript.js
+1029 silly gunzTarPerm modified mode [ 'lib/languages/taggerscript.js', 438, 420 ]
+1030 silly gunzTarPerm extractEntry lib/languages/cal.js
+1031 silly gunzTarPerm modified mode [ 'lib/languages/cal.js', 438, 420 ]
+1032 silly gunzTarPerm extractEntry lib/languages/tap.js
+1033 silly gunzTarPerm modified mode [ 'lib/languages/tap.js', 438, 420 ]
+1034 silly gunzTarPerm extractEntry lib/languages/brainfuck.js
+1035 silly gunzTarPerm modified mode [ 'lib/languages/brainfuck.js', 438, 420 ]
+1036 silly gunzTarPerm extractEntry lib/languages/tcl.js
+1037 silly gunzTarPerm modified mode [ 'lib/languages/tcl.js', 438, 420 ]
+1038 silly gunzTarPerm extractEntry lib/languages/bnf.js
+1039 silly gunzTarPerm modified mode [ 'lib/languages/bnf.js', 438, 420 ]
+1040 silly gunzTarPerm extractEntry lib/languages/tex.js
+1041 silly gunzTarPerm modified mode [ 'lib/languages/tex.js', 438, 420 ]
+1042 silly gunzTarPerm extractEntry lib/languages/basic.js
+1043 silly gunzTarPerm modified mode [ 'lib/languages/basic.js', 438, 420 ]
+1044 silly gunzTarPerm extractEntry lib/languages/thrift.js
+1045 silly gunzTarPerm modified mode [ 'lib/languages/thrift.js', 438, 420 ]
+1046 silly gunzTarPerm extractEntry lib/languages/bash.js
+1047 silly gunzTarPerm modified mode [ 'lib/languages/bash.js', 438, 420 ]
+1048 silly gunzTarPerm extractEntry lib/languages/tp.js
+1049 silly gunzTarPerm modified mode [ 'lib/languages/tp.js', 438, 420 ]
+1050 silly gunzTarPerm extractEntry lib/languages/axapta.js
+1051 silly gunzTarPerm modified mode [ 'lib/languages/axapta.js', 438, 420 ]
+1052 silly gunzTarPerm extractEntry lib/languages/twig.js
+1053 silly gunzTarPerm modified mode [ 'lib/languages/twig.js', 438, 420 ]
+1054 silly gunzTarPerm extractEntry lib/languages/awk.js
+1055 silly gunzTarPerm modified mode [ 'lib/languages/awk.js', 438, 420 ]
+1056 silly gunzTarPerm extractEntry lib/languages/typescript.js
+1057 silly gunzTarPerm modified mode [ 'lib/languages/typescript.js', 438, 420 ]
+1058 silly gunzTarPerm extractEntry lib/languages/avrasm.js
+1059 silly gunzTarPerm modified mode [ 'lib/languages/avrasm.js', 438, 420 ]
+1060 silly gunzTarPerm extractEntry lib/languages/vala.js
+1061 silly gunzTarPerm modified mode [ 'lib/languages/vala.js', 438, 420 ]
+1062 silly gunzTarPerm extractEntry lib/languages/autoit.js
+1063 silly gunzTarPerm modified mode [ 'lib/languages/autoit.js', 438, 420 ]
+1064 silly gunzTarPerm extractEntry lib/languages/vbnet.js
+1065 silly gunzTarPerm modified mode [ 'lib/languages/vbnet.js', 438, 420 ]
+1066 silly gunzTarPerm extractEntry lib/languages/autohotkey.js
+1067 silly gunzTarPerm modified mode [ 'lib/languages/autohotkey.js', 438, 420 ]
+1068 silly gunzTarPerm extractEntry lib/languages/vbscript-html.js
+1069 silly gunzTarPerm modified mode [ 'lib/languages/vbscript-html.js', 438, 420 ]
+1070 silly gunzTarPerm extractEntry lib/languages/aspectj.js
+1071 silly gunzTarPerm modified mode [ 'lib/languages/aspectj.js', 438, 420 ]
+1072 silly gunzTarPerm extractEntry lib/languages/vbscript.js
+1073 silly gunzTarPerm modified mode [ 'lib/languages/vbscript.js', 438, 420 ]
+1074 silly gunzTarPerm extractEntry lib/languages/asciidoc.js
+1075 silly gunzTarPerm modified mode [ 'lib/languages/asciidoc.js', 438, 420 ]
+1076 silly gunzTarPerm extractEntry lib/languages/verilog.js
+1077 silly gunzTarPerm modified mode [ 'lib/languages/verilog.js', 438, 420 ]
+1078 silly gunzTarPerm extractEntry lib/languages/armasm.js
+1079 silly gunzTarPerm modified mode [ 'lib/languages/armasm.js', 438, 420 ]
+1080 silly gunzTarPerm extractEntry lib/languages/vhdl.js
+1081 silly gunzTarPerm modified mode [ 'lib/languages/vhdl.js', 438, 420 ]
+1082 silly gunzTarPerm extractEntry lib/languages/arduino.js
+1083 silly gunzTarPerm modified mode [ 'lib/languages/arduino.js', 438, 420 ]
+1084 silly gunzTarPerm extractEntry lib/languages/vim.js
+1085 silly gunzTarPerm modified mode [ 'lib/languages/vim.js', 438, 420 ]
+1086 silly gunzTarPerm extractEntry lib/languages/applescript.js
+1087 silly gunzTarPerm modified mode [ 'lib/languages/applescript.js', 438, 420 ]
+1088 silly gunzTarPerm extractEntry lib/languages/x86asm.js
+1089 silly gunzTarPerm modified mode [ 'lib/languages/x86asm.js', 438, 420 ]
+1090 silly gunzTarPerm extractEntry lib/languages/apache.js
+1091 silly gunzTarPerm modified mode [ 'lib/languages/apache.js', 438, 420 ]
+1092 silly gunzTarPerm extractEntry lib/languages/xl.js
+1093 silly gunzTarPerm modified mode [ 'lib/languages/xl.js', 438, 420 ]
+1094 silly gunzTarPerm extractEntry lib/languages/ada.js
+1095 silly gunzTarPerm modified mode [ 'lib/languages/ada.js', 438, 420 ]
+1096 silly gunzTarPerm extractEntry lib/languages/xml.js
+1097 silly gunzTarPerm modified mode [ 'lib/languages/xml.js', 438, 420 ]
+1098 silly gunzTarPerm extractEntry lib/languages/actionscript.js
+1099 silly gunzTarPerm modified mode [ 'lib/languages/actionscript.js', 438, 420 ]
+1100 silly gunzTarPerm extractEntry lib/languages/xquery.js
+1101 silly gunzTarPerm modified mode [ 'lib/languages/xquery.js', 438, 420 ]
+1102 silly gunzTarPerm extractEntry lib/languages/accesslog.js
+1103 silly gunzTarPerm modified mode [ 'lib/languages/accesslog.js', 438, 420 ]
+1104 silly gunzTarPerm extractEntry lib/languages/yaml.js
+1105 silly gunzTarPerm modified mode [ 'lib/languages/yaml.js', 438, 420 ]
+1106 silly gunzTarPerm extractEntry lib/languages/abnf.js
+1107 silly gunzTarPerm modified mode [ 'lib/languages/abnf.js', 438, 420 ]
+1108 silly gunzTarPerm extractEntry lib/languages/zephir.js
+1109 silly gunzTarPerm modified mode [ 'lib/languages/zephir.js', 438, 420 ]
+1110 silly gunzTarPerm extractEntry lib/languages/less.js
+1111 silly gunzTarPerm modified mode [ 'lib/languages/less.js', 438, 420 ]
+1112 silly gunzTarPerm extractEntry styles/googlecode.css
+1113 silly gunzTarPerm modified mode [ 'styles/googlecode.css', 438, 420 ]
+1114 silly gunzTarPerm extractEntry styles/agate.css
+1115 silly gunzTarPerm modified mode [ 'styles/agate.css', 438, 420 ]
+1116 silly gunzTarPerm extractEntry styles/arduino-light.css
+1117 silly gunzTarPerm modified mode [ 'styles/arduino-light.css', 438, 420 ]
+1118 silly gunzTarPerm extractEntry styles/arta.css
+1119 silly gunzTarPerm modified mode [ 'styles/arta.css', 438, 420 ]
+1120 silly gunzTarPerm extractEntry styles/ascetic.css
+1121 silly gunzTarPerm modified mode [ 'styles/ascetic.css', 438, 420 ]
+1122 silly gunzTarPerm extractEntry styles/atelier-cave-dark.css
+1123 silly gunzTarPerm modified mode [ 'styles/atelier-cave-dark.css', 438, 420 ]
+1124 silly gunzTarPerm extractEntry styles/atelier-cave-light.css
+1125 silly gunzTarPerm modified mode [ 'styles/atelier-cave-light.css', 438, 420 ]
+1126 silly gunzTarPerm extractEntry styles/atelier-dune-dark.css
+1127 silly gunzTarPerm modified mode [ 'styles/atelier-dune-dark.css', 438, 420 ]
+1128 silly gunzTarPerm extractEntry styles/atelier-dune-light.css
+1129 silly gunzTarPerm modified mode [ 'styles/atelier-dune-light.css', 438, 420 ]
+1130 silly gunzTarPerm extractEntry styles/atelier-estuary-dark.css
+1131 silly gunzTarPerm modified mode [ 'styles/atelier-estuary-dark.css', 438, 420 ]
+1132 silly gunzTarPerm extractEntry styles/atelier-estuary-light.css
+1133 silly gunzTarPerm modified mode [ 'styles/atelier-estuary-light.css', 438, 420 ]
+1134 silly gunzTarPerm extractEntry styles/atelier-forest-dark.css
+1135 silly gunzTarPerm modified mode [ 'styles/atelier-forest-dark.css', 438, 420 ]
+1136 silly gunzTarPerm extractEntry styles/atelier-forest-light.css
+1137 silly gunzTarPerm modified mode [ 'styles/atelier-forest-light.css', 438, 420 ]
+1138 silly gunzTarPerm extractEntry styles/atelier-heath-dark.css
+1139 silly gunzTarPerm modified mode [ 'styles/atelier-heath-dark.css', 438, 420 ]
+1140 silly gunzTarPerm extractEntry styles/atelier-heath-light.css
+1141 silly gunzTarPerm modified mode [ 'styles/atelier-heath-light.css', 438, 420 ]
+1142 silly gunzTarPerm extractEntry styles/atelier-lakeside-dark.css
+1143 silly gunzTarPerm modified mode [ 'styles/atelier-lakeside-dark.css', 438, 420 ]
+1144 silly gunzTarPerm extractEntry styles/atelier-lakeside-light.css
+1145 silly gunzTarPerm modified mode [ 'styles/atelier-lakeside-light.css', 438, 420 ]
+1146 silly gunzTarPerm extractEntry styles/atelier-plateau-dark.css
+1147 silly gunzTarPerm modified mode [ 'styles/atelier-plateau-dark.css', 438, 420 ]
+1148 silly gunzTarPerm extractEntry styles/atelier-plateau-light.css
+1149 silly gunzTarPerm modified mode [ 'styles/atelier-plateau-light.css', 438, 420 ]
+1150 silly gunzTarPerm extractEntry styles/atelier-savanna-dark.css
+1151 silly gunzTarPerm modified mode [ 'styles/atelier-savanna-dark.css', 438, 420 ]
+1152 silly gunzTarPerm extractEntry styles/atelier-savanna-light.css
+1153 silly gunzTarPerm modified mode [ 'styles/atelier-savanna-light.css', 438, 420 ]
+1154 silly gunzTarPerm extractEntry styles/atelier-seaside-dark.css
+1155 silly gunzTarPerm modified mode [ 'styles/atelier-seaside-dark.css', 438, 420 ]
+1156 silly gunzTarPerm extractEntry styles/atelier-seaside-light.css
+1157 silly gunzTarPerm modified mode [ 'styles/atelier-seaside-light.css', 438, 420 ]
+1158 silly gunzTarPerm extractEntry styles/atelier-sulphurpool-dark.css
+1159 silly gunzTarPerm modified mode [ 'styles/atelier-sulphurpool-dark.css', 438, 420 ]
+1160 silly gunzTarPerm extractEntry styles/atelier-sulphurpool-light.css
+1161 silly gunzTarPerm modified mode [ 'styles/atelier-sulphurpool-light.css', 438, 420 ]
+1162 silly gunzTarPerm extractEntry styles/atom-one-dark.css
+1163 silly gunzTarPerm modified mode [ 'styles/atom-one-dark.css', 438, 420 ]
+1164 silly gunzTarPerm extractEntry styles/atom-one-light.css
+1165 silly gunzTarPerm modified mode [ 'styles/atom-one-light.css', 438, 420 ]
+1166 silly gunzTarPerm extractEntry styles/brown-paper.css
+1167 silly gunzTarPerm modified mode [ 'styles/brown-paper.css', 438, 420 ]
+1168 silly gunzTarPerm extractEntry styles/brown-papersq.png
+1169 silly gunzTarPerm modified mode [ 'styles/brown-papersq.png', 438, 420 ]
+1170 silly gunzTarPerm extractEntry styles/codepen-embed.css
+1171 silly gunzTarPerm modified mode [ 'styles/codepen-embed.css', 438, 420 ]
+1172 silly gunzTarPerm extractEntry styles/color-brewer.css
+1173 silly gunzTarPerm modified mode [ 'styles/color-brewer.css', 438, 420 ]
+1174 silly gunzTarPerm extractEntry styles/darcula.css
+1175 silly gunzTarPerm modified mode [ 'styles/darcula.css', 438, 420 ]
+1176 silly gunzTarPerm extractEntry styles/dark.css
+1177 silly gunzTarPerm modified mode [ 'styles/dark.css', 438, 420 ]
+1178 silly gunzTarPerm extractEntry styles/darkula.css
+1179 silly gunzTarPerm modified mode [ 'styles/darkula.css', 438, 420 ]
+1180 silly gunzTarPerm extractEntry styles/default.css
+1181 silly gunzTarPerm modified mode [ 'styles/default.css', 438, 420 ]
+1182 silly gunzTarPerm extractEntry styles/docco.css
+1183 silly gunzTarPerm modified mode [ 'styles/docco.css', 438, 420 ]
+1184 silly gunzTarPerm extractEntry styles/dracula.css
+1185 silly gunzTarPerm modified mode [ 'styles/dracula.css', 438, 420 ]
+1186 silly gunzTarPerm extractEntry styles/far.css
+1187 silly gunzTarPerm modified mode [ 'styles/far.css', 438, 420 ]
+1188 silly gunzTarPerm extractEntry styles/foundation.css
+1189 silly gunzTarPerm modified mode [ 'styles/foundation.css', 438, 420 ]
+1190 silly gunzTarPerm extractEntry styles/github-gist.css
+1191 silly gunzTarPerm modified mode [ 'styles/github-gist.css', 438, 420 ]
+1192 silly gunzTarPerm extractEntry styles/github.css
+1193 silly gunzTarPerm modified mode [ 'styles/github.css', 438, 420 ]
+1194 silly gunzTarPerm extractEntry styles/androidstudio.css
+1195 silly gunzTarPerm modified mode [ 'styles/androidstudio.css', 438, 420 ]
+1196 silly gunzTarPerm extractEntry styles/grayscale.css
+1197 silly gunzTarPerm modified mode [ 'styles/grayscale.css', 438, 420 ]
+1198 silly gunzTarPerm extractEntry styles/gruvbox-dark.css
+1199 silly gunzTarPerm modified mode [ 'styles/gruvbox-dark.css', 438, 420 ]
+1200 silly gunzTarPerm extractEntry styles/gruvbox-light.css
+1201 silly gunzTarPerm modified mode [ 'styles/gruvbox-light.css', 438, 420 ]
+1202 silly gunzTarPerm extractEntry styles/hopscotch.css
+1203 silly gunzTarPerm modified mode [ 'styles/hopscotch.css', 438, 420 ]
+1204 silly gunzTarPerm extractEntry styles/hybrid.css
+1205 silly gunzTarPerm modified mode [ 'styles/hybrid.css', 438, 420 ]
+1206 silly gunzTarPerm extractEntry styles/idea.css
+1207 silly gunzTarPerm modified mode [ 'styles/idea.css', 438, 420 ]
+1208 silly gunzTarPerm extractEntry styles/ir-black.css
+1209 silly gunzTarPerm modified mode [ 'styles/ir-black.css', 438, 420 ]
+1210 silly gunzTarPerm extractEntry styles/kimbie.dark.css
+1211 silly gunzTarPerm modified mode [ 'styles/kimbie.dark.css', 438, 420 ]
+1212 silly gunzTarPerm extractEntry styles/kimbie.light.css
+1213 silly gunzTarPerm modified mode [ 'styles/kimbie.light.css', 438, 420 ]
+1214 silly gunzTarPerm extractEntry styles/magula.css
+1215 silly gunzTarPerm modified mode [ 'styles/magula.css', 438, 420 ]
+1216 silly gunzTarPerm extractEntry styles/mono-blue.css
+1217 silly gunzTarPerm modified mode [ 'styles/mono-blue.css', 438, 420 ]
+1218 silly gunzTarPerm extractEntry styles/monokai-sublime.css
+1219 silly gunzTarPerm modified mode [ 'styles/monokai-sublime.css', 438, 420 ]
+1220 silly gunzTarPerm extractEntry styles/monokai.css
+1221 silly gunzTarPerm modified mode [ 'styles/monokai.css', 438, 420 ]
+1222 silly gunzTarPerm extractEntry styles/obsidian.css
+1223 silly gunzTarPerm modified mode [ 'styles/obsidian.css', 438, 420 ]
+1224 silly gunzTarPerm extractEntry styles/ocean.css
+1225 silly gunzTarPerm modified mode [ 'styles/ocean.css', 438, 420 ]
+1226 silly gunzTarPerm extractEntry styles/paraiso-dark.css
+1227 silly gunzTarPerm modified mode [ 'styles/paraiso-dark.css', 438, 420 ]
+1228 silly gunzTarPerm extractEntry styles/paraiso-light.css
+1229 silly gunzTarPerm modified mode [ 'styles/paraiso-light.css', 438, 420 ]
+1230 silly gunzTarPerm extractEntry styles/pojoaque.css
+1231 silly gunzTarPerm modified mode [ 'styles/pojoaque.css', 438, 420 ]
+1232 silly gunzTarPerm extractEntry styles/pojoaque.jpg
+1233 silly gunzTarPerm modified mode [ 'styles/pojoaque.jpg', 438, 420 ]
+1234 silly gunzTarPerm extractEntry styles/purebasic.css
+1235 silly gunzTarPerm modified mode [ 'styles/purebasic.css', 438, 420 ]
+1236 silly gunzTarPerm extractEntry styles/qtcreator_dark.css
+1237 silly gunzTarPerm modified mode [ 'styles/qtcreator_dark.css', 438, 420 ]
+1238 silly gunzTarPerm extractEntry styles/qtcreator_light.css
+1239 silly gunzTarPerm modified mode [ 'styles/qtcreator_light.css', 438, 420 ]
+1240 silly gunzTarPerm extractEntry styles/railscasts.css
+1241 silly gunzTarPerm modified mode [ 'styles/railscasts.css', 438, 420 ]
+1242 silly gunzTarPerm extractEntry styles/rainbow.css
+1243 silly gunzTarPerm modified mode [ 'styles/rainbow.css', 438, 420 ]
+1244 silly gunzTarPerm extractEntry styles/routeros.css
+1245 silly gunzTarPerm modified mode [ 'styles/routeros.css', 438, 420 ]
+1246 silly gunzTarPerm extractEntry styles/school-book.css
+1247 silly gunzTarPerm modified mode [ 'styles/school-book.css', 438, 420 ]
+1248 silly gunzTarPerm extractEntry styles/school-book.png
+1249 silly gunzTarPerm modified mode [ 'styles/school-book.png', 438, 420 ]
+1250 silly gunzTarPerm extractEntry styles/solarized-dark.css
+1251 silly gunzTarPerm modified mode [ 'styles/solarized-dark.css', 438, 420 ]
+1252 silly gunzTarPerm extractEntry styles/solarized-light.css
+1253 silly gunzTarPerm modified mode [ 'styles/solarized-light.css', 438, 420 ]
+1254 silly gunzTarPerm extractEntry styles/sunburst.css
+1255 silly gunzTarPerm modified mode [ 'styles/sunburst.css', 438, 420 ]
+1256 silly gunzTarPerm extractEntry styles/tomorrow-night-blue.css
+1257 silly gunzTarPerm modified mode [ 'styles/tomorrow-night-blue.css', 438, 420 ]
+1258 silly gunzTarPerm extractEntry styles/tomorrow-night-bright.css
+1259 silly gunzTarPerm modified mode [ 'styles/tomorrow-night-bright.css', 438, 420 ]
+1260 silly gunzTarPerm extractEntry styles/tomorrow-night-eighties.css
+1261 silly gunzTarPerm modified mode [ 'styles/tomorrow-night-eighties.css', 438, 420 ]
+1262 silly gunzTarPerm extractEntry styles/tomorrow-night.css
+1263 silly gunzTarPerm modified mode [ 'styles/tomorrow-night.css', 438, 420 ]
+1264 silly gunzTarPerm extractEntry styles/tomorrow.css
+1265 silly gunzTarPerm modified mode [ 'styles/tomorrow.css', 438, 420 ]
+1266 silly gunzTarPerm extractEntry styles/vs.css
+1267 silly gunzTarPerm modified mode [ 'styles/vs.css', 438, 420 ]
+1268 silly gunzTarPerm extractEntry styles/vs2015.css
+1269 silly gunzTarPerm modified mode [ 'styles/vs2015.css', 438, 420 ]
+1270 silly gunzTarPerm extractEntry styles/xcode.css
+1271 silly gunzTarPerm modified mode [ 'styles/xcode.css', 438, 420 ]
+1272 silly gunzTarPerm extractEntry styles/xt256.css
+1273 silly gunzTarPerm modified mode [ 'styles/xt256.css', 438, 420 ]
+1274 silly gunzTarPerm extractEntry styles/zenburn.css
+1275 silly gunzTarPerm modified mode [ 'styles/zenburn.css', 438, 420 ]
+1276 verbose write writing to /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs/node_modules/highlight.js/package.json
+1277 info preinstall highlight.js@9.12.0
+1278 verbose readDependencies loading dependencies from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs/node_modules/highlight.js/package.json
+1279 verbose readDependencies loading dependencies from /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs/node_modules/highlight.js/package.json
+1280 silly install resolved []
+1281 verbose about to build /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs/node_modules/highlight.js
+1282 info build /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs/node_modules/highlight.js
+1283 info linkStuff highlight.js@9.12.0
+1284 silly linkStuff highlight.js@9.12.0 has /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs/node_modules as its parent node_modules
+1285 verbose linkBins highlight.js@9.12.0
+1286 verbose linkMans highlight.js@9.12.0
+1287 verbose rebuildBundles highlight.js@9.12.0
+1288 info install highlight.js@9.12.0
+1289 info postinstall highlight.js@9.12.0
+1290 verbose unlock done using /home/ubuntu/.npm/_locks/highlight-js-440037328837522c.lock for /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs/node_modules/highlight.js
+1291 verbose about to build /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs
+1292 info build /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs
+1293 info linkStuff react-hljs@1.0.0
+1294 silly linkStuff react-hljs@1.0.0 has /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules as its parent node_modules
+1295 verbose linkBins react-hljs@1.0.0
+1296 verbose linkMans react-hljs@1.0.0
+1297 verbose rebuildBundles react-hljs@1.0.0
+1298 verbose rebuildBundles [ 'highlight.js' ]
+1299 info install react-hljs@1.0.0
+1300 info postinstall react-hljs@1.0.0
+1301 verbose unlock done using /home/ubuntu/.npm/_locks/react-hljs-c5aa56ad59653810.lock for /home/ubuntu/workspace/exemplars/wordcloud-node/node_modules/react-hljs
+1302 verbose validateInstall loading /home/ubuntu/workspace/exemplars/wordcloud-node/package.json for validation
+1303 verbose stack Error: The package ajv@4.11.8 does not satisfy its siblings' peerDependencies requirements!
+1303 verbose stack     at /home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/lib/install.js:125:32
+1303 verbose stack     at /home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/lib/install.js:268:7
+1303 verbose stack     at /home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+1303 verbose stack     at /home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+1303 verbose stack     at cb (/home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+1303 verbose stack     at /home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+1303 verbose stack     at cb (/home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+1303 verbose stack     at /home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+1303 verbose stack     at cb (/home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+1303 verbose stack     at /home/ubuntu/.nvm/versions/node/v4.4.5/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+1304 verbose cwd /home/ubuntu/workspace/exemplars/wordcloud-node
+1305 error Linux 4.9.17-c9
+1306 error argv "/home/ubuntu/.nvm/versions/node/v4.4.5/bin/node" "/home/ubuntu/.nvm/versions/node/v4.4.5/bin/npm" "install" "--save" "react-hljs"
+1307 error node v4.4.5
+1308 error npm  v2.15.5
+1309 error code EPEERINVALID
+1310 error peerinvalid The package ajv@4.11.8 does not satisfy its siblings' peerDependencies requirements!
+1311 verbose exit [ 1, true ]
