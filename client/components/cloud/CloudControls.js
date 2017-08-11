@@ -91,6 +91,7 @@ class CloudControls extends Component {
                             setText={this.props.setText}
                             setDocs={this.props.setDocs}
                             clearCloud={this.props.clearCloud}
+                            cloudBody={this.props.cloudBody}
                         />
                     </div>
                     <div id="checkboxes">

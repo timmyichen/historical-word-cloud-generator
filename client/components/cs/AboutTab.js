@@ -6,7 +6,7 @@ class AboutTab extends Component {
     render() {
         return (
             <div id="tab-about">
-                <div class="left">
+                <div className="left">
                     <Header as="h2">About</Header>
                     <p>
                         This is a project developed by Tim Chen at MongoDB, Inc. as part
@@ -19,7 +19,7 @@ class AboutTab extends Component {
                         from 1836 and 1924, archived by the Library of Congress.
                     </p>
                 </div>
-                <div class="right">
+                <div className="right">
                     <Header as="h2">Instructions</Header>
                     <Header as="h3">General</Header>
                     <p>

@@ -29,8 +29,7 @@ class DatePicker extends Component {
     }
     handleDateChange(e) {
         let { year, month, day } = parseDate(e.target.value);
-        if (year > 1924) year = 1924;
-        if (year < 1836) year = 1836;
+        
         this.setState({
             date: e.target.value,
             invalidDate: isDateInvalid(year, month, day),
@@ -47,6 +46,7 @@ class DatePicker extends Component {
                 size="tiny"
                 onOpen={this.open}
                 onClose={this.close}
+                mountNode={this.props.cloudBody}
             >
                 <Modal.Header>Pick a Date</Modal.Header>
                 <Modal.Content>
@@ -57,6 +57,11 @@ class DatePicker extends Component {
                         value={this.state.date}
                         onChange={this.handleDateChange}
                     />
+                    <br/><br/>
+                    <p>Please be patient as the data loads.  If you are searching for a date that
+                    is not in our database, it may take up to 30 seconds to scrape this data from
+                    the source.  If it takes longer than 30 seconds to load, refresh the page and
+                    try again.</p>
                 </Modal.Content>
                 <Modal.Actions>
                     <Button negative onClick={this.close}>Cancel</Button>
@@ -70,6 +75,7 @@ class DatePicker extends Component {
                         closeParent={this.close}
                         date={this.state.dateFull}
                         clearCloud={this.props.clearCloud}
+                        cloudBody={this.props.cloudBody}
                     />
                 </Modal.Actions>
             </Modal>

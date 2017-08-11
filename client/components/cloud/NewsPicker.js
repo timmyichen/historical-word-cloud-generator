@@ -114,7 +114,7 @@ class NewsPicker extends Component {
                 trigger={
                     <Button
                         positive
-                        disabled={(this.props.disabled || loading) && open}
+                        disabled={this.props.disabled || loading || (loading && open)}
                     >
                         See Available Newspapers
                         {loading ? (<Loader size="tiny"  active inline />) : ''}
@@ -123,6 +123,7 @@ class NewsPicker extends Component {
                 open={open}
                 onOpen={this.open}
                 onClose={this.close}
+                mountNode={this.props.cloudBody}
             >
                 <Modal.Header>Choose From Available Papers</Modal.Header>
                 <Modal.Content>

@@ -124,7 +124,7 @@ class CloudContainer extends Component {
     }
     render() {
         return (
-            <div id="cloud-elements">
+            <div id="cloud-elements" ref="cloudBody">
                 <CloudControls
                     text={this.props.text}
                     stopWords={this.props.stopWords}
@@ -137,6 +137,7 @@ class CloudContainer extends Component {
                     wordRemoval={this.state.removeErrors}
                     highlightedWord={this.state.highlightedWord}
                     clearCloud={this.clearCloud}
+                    cloudBody={this.refs.cloudBody}
                 />
                 
                 <div id="cloud-output" ref="cloudOutRef" className="dimmable">

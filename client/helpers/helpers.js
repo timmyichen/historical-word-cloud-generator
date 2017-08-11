@@ -4,6 +4,7 @@ function isDateInvalid(year, month, day) {
     year = parseFloat(year);
     month = parseFloat(month);
     day = parseFloat(day);
+    console.log(year);
     return (!Number.isInteger(year)) ||
         (!Number.isInteger(month)) ||
         (!Number.isInteger(day)) ||

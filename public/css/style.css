@@ -139,6 +139,9 @@ textarea {
   fill: #f00 !important;
   cursor: pointer;
 }
+#cloud-elements .ui.page.dimmer {
+  position: absolute !important;
+}
 #compsci-container {
   margin-top: 20px;
 }
