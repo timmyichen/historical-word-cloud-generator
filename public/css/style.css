@@ -70,6 +70,7 @@ svg g text {
 }
 body {
   padding: 20px !important;
+  background: #fff;
 }
 .hidden {
   display: none;
@@ -139,7 +140,7 @@ textarea {
   fill: #f00 !important;
   cursor: pointer;
 }
-#cloud-elements .ui.page.dimmer {
+.ui.page.dimmer {
   position: absolute !important;
 }
 #compsci-container {
@@ -150,35 +151,39 @@ textarea {
 }
 #compsci-container #tab-count {
   display: flex;
+  flex-direction: column;
 }
-#compsci-container #tab-count h3:hover {
+#compsci-container #tab-count > div {
+  display: flex;
+}
+#compsci-container #tab-count > div h4:hover {
   cursor: pointer;
 }
-#compsci-container #tab-count #text-and-controls,
-#compsci-container #tab-count #word-table,
-#compsci-container #tab-count #python-code {
+#compsci-container #tab-count > div #text-and-controls,
+#compsci-container #tab-count > div #word-table,
+#compsci-container #tab-count > div #python-code {
   transition: all 300ms;
   padding: 5px;
 }
-#compsci-container #tab-count #text-and-controls.highlight,
-#compsci-container #tab-count #word-table.highlight,
-#compsci-container #tab-count #python-code.highlight {
+#compsci-container #tab-count > div #text-and-controls.highlight,
+#compsci-container #tab-count > div #word-table.highlight,
+#compsci-container #tab-count > div #python-code.highlight {
   background: rgba(255,255,0,0.5) !important;
 }
-#compsci-container #tab-count #step-instructions {
+#compsci-container #tab-count > div #step-instructions {
   width: 25%;
   flex: 1;
 }
-#compsci-container #tab-count #counting-left {
+#compsci-container #tab-count > div #counting-left {
   flex: 2;
   width: 50%;
   display: flex;
 }
-#compsci-container #tab-count #counting-left #text-and-controls {
+#compsci-container #tab-count > div #counting-left #text-and-controls {
   flex: 1;
 }
-#compsci-container #tab-count #counting-left #text-and-controls textarea,
-#compsci-container #tab-count #counting-left #text-and-controls #static-text {
+#compsci-container #tab-count > div #counting-left #text-and-controls textarea,
+#compsci-container #tab-count > div #counting-left #text-and-controls #static-text {
   display: inline-block;
   width: 100%;
   height: 200px;
@@ -186,42 +191,42 @@ textarea {
   margin-top: 5px;
   padding: 3px;
 }
-#compsci-container #tab-count #counting-left #text-and-controls textarea .counting-mark,
-#compsci-container #tab-count #counting-left #text-and-controls #static-text .counting-mark {
+#compsci-container #tab-count > div #counting-left #text-and-controls textarea .counting-mark,
+#compsci-container #tab-count > div #counting-left #text-and-controls #static-text .counting-mark {
   background: #fff;
 }
-#compsci-container #tab-count #counting-left #text-and-controls textarea .counting-mark.highlight,
-#compsci-container #tab-count #counting-left #text-and-controls #static-text .counting-mark.highlight {
+#compsci-container #tab-count > div #counting-left #text-and-controls textarea .counting-mark.highlight,
+#compsci-container #tab-count > div #counting-left #text-and-controls #static-text .counting-mark.highlight {
   background: #ff0;
   border: 1px solid #000;
 }
-#compsci-container #tab-count #counting-left #text-and-controls #controls {
+#compsci-container #tab-count > div #counting-left #text-and-controls #controls {
   display: flex;
   width: 100%;
 }
-#compsci-container #tab-count #counting-left #text-and-controls #controls button {
+#compsci-container #tab-count > div #counting-left #text-and-controls #controls button {
   flex: 1;
   height: 65px;
 }
-#compsci-container #tab-count #counting-left #text-and-controls #controls buttonlast-of-type {
+#compsci-container #tab-count > div #counting-left #text-and-controls #controls buttonlast-of-type {
   margin: 0 !important;
 }
-#compsci-container #tab-count #counting-left #word-table {
+#compsci-container #tab-count > div #counting-left #word-table {
   flex: 1;
 }
-#compsci-container #tab-count #counting-left #word-table .ui.checkbox {
+#compsci-container #tab-count > div #counting-left #word-table .ui.checkbox {
   font-size: 10px;
 }
-#compsci-container #tab-count #python-code {
+#compsci-container #tab-count > div #python-code {
   margin-left: 10px;
   width: 25%;
   flex: 1;
 }
-#compsci-container #tab-count #python-code code span {
+#compsci-container #tab-count > div #python-code code span {
   cursor: pointer;
 }
-#compsci-container #tab-count #python-code .python.hljs,
-#compsci-container #tab-count #python-code pre {
+#compsci-container #tab-count > div #python-code .python.hljs,
+#compsci-container #tab-count > div #python-code pre {
   padding: 0;
   padding-left: 3px;
   margin: 0 !important;
@@ -273,10 +278,10 @@ textarea {
   display: flex;
 }
 #compsci-container #tab-scrape #scrape-links .left {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 #compsci-container #tab-scrape #scrape-links .right {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 #compsci-container #tab-scrape #scrape-links .text,
 #compsci-container #tab-scrape #scrape-links .support {
@@ -328,10 +333,10 @@ textarea {
   width: 40%;
 }
 #tab-about .left {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 #tab-about .right {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 #choose-papers .ui.radio.checkbox {
   padding-top: 6px;

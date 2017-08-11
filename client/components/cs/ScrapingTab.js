@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Header, Popup } from 'semantic-ui-react';
+import { Header, Popup, Icon } from 'semantic-ui-react';
 
 const Theme = require('syntux/style/atelier-sulphurpool.light');
 const Html = require('syntux/xml');
@@ -15,7 +15,7 @@ const sampleHtml = [
 {
     html: `<h1>The Washington herald. (Washington, D.C.) 1906-1939, May 06, 1917, Image 1</h1>`,
     hoverText: `This is where we would extract the paper name and location
-        (2nd h1 on the page)`,
+        (2nd 'h1' on the page)`,
 },
 {
     html: `<h3>Image and text provided by Library of Congress, Washington, DC</h3>`,
@@ -26,7 +26,7 @@ const sampleHtml = [
     hoverText: `If we needed to get the link, we could get it here, but we already have
         the ID and the date, and we can construct the URL from just that information alone.
         However, if we really needed to scrape it, we could describe the link as "the
-        href attribute within the a tag within the 2nd h3 tag on the page"`,
+        href attribute within the 'a' tag within the 2nd 'h3' tag on the page"`,
 },
 {
     html: `</div>
@@ -65,7 +65,7 @@ const sampleHtml = [
 </div>`,
     hoverText: `This is a shortened version of the full article.  This is where we would
         actually get all our words from.  We describe this location as the paragraph (p)
-        tag within a div tag (this doesn't happen anywhere else on the page!)`
+        tag within a 'div' tag (this doesn't happen anywhere else on the page!)`
 }
 ];
 
@@ -81,7 +81,7 @@ class ScrapingTab extends Component {
                     trigger={<span className="can-hover"><Html>{section.html}</Html></span>}
                     content={section.hoverText}
                 />
-            )
+            );
         });
     }
     render() {
@@ -103,13 +103,16 @@ class ScrapingTab extends Component {
                             The first question might be, how do we know where to find the data?  Let's
                             examine a sample URL from the Library of Congress:
                             <li><a href="http://chroniclingamerica.loc.gov/lccn/sn83045433/1917-05-06/ed-1/seq-1/ocr/" target="_blank">
-                            http://chroniclingamerica.loc.gov/lccn/sn83045433/1917-05-06/ed-1/seq-1/ocr/</a></li>
-                            (this "OCR" link is accessible from the
+                            http://chroniclingamerica.loc.gov/lccn/sn83045433/1917-05-06/ed-1/seq-1/ocr/
+                            &nbsp;<Icon name="external" size="small" /></a></li>
+                            This "OCR" version, or Optical Character Recognition, is accessible from the&nbsp;
                             <a href="http://chroniclingamerica.loc.gov/lccn/sn83045433/1917-05-06/ed-1/seq-1/" target="_blank">
-                            main page</a> of the newspaper itself)  Now let's look at another link for a different
-                            date and a different paper:
+                            main page&nbsp;<Icon name="external" size="small" /></a> of the newspaper itself.<br/>
+                            Now let's 
+                            look at another link for a different date and a different paper:
                             <li><a href="http://chroniclingamerica.loc.gov/lccn/sn83045462/1865-04-15/ed-1/seq-1/ocr/" target="_blank">
-                            http://chroniclingamerica.loc.gov/lccn/sn83045462/1865-04-15/ed-1/seq-1/ocr/</a></li>
+                            http://chroniclingamerica.loc.gov/lccn/sn83045462/1865-04-15/ed-1/seq-1/ocr/
+                            &nbsp;<Icon name="external" size="small" /></a></li>
                             We see a few differences and a lot of similarities.
                         </p>
                         <p>
@@ -169,6 +172,7 @@ class ScrapingTab extends Component {
                             the scraper knows where to extract it.
                         </p>
                         <div className="left support has-hover">
+                            {Theme}
                             {this.generateStaticHTML()}
                         </div>
                     </div>

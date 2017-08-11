@@ -124,28 +124,29 @@ class CloudContainer extends Component {
     }
     render() {
         return (
-            <div id="cloud-elements" ref="cloudBody">
-                <CloudControls
-                    text={this.props.text}
-                    stopWords={this.props.stopWords}
-                    changeText={this.props.changeText}
-                    changeStopWords={this.props.changeStopWords}
-                    renderCloud={this.renderCloud}
-                    setText={this.props.setText}
-                    setDocs={this.props.setDocs}
-                    updateWordRemoval={this.updateWordRemoval}
-                    wordRemoval={this.state.removeErrors}
-                    highlightedWord={this.state.highlightedWord}
-                    clearCloud={this.clearCloud}
-                    cloudBody={this.refs.cloudBody}
-                />
-                
-                <div id="cloud-output" ref="cloudOutRef" className="dimmable">
-                    <Dimmer inverted active={this.state.loading}>
-                        <Loader inverted>Generating Word Cloud</Loader>
-                    </Dimmer>
+            <div id="cloud-elements-dummy" ref="cloudBody2">
+                <div id="cloud-elements" ref="cloudBody">
+                    <CloudControls
+                        text={this.props.text}
+                        stopWords={this.props.stopWords}
+                        changeText={this.props.changeText}
+                        changeStopWords={this.props.changeStopWords}
+                        renderCloud={this.renderCloud}
+                        setText={this.props.setText}
+                        setDocs={this.props.setDocs}
+                        updateWordRemoval={this.updateWordRemoval}
+                        wordRemoval={this.state.removeErrors}
+                        highlightedWord={this.state.highlightedWord}
+                        clearCloud={this.clearCloud}
+                        cloudBody={this.refs.cloudBody}
+                        cloudBody2={this.refs.cloudBody2}
+                    />
+                    <div id="cloud-output" ref="cloudOutRef" className="dimmable">
+                        <Dimmer inverted active={this.state.loading}>
+                            <Loader inverted>Generating Word Cloud</Loader>
+                        </Dimmer>
+                    </div>
                 </div>
-                
             </div>
         );
     }
@@ -156,6 +157,8 @@ CloudContainer.propTypes = {
     stopWords: PropTypes.string.isRequired,
     changeText: PropTypes.func.isRequired,
     changeStopWords: PropTypes.func.isRequired,
+    setText: PropTypes.func.isRequired,
+    setDocs: PropTypes.func.isRequired,
 };
 
 export default CloudContainer;

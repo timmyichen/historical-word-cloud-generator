@@ -33,6 +33,8 @@ class CountingTab extends Component {
     render() {
         return (
             <div id="tab-count">
+                <Header as="h2">Counting Words</Header>
+                <div>
                 <div id="step-instructions">
                     <Header as="h3">Instructions</Header>
                     <p>
@@ -88,13 +90,15 @@ class CountingTab extends Component {
                 <PyCode 
                     sendRef={this.getRef}
                 />
+                </div>
             </div>
         );
     }
 }
 
 CountingTab.propTypes = {
-    
+    stepping: PropTypes.bool.isRequired,
+    toggleStepping: PropTypes.func.isRequired,
 };
 
 export default CountingTab;

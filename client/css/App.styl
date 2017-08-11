@@ -82,6 +82,7 @@ svg g text {
 //MAIN STYLES
 body
     padding 20px !important
+    background white
 
 .hidden
     display none
@@ -140,8 +141,9 @@ textarea
                 fill red !important
                 cursor pointer
     
-    .ui.page.dimmer
-        position absolute !important
+.ui.page.dimmer
+    // background purple
+    position absolute !important
 
 #compsci-container
     margin-top 20px
@@ -150,58 +152,61 @@ textarea
         margin-bottom 20px
     #tab-count
         display flex
-        h3:hover
-            cursor pointer
-        #text-and-controls, #word-table, #python-code
-            transition all 300ms
-            padding 5px
-            &.highlight
-                background rgba(255,255,0,0.5) !important
-        #step-instructions
-            width 25%
-            flex 1
-        #counting-left
-            flex 2
-            width 50%
+        flex-direction column
+        & > div
             display flex
-            #text-and-controls
-                flex 1
-                textarea, #static-text
-                    display inline-block
-                    width 100%
-                    height 200px
-                    border 1px solid black
-                    margin-top 5px
-                    padding 3px
-                    .counting-mark
-                        background white
-                        &.highlight
-                            background yellow
-                            border 1px solid black
-                #controls
-                    display flex
-                    width 100%
-                    button
-                        flex 1
-                        height 65px
-                        &last-of-type
-                            margin 0 !important
-            #word-table
-                flex 1
-                .ui.checkbox
-                    font-size 10px
-        #python-code
-            margin-left 10px
-            width 25%
-            flex 1
-            
-            code span
+            h4:hover
                 cursor pointer
-            .python.hljs, pre
-                padding 0
-                padding-left 3px
-                margin 0 !important
-                // background transparent
+            #text-and-controls, #word-table, #python-code
+                transition all 300ms
+                padding 5px
+                &.highlight
+                    background rgba(255,255,0,0.5) !important
+            #step-instructions
+                width 25%
+                flex 1
+            #counting-left
+                flex 2
+                width 50%
+                display flex
+                #text-and-controls
+                    flex 1
+                    textarea, #static-text
+                        display inline-block
+                        width 100%
+                        height 200px
+                        border 1px solid black
+                        margin-top 5px
+                        padding 3px
+                        .counting-mark
+                            background white
+                            &.highlight
+                                background yellow
+                                border 1px solid black
+                    #controls
+                        display flex
+                        width 100%
+                        button
+                            flex 1
+                            height 65px
+                            &last-of-type
+                                margin 0 !important
+                #word-table
+                    flex 1
+                    .ui.checkbox
+                        font-size 10px
+            #python-code
+                margin-left 10px
+                width 25%
+                flex 1
+                
+                code span
+                    cursor pointer
+                .python.hljs, pre
+                    padding 0
+                    padding-left 3px
+                    margin 0 !important
+                    // background transparent
     #tab-dbs
         #db-container
             display flex
@@ -240,9 +245,9 @@ textarea
         #scrape-links
             display flex
             .left
-                margin-right 10px
+                margin-right 20px
             .right
-                margin-left 10px
+                margin-left 20px
             .text, .support
                 flex 1
                 width 50%
@@ -270,9 +275,9 @@ textarea
     & > div
         width 40%
     .left
-        margin-right 10px
+        margin-right 20px
     .right
-        margin-left 10px
+        margin-left 20px
 
 #choose-papers
     .ui.radio.checkbox

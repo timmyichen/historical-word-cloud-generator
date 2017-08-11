@@ -126,7 +126,9 @@ class SampleText extends Component {
 }
 
 SampleText.propTypes = {
-    
+    stepping: PropTypes.bool.isRequired,
+    toggleStepping: PropTypes.func.isRequired,
+    sendRef: PropTypes.func.isRequired,
 };
 
 export default SampleText;

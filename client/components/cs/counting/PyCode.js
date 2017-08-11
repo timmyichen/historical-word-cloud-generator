@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Header, Popup, Icon } from 'semantic-ui-react';
+import { Header, Popup } from 'semantic-ui-react';
 
 const Theme = require('syntux/style/atelier-sulphurpool.light');
 const Python = require('syntux/python');
@@ -45,9 +45,9 @@ code = code.replace(/  /g, ' \u00a0').split('\n').forEach((line, i) => {
             content={annotations[i]}
             hoverable
         /> : <Python key={`blank${i}`}>{'\n'}</Python>
-    )
+    );
     // final.push(<br key={`br${i}`} />)
-})
+});
 
 class PyCode extends Component {
     componentDidMount() {
@@ -67,7 +67,7 @@ class PyCode extends Component {
 }
 
 PyCode.propTypes = {
-    
+    sendRef: PropTypes.func.isRequired,
 };
 
 export default PyCode;

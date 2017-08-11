@@ -13,6 +13,7 @@ class NewsPicker extends Component {
             selectedNews: -1,
             loading: false,
             emptyResults: false,
+            statusResults: [],
         };
         this.open = this.open.bind(this);
         this.close = this.close.bind(this);
@@ -111,6 +112,7 @@ class NewsPicker extends Component {
         return (
             <Modal
                 id="choose-papers"
+                ref="test"
                 trigger={
                     <Button
                         positive
@@ -123,7 +125,7 @@ class NewsPicker extends Component {
                 open={open}
                 onOpen={this.open}
                 onClose={this.close}
-                mountNode={this.props.cloudBody}
+                mountNode={this.props.mountOn}
             >
                 <Modal.Header>Choose From Available Papers</Modal.Header>
                 <Modal.Content>

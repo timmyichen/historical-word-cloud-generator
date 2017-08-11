@@ -19,7 +19,7 @@ function checkEndOfScrape(resolve, reject, data, ajaxRemaining) {
     if (ajaxRemaining === 0) {
         console.log('resolving data');
         if (data.length !== 0) resolve(data);
-        reject('REJECT-EMPTY: no matches found for newspaper ID')
+        reject('REJECT-EMPTY: no matches found for newspaper ID');
     }
 }
 
@@ -28,15 +28,15 @@ function scrapeNews(year, month, day) {
     let ajaxRemaining = newsList.length;
     
     return new Promise((resolve, reject) => {
-        const data = []
-        console.log(`begin scrape for ${year}-${month}-${day}`)
+        const data = [];
+        console.log(`begin scrape for ${year}-${month}-${day}`);
         
         try {
             newsList.forEach((paper, i) => {
                 setTimeout(() => {
                     const url = `http://chroniclingamerica.loc.gov/lccn/${paper.id}/${year}-${month}-${day}/ed-1/seq-1/ocr/`;
                     request(url, (err, response, html) => {
-                        console.log(`begin scrape: ${paper.name} - ${ajaxRemaining} remaining`)
+                        console.log(`begin scrape: ${paper.name} - ${ajaxRemaining} remaining`);
                         if (err) {
                             ajaxRemaining--;
                             console.log(err);
@@ -44,7 +44,7 @@ function scrapeNews(year, month, day) {
                         const $ = cheerio.load(html);
                         
                         if ($('div#main').length) {
-                            console.log(`did not scrape from ${paper.name}, does not exist`)
+                            console.log(`did not scrape from ${paper.name}, does not exist`);
                             ajaxRemaining--;
                             checkEndOfScrape(resolve, reject, data, ajaxRemaining);
                             return;
@@ -62,7 +62,7 @@ function scrapeNews(year, month, day) {
                             contents: body.replace('[object Object]', ''),
                         });
                         
-                        console.log(`scraped data from ${paper.name}`)
+                        console.log(`scraped data from ${paper.name}`);
                         ajaxRemaining--;
                         
                         checkEndOfScrape(resolve, reject, data, ajaxRemaining);
@@ -72,7 +72,7 @@ function scrapeNews(year, month, day) {
             });
         } catch (err) {
             console.log('ERROR\n' + err);
-            reject("Error in scraping!")
+            reject("Error in scraping!");
         }
         
     });

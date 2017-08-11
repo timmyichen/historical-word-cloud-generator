@@ -91,7 +91,7 @@ module.exports = {
     prepareStopWords,
     removeStopWords,
     removePossibleErrors,
-}
+};
 
 //need to:
 // - replace words with highlighted spans (JSX)

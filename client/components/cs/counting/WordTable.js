@@ -7,14 +7,14 @@ class WordTable extends Component {
         super(props);
         this.state = {
             limitWords: false,
-        }
+        };
         this.toggleLimit = this.toggleLimit.bind(this);
     }
     componentDidMount() {
         this.props.sendRef('table', this.refs.table);
     }
     toggleLimit() {
-        this.setState((prevState) => ({ limitWords: !prevState.limitWords }))
+        this.setState((prevState) => ({ limitWords: !prevState.limitWords }));
     }
     render() {
         const { limitWords } = this.state;
@@ -59,7 +59,8 @@ class WordTable extends Component {
 }
 
 WordTable.propTypes = {
-    
+    wordFreq: PropTypes.array.isRequired,
+    sendRef: PropTypes.node.isRequired,
 };
 
 export default WordTable;

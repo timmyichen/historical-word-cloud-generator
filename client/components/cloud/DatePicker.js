@@ -23,6 +23,7 @@ class DatePicker extends Component {
     }
     open() {
         this.setState({ open: true });
+        console.log(this.refs.datePickerContainer);
     }
     close() {
         this.setState({ open: false });
@@ -73,9 +74,11 @@ class DatePicker extends Component {
                         setText={this.props.setText}
                         setDocs={this.props.setDocs}
                         closeParent={this.close}
+                        openParent={this.open}
                         date={this.state.dateFull}
                         clearCloud={this.props.clearCloud}
-                        cloudBody={this.props.cloudBody}
+                        mountOn={this.props.cloudBody2}
+                        
                     />
                 </Modal.Actions>
             </Modal>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Header } from 'semantic-ui-react';
+import { Header, Icon } from 'semantic-ui-react';
 
 const Theme = require('syntux/style/atelier-sulphurpool.light');
 const Json = require('syntux/json');
@@ -14,7 +14,7 @@ const sampleJsonText =
   "newspaperName": "Evening star",
   "location": "Washington, D.C.",
   "url": "http://chroniclingamerica.loc.gov/lcc...",
-  contents: ".. (front page text goes here) .."
+  "contents": ".. (front page text goes here) .."
 }
 
 {
@@ -71,10 +71,11 @@ class DatabaseTab extends Component {
                                 track of it all.
                             </p>
                             <p> 
-                                This site uses a database called <a href="https://www.mongodb.com/">
-                                MongoDB</a>.  Normally when you think of a database, you might think of
-                                rows and columns, like an Excel spreadsheet or Google Sheets.  MongoDB is a
-                                document-based database, which is structured differently.
+                                This site uses a database called <a href="https://www.mongodb.com/" target="_blank">
+                                MongoDB&nbsp;<Icon name="external" size="small" /></a>.  Normally when you 
+                                think of a database, you might think of rows and columns, like an Excel 
+                                spreadsheet or Google Sheets.  MongoDB is a document-based database, which
+                                is structured differently.
                             </p>
                             <p>
                                 A "document" in a database like MongoDB is composed of keys (on the left,
@@ -91,6 +92,7 @@ class DatabaseTab extends Component {
                         </div>
                     </div>
                     <div id="doc-example">
+                        {Theme}
                         <Json>
                             {this.determineJsonText()}
                         </Json>
@@ -102,7 +104,7 @@ class DatabaseTab extends Component {
 }
 
 DatabaseTab.propTypes = {
-    
+    currentDocs: PropTypes.object,
 };
 
 export default DatabaseTab;

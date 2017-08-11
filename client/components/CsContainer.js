@@ -16,42 +16,59 @@ class CsContainer extends Component {
         this.toggleStepping = this.toggleStepping.bind(this);
     }
     toggleStepping() {
-        this.setState((prevState) => ({ stepping: !prevState.stepping }))
+        this.setState((prevState) => ({ stepping: !prevState.stepping }));
     }
     render() {
         const { stepping } = this.state;
         const tabs = [
             { menuItem: {key: 'about', content: 'About', icon: "info circle"},
-                render: () => ( <AboutTab /> ) },
+                render: () => (
+                    <Tab.Pane attached={false}>
+                        <AboutTab />
+                    </Tab.Pane>
+                ) },
             { menuItem: {key: 'counting', content: 'Counting Words', icon: "numbered list"},
                 render: () => (
-                    <CountingTab
-                        stepping={stepping}
-                        toggleStepping={this.toggleStepping}
-                    />
+                    <Tab.Pane attached={false}>
+                        <CountingTab
+                            stepping={stepping}
+                            toggleStepping={this.toggleStepping}
+                        />
+                    </Tab.Pane>
                 ) },
             { menuItem: {key: 'scrape', content: 'Web Scraping', icon: "barcode"},
                 render: () => (
-                    <ScrapingTab />
+                    <Tab.Pane attached={false}>
+                        <ScrapingTab />
+                    </Tab.Pane>
                 ) },
             { menuItem: {key: 'database', content: 'Databases', icon: "database"},
                 render: () => (
-                    <DatabaseTab
-                        currentDocs={this.props.currentDocs}
-                    />
+                    <Tab.Pane attached={false}>
+                        <DatabaseTab
+                            currentDocs={this.props.currentDocs}
+                        />
+                    </Tab.Pane>
                 ) },
-        ]
+        ];
         
         return (
             <div id="compsci-container">
-                {<Tab panes={tabs} />}
+                <Tab
+                    menu={{
+                        color: "grey",
+                        inverted: true,
+                        pointing: true,
+                    }}
+                    panes={tabs}
+                />
             </div>
         );
     }
 }
 
 CsContainer.propTypes = {
-    
+    currentDocs: PropTypes.object,
 };
 
 export default CsContainer;

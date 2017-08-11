@@ -25,9 +25,9 @@ class CloudControls extends Component {
         const wordsOriginal = this.props.text.split(/\b/).filter(w => w.match(re));
         const count = split.length;
         let inserted = 0;
-        split[0] = split[0].replace(/  /g,' \u00a0')
+        split[0] = split[0].replace(/  /g,' \u00a0');
         for (let i=1; i<count; i++) {
-            split[i+inserted] = split[i+inserted].replace(/  /g,' \u00a0')
+            split[i+inserted] = split[i+inserted].replace(/  /g,' \u00a0');
             const newItem = <span ref='' key={`hl-${i}`} className="highlight">{wordsOriginal[i-1]}</span>;
             split.splice(i+inserted, 0, newItem);
             inserted++;
@@ -38,8 +38,8 @@ class CloudControls extends Component {
         return new RegExp(`\\b${this.props.highlightedWord}\\b`,'gi');
     }
     handleScroll(e) {
-        console.log(this.refs.highlightText.scrollTop)
-        console.log(this.refs.mainText.scrollTop)
+        console.log(this.refs.highlightText.scrollTop);
+        console.log(this.refs.mainText.scrollTop);
         this.refs.highlightText.scrollTop = this.refs.mainText.scrollTop;
     }
     render() {
@@ -92,6 +92,7 @@ class CloudControls extends Component {
                             setDocs={this.props.setDocs}
                             clearCloud={this.props.clearCloud}
                             cloudBody={this.props.cloudBody}
+                            cloudBody2={this.props.cloudBody2}
                         />
                     </div>
                     <div id="checkboxes">
@@ -123,6 +124,11 @@ CloudControls.propTypes = {
     changeText: PropTypes.func.isRequired,
     changeStopWords: PropTypes.func.isRequired,
     renderCloud: PropTypes.func.isRequired,
+    setText: PropTypes.func.isRequired,
+    setDocs: PropTypes.func.isRequired,
+    updateWordRemoval: PropTypes.func.isRequired,
+    highlightedWord: PropTypes.string.isRequired,
+    clearCloud: PropTypes.func.isRequired,
 };
 
 export default CloudControls;

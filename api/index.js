@@ -23,25 +23,25 @@ var availableRoutes = [
             "Gets article for a specified date from a specified newspaper."
         ]
     }
-]
+];
 
 router.get('/', (req, res) => {
     res.render('pages/api-entry', {
         appname: config.APPNAME,
         routes: availableRoutes
-    })
-})
+    });
+});
 
 const internalServerError = 
-    (res, reason, source) => res.status(500).send({ error: `Error retrieving data from ${source}.`, reason: reason })
+    (res, reason, source) => res.status(500).send({ error: `Error retrieving data from ${source}.`, reason: reason });
 const badUserRequestError = 
-    (res, reason) => res.status(400).send({ error: `Invalid user request.`, reason: reason })
+    (res, reason) => res.status(400).send({ error: `Invalid user request.`, reason: reason });
 
 router.get(availableRoutes[0].routename, (req, res) => {
     const { year, month, day } = req.params;
     
     if (helpers.isDateInvalid(year, month, day)) {
-        res.status(500).send({ error: 'invalid query: out of range or includes text'})
+        res.status(500).send({ error: 'invalid query: out of range or includes text'});
         return;
     }
     const dateString = `${year}-${month}-${day}`;
@@ -52,12 +52,12 @@ router.get(availableRoutes[0].routename, (req, res) => {
     MongoClient.connect(uri, (err,db) => {
         if (err) console.log(err);
         console.log('successfully connected to db');
-        db.collection('articles').find(query).toArray((err, result) => {
+        db.collection(dbName).find(query).toArray((err, result) => {
             if (err) console.log(err);
-            console.log('successfully queried db')
+            console.log('successfully queried db');
             if (result.length === 0) {
                 scrapeNews(year, month, day).then((data) => {
-                    db.collection('articles').insertMany(data, (err, res) => {
+                    db.collection(dbName).insertMany(data, (err, res) => {
                         if (err) console.log(err);
                         console.log(`inserted ${res.insertedCount} documents`);
                         db.close();
@@ -65,17 +65,17 @@ router.get(availableRoutes[0].routename, (req, res) => {
                     res.send(data);
                 }).catch((msg) => {
                     console.log(`promise rejected: ${msg}`);
-                    res.send({ empty: true })
+                    res.send({ empty: true });
                     const emptyObject = {
                         dateString,
                         flag: "empty"
                     };
-                    db.collection('articles').insertOne(emptyObject, (err, res) => {
+                    db.collection(dbName).insertOne(emptyObject, (err, res) => {
                         if (err) console.log(err);
                         console.log(`inserted object with EMPTY flag for ${dateString}`);
                         db.close();
-                    })
-                })
+                    });
+                });
             } else if (result.length === 1 && result[0].flag) {
                 console.log(`db shows that previous scrapes returned zero results. no data was scraped or returned.`)
                 res.send({ empty: true })
