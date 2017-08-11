@@ -19,15 +19,23 @@ class NewsPicker extends Component {
         this.handleRadioChange = this.handleRadioChange.bind(this);
         this.toggleLoading = this.toggleLoading.bind(this);
         this.liftResults = this.liftResults.bind(this);
+        this.renderPaperChoices = this.renderPaperChoices.bind(this);
     }
     open() {
-        this.setState({ loading: true, emptyResults: false }, () => {
+        const timeoutID = setTimeout(() => {
+            if (this.state.loading) alert("Loading for over 30 seconds - this should not happen. Please refresh your page.");
+        }, 30000);
+        this.setState({ loading: true, emptyResults: false, papers: [] }, () => {
             const {year, month, day} = this.props;
             console.log('attempting to connect to api');
             axios.get(`/api/news/${year}/${month}/${day}`).then((res) => {
                 console.log('successfully received response from api');
-                if (res.empty) {
-                    this.setState({ emptyResults: true })
+                if (res.data.empty) {
+                    this.setState({ 
+                        loading: false,
+                        open: true,
+                        emptyResults: true,
+                    })
                 } else {
                     this.setState({
                         loading: false,
@@ -36,6 +44,7 @@ class NewsPicker extends Component {
                     });
                     this.props.clearCloud();
                 }
+                clearTimeout(timeoutID);
             });
         })
     }
@@ -64,29 +73,60 @@ class NewsPicker extends Component {
             result.contents = currentPaper.contents;
         }
         this.props.setText(result);
+        if (!this.state.emptyResults) {
+            this.props.setDocs({ papers, selectedNews });
+        } else {
+            this.props.setDocs({ papers: { empty: true }, selectedNews: -1 });
+        }
         this.props.closeParent();
         this.close();
     }
+    renderPaperChoices() {
+        const { selectedNews } = this.state;
+        const papers = this.state.papers || [];
+        if (papers.length === 0) return '';
+        const paperArray = [];
+        
+        papers.forEach((paper, i) => {
+            paperArray.push(
+                <div key={`paper-${i}`}>
+                    <Radio
+                        label={`${i+1}: ${paper.newspaperName} (${paper.location})`}
+                        name="article-group"
+                        value={i}
+                        checked={selectedNews === i}
+                        onChange={this.handleRadioChange}
+                    />
+                    &nbsp;&nbsp;<a href={paper.url.slice(0,-4)} target="_blank">Link
+                    &nbsp;<Icon name="external" size="small" /></a>
+                </div>
+            )
+        });
+        return paperArray;
+        
+    }
     render() {
+        const { loading, open, emptyResults, selectedNews } = this.state
+        const papers = this.state.papers || [];
         return (
             <Modal
                 id="choose-papers"
                 trigger={
                     <Button
                         positive
-                        disabled={this.props.disabled || this.state.loading}
+                        disabled={(this.props.disabled || loading) && open}
                     >
                         See Available Newspapers
-                        {this.state.loading ? (<Loader size="tiny"  active inline />) : ''}
+                        {loading ? (<Loader size="tiny"  active inline />) : ''}
                     </Button>
                 }
-                open={this.state.open}
+                open={open}
                 onOpen={this.open}
                 onClose={this.close}
             >
                 <Modal.Header>Choose From Available Papers</Modal.Header>
                 <Modal.Content>
-                    {!this.state.emptyResults ?
+                    {!emptyResults ?
                         (<p>These are the newspapers available on {this.props.date}.  Please select
                         the one you would like to load.  Please note that only the front page is loaded.
                         A link is provided to a digitized version of the news itself, hosted on
@@ -95,34 +135,22 @@ class NewsPicker extends Component {
                     :   (<p>There are no newpapers available on {this.props.date}.  Please go back and
                         select a different date.</p>)
                     }
-                    {this.state.papers.map((paper, i) => (
-                        <div key={`paper-${i}`}>
-                            <Radio
-                                label={`${i+1}: ${paper.newspaperName} (${paper.location})`}
-                                name="article-group"
-                                value={i}
-                                checked={this.state.selectedNews === i}
-                                onChange={this.handleRadioChange}
-                            />
-                            &nbsp;&nbsp;<a href={paper.url.slice(0,-4)} target="_blank">Link
-                            &nbsp;<Icon name="external" size="small" /></a>
-                        </div>
-                    ))}
-                    {this.state.papers.length === 0 ? '' : (
+                    {this.renderPaperChoices()}
+                    {papers.length === 0 ? '' : (
                         <div>
                             <Radio
-                                label={`Select all ${this.state.papers.length} newspapers`}
+                                label={`Select all ${papers.length} newspapers`}
                                 name="article-group"
                                 value="99"
-                                checked={this.state.selectedNews === 99}
+                                checked={selectedNews === 99}
                                 onChange={this.handleRadioChange}
                             />
                         </div>
                     )}
                 </Modal.Content>
                 <Modal.Actions>
-                    <Button negative onClick={this.close}>{this.state.emptyResults ? 'Cancel' : 'Go Back'}</Button>
-                    {this.state.emptyResults ? '' : (<Button positive onClick={this.liftResults}>Load front page</Button>)}
+                    <Button negative onClick={this.close}>{emptyResults ? 'Cancel' : 'Go Back'}</Button>
+                    {emptyResults ? '' : (<Button positive onClick={this.liftResults}>Load front page</Button>)}
                 </Modal.Actions>
             </Modal>
         );

@@ -223,6 +223,113 @@ textarea {
   padding-left: 3px;
   margin: 0 !important;
 }
+#compsci-container #tab-dbs #db-container {
+  display: flex;
+}
+#compsci-container #tab-dbs #db-container > div {
+  flex: 1;
+  width: 33%;
+  margin: 10px;
+}
+#compsci-container #tab-dbs #db-container #db-img-container {
+  text-align: center;
+}
+#compsci-container #tab-dbs #db-container #db-img-container img {
+  width: 100%;
+}
+#compsci-container #tab-dbs #db-container #db-text #db-paragraphs {
+  display: flex;
+  flex-direction: column;
+}
+#compsci-container #tab-dbs #db-container #doc-example span.hljs-attr {
+  font-weight: bold;
+}
+#compsci-container #tab-dbs #db-container #doc-example code.hljs.json {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+#compsci-container #tab-scrape #tab-scrape-heading {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+#compsci-container #tab-scrape #tab-scrape-heading > * {
+  width: 50%;
+}
+#compsci-container #tab-scrape .can-hover,
+#compsci-container #tab-scrape .can-hover pre.hljs.xml code.hljs.xml {
+  transition: all 300ms;
+  background: rgba(255,255,0,0.1);
+  cursor: pointer;
+}
+#compsci-container #tab-scrape .can-hover:hover,
+#compsci-container #tab-scrape .can-hover pre.hljs.xml code.hljs.xml:hover {
+  background: rgba(255,255,0,0.5) !important;
+}
+#compsci-container #tab-scrape #scrape-links {
+  display: flex;
+}
+#compsci-container #tab-scrape #scrape-links .left {
+  margin-right: 10px;
+}
+#compsci-container #tab-scrape #scrape-links .right {
+  margin-left: 10px;
+}
+#compsci-container #tab-scrape #scrape-links .text,
+#compsci-container #tab-scrape #scrape-links .support {
+  flex: 1;
+  width: 50%;
+}
+#compsci-container #tab-scrape #scrape-links .text,
+#compsci-container #tab-scrape #read-html .text,
+#compsci-container #tab-scrape #scrape-links .support,
+#compsci-container #tab-scrape #read-html .support {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#compsci-container #tab-scrape #scrape-links .text img,
+#compsci-container #tab-scrape #read-html .text img,
+#compsci-container #tab-scrape #scrape-links .support img,
+#compsci-container #tab-scrape #read-html .support img {
+  width: 100%;
+}
+#compsci-container #tab-scrape #scrape-links .text .hljs.xml,
+#compsci-container #tab-scrape #read-html .text .hljs.xml,
+#compsci-container #tab-scrape #scrape-links .support .hljs.xml,
+#compsci-container #tab-scrape #read-html .support .hljs.xml {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  margin: 0;
+}
+#compsci-container #tab-scrape #scrape-links .text pre,
+#compsci-container #tab-scrape #read-html .text pre,
+#compsci-container #tab-scrape #scrape-links .support pre,
+#compsci-container #tab-scrape #read-html .support pre,
+#compsci-container #tab-scrape #scrape-links .text code,
+#compsci-container #tab-scrape #read-html .text code,
+#compsci-container #tab-scrape #scrape-links .support code,
+#compsci-container #tab-scrape #read-html .support code {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#compsci-container #tab-scrape #read-html {
+  margin: 25px auto;
+  width: 600px;
+}
+#tab-about {
+  display: flex;
+  justify-content: space-between;
+}
+#tab-about > div {
+  width: 40%;
+}
+#tab-about .left {
+  margin-right: 10px;
+}
+#tab-about .right {
+  margin-left: 10px;
+}
 #choose-papers .ui.radio.checkbox {
   padding-top: 6px;
 }

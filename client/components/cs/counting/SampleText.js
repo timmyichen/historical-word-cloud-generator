@@ -84,8 +84,8 @@ class SampleText extends Component {
                     <Header as="h3">Text Input and Controls</Header>
                     <div id="controls">
                         <Button
+                            color={stepping ? 'red' : 'green'}
                             toggle
-                            active={stepping}
                             onClick={this.props.toggleStepping}
                             icon={stepping ? 'refresh' : 'play'}
                             labelPosition="left"

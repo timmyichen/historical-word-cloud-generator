@@ -28,7 +28,9 @@ class DatePicker extends Component {
         this.setState({ open: false });
     }
     handleDateChange(e) {
-        const { year, month, day } = parseDate(e.target.value);
+        let { year, month, day } = parseDate(e.target.value);
+        if (year > 1924) year = 1924;
+        if (year < 1836) year = 1836;
         this.setState({
             date: e.target.value,
             invalidDate: isDateInvalid(year, month, day),
@@ -64,6 +66,7 @@ class DatePicker extends Component {
                         month={month}
                         day={day}
                         setText={this.props.setText}
+                        setDocs={this.props.setDocs}
                         closeParent={this.close}
                         date={this.state.dateFull}
                         clearCloud={this.props.clearCloud}

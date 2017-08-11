@@ -67,7 +67,7 @@ class CloudControls extends Component {
                 </div>
                 <div id="controls">
                     <div id="buttons">
-                        <Button 
+                        <Button
                             toggle
                             active={this.state.editStopWords}
                             onClick={this.toggleEdit}
@@ -82,12 +82,14 @@ class CloudControls extends Component {
                             </Popup>
                         </Button>
                         <Button
+                            positive
                             id="go-button"
                             type="submit"
                             onClick={this.props.renderCloud}
                         >Generate Wordcloud</Button>
                         <DatePicker
                             setText={this.props.setText}
+                            setDocs={this.props.setDocs}
                             clearCloud={this.props.clearCloud}
                         />
                     </div>

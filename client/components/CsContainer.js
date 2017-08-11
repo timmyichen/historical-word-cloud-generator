@@ -4,6 +4,8 @@ import { Tab } from 'semantic-ui-react';
 
 import CountingTab from './cs/CountingTab';
 import DatabaseTab from './cs/DatabaseTab';
+import AboutTab from './cs/AboutTab';
+import ScrapingTab from './cs/ScrapingTab';
 
 class CsContainer extends Component {
     constructor(props) {
@@ -19,6 +21,8 @@ class CsContainer extends Component {
     render() {
         const { stepping } = this.state;
         const tabs = [
+            { menuItem: {key: 'about', content: 'About', icon: "info circle"},
+                render: () => ( <AboutTab /> ) },
             { menuItem: {key: 'counting', content: 'Counting Words', icon: "numbered list"},
                 render: () => (
                     <CountingTab
@@ -28,12 +32,14 @@ class CsContainer extends Component {
                 ) },
             { menuItem: {key: 'scrape', content: 'Web Scraping', icon: "barcode"},
                 render: () => (
-                    <DatabaseTab
-                    
-                    />
+                    <ScrapingTab />
                 ) },
             { menuItem: {key: 'database', content: 'Databases', icon: "database"},
-                render: () => (<p>dbs</p>) },
+                render: () => (
+                    <DatabaseTab
+                        currentDocs={this.props.currentDocs}
+                    />
+                ) },
         ]
         
         return (

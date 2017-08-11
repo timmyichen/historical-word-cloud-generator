@@ -31,44 +31,50 @@ function scrapeNews(year, month, day) {
         const data = []
         console.log(`begin scrape for ${year}-${month}-${day}`)
         
-        newsList.forEach((paper, i) => {
-            setTimeout(() => {
-                const url = `http://chroniclingamerica.loc.gov/lccn/${paper.id}/${year}-${month}-${day}/ed-1/seq-1/ocr/`;
-                request(url, (err, response, html) => {
-                    console.log(`begin scrape: ${paper.name} - ${ajaxRemaining} remaining`)
-                    if (err) {
+        try {
+            newsList.forEach((paper, i) => {
+                setTimeout(() => {
+                    const url = `http://chroniclingamerica.loc.gov/lccn/${paper.id}/${year}-${month}-${day}/ed-1/seq-1/ocr/`;
+                    request(url, (err, response, html) => {
+                        console.log(`begin scrape: ${paper.name} - ${ajaxRemaining} remaining`)
+                        if (err) {
+                            ajaxRemaining--;
+                            console.log(err);
+                        }
+                        const $ = cheerio.load(html);
+                        
+                        if ($('div#main').length) {
+                            console.log(`did not scrape from ${paper.name}, does not exist`)
+                            ajaxRemaining--;
+                            checkEndOfScrape(resolve, reject, data, ajaxRemaining);
+                            return;
+                        }
+                        
+                        const head = $('#head_nav h1')[1].children[0].data;
+                        const body = $('div p')[0].children.filter((child, i) => i % 2 == 0).reduce((total, n) => total + '\n' + n.data, '');
+                        
+                        data.push({
+                            uniqueID: `${year}-${month}-${day}-${paper.id}`,
+                            dateString: `${year}-${month}-${day}`,
+                            newspaperName: head.split('.')[0],
+                            location: head.substring(head.indexOf('(') + 1, head.indexOf(')')),
+                            year, month, day, url,
+                            contents: body.replace('[object Object]', ''),
+                        });
+                        
+                        console.log(`scraped data from ${paper.name}`)
                         ajaxRemaining--;
-                        console.log(err);
-                    }
-                    const $ = cheerio.load(html);
-                    
-                    if ($('div#main').length) {
-                        console.log(`did not scrape from ${paper.name}, does not exist`)
-                        ajaxRemaining--;
+                        
                         checkEndOfScrape(resolve, reject, data, ajaxRemaining);
-                        return;
-                    }
-                    
-                    const head = $('#head_nav h1')[1].children[0].data;
-                    const body = $('div p')[0].children.filter((child, i) => i % 2 == 0).reduce((total, n) => total + '\n' + n.data, '');
-                    
-                    data.push({
-                        uniqueID: `${year}-${month}-${day}-${paper.id}`,
-                        dateString: `${year}-${month}-${day}`,
-                        newspaperName: head.split('.')[0],
-                        location: head.substring(head.indexOf('(') + 1, head.indexOf(')')),
-                        year, month, day, url,
-                        contents: body.replace('[object Object]', ''),
                     });
-                    
-                    console.log(`scraped data from ${paper.name}`)
-                    ajaxRemaining--;
-                    
-                    checkEndOfScrape(resolve, reject, data, ajaxRemaining);
-                });
-            }, 250 * i);
-            
-        });
+                }, 250 * i);
+                
+            });
+        } catch (err) {
+            console.log('ERROR\n' + err);
+            reject("Error in scraping!")
+        }
+        
     });
 }
 

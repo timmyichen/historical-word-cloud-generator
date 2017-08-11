@@ -18,6 +18,7 @@ class App extends Component {
             cloudText: defaultText,
             stopWords: '',
             tabIndex: 0,
+            currentDocs: null,
         };
         getStopWords().then((data) => {
             this.setState({stopWords: data});
@@ -25,6 +26,7 @@ class App extends Component {
         this.changeText = this.changeText.bind(this);
         this.changeStopWords = this.changeStopWords.bind(this);
         this.setText = this.setText.bind(this);
+        this.setDocs = this.setDocs.bind(this);
     }
     changeText(event) {
         this.setState({ cloudText: event.target.value });
@@ -35,18 +37,43 @@ class App extends Component {
     setText(newsInfo) {
         this.setState({ newsInfo, cloudText: newsInfo.contents });
     }
+    setDocs(currentDocs) {
+        if (currentDocs.empty) {
+            this.setState({ currentDocs: {
+                docs: currentDocs.papers,
+                type: 'empty',
+            } });
+        } else if (currentDocs.selectedNews === 99) {
+            this.setState({
+                currentDocs: {
+                    docs: currentDocs.papers,
+                    type: 'array',
+                }
+            });
+        } else {
+            this.setState({
+                currentDocs: {
+                    docs: currentDocs.papers[currentDocs.selectedNews],
+                    type: 'single',
+                }
+            })
+        }
+    }
     render() {
+        const { cloudText, stopWords, currentDocs } = this.state;
         return (
             <div id="main-container">
                 <Header as="h1">Historical Word Cloud Generator</Header>
                 <CloudContainer
-                    text={this.state.cloudText}
-                    stopWords={this.state.stopWords}
+                    text={cloudText}
+                    stopWords={stopWords}
                     changeText={this.changeText}
                     changeStopWords={this.changeStopWords}
                     setText={this.setText}
+                    setDocs={this.setDocs}
                 />
                 <CsContainer
+                    currentDocs={currentDocs}
                 />
             </div>
         );

@@ -114,7 +114,7 @@ class CloudContainer extends Component {
             .on('click', (d) => {
                 this.setState({ highlightedWord: d.text }, () => {
                     PubSub.publish('highlight');
-                })
+                });
             })
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide);
@@ -132,6 +132,7 @@ class CloudContainer extends Component {
                     changeStopWords={this.props.changeStopWords}
                     renderCloud={this.renderCloud}
                     setText={this.props.setText}
+                    setDocs={this.props.setDocs}
                     updateWordRemoval={this.updateWordRemoval}
                     wordRemoval={this.state.removeErrors}
                     highlightedWord={this.state.highlightedWord}
