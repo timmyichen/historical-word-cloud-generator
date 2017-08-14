@@ -66,20 +66,24 @@ router.get(availableRoutes[0].routename, (req, res) => {
                     res.send(data);
                 }).catch((msg) => {
                     console.log(`promise rejected: ${msg}`);
-                    res.send({
-                        empty: true,
-                        // uniqueID: `${year}-${month}-${day}-${paper.id}`,
-                    });
-                    const emptyObject = {
-                        uniqueID: dateString,
-                        dateString,
-                        flag: "empty"
-                    };
-                    db.collection(dbName).insertOne(emptyObject, (err, res) => {
-                        if (err) console.log(err);
-                        console.log(`inserted object with EMPTY flag for ${dateString}`);
+                    if (msg === 'crash') {
                         db.close();
-                    });
+                    } else {
+                        res.send({
+                            empty: true,
+                            // uniqueID: `${year}-${month}-${day}-${paper.id}`,
+                        });
+                        const emptyObject = {
+                            uniqueID: dateString,
+                            dateString,
+                            flag: "empty"
+                        };
+                        db.collection(dbName).insertOne(emptyObject, (err, res) => {
+                            if (err) console.log(err);
+                            console.log(`inserted object with EMPTY flag for ${dateString}`);
+                            db.close();
+                        });
+                    }
                 });
             } else if (result.length === 1 && result[0].flag) {
                 console.log(`db shows that previous scrapes returned zero results. no data was scraped or returned.`)

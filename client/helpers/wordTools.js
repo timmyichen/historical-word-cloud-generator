@@ -2,7 +2,7 @@ const axios = require('axios');
 
 function simplePrepareText(text) {
     return text.toLowerCase()
-        .replace(/[.,;:!?'"]+/g, '')
+        .replace(/[.,;:!?'"\[\]\(\)\{\}]+/g, '')
         .replace(/\n/g,' ')
         .replace(/\s\s+/g, ' ');
 }
@@ -19,7 +19,7 @@ function getStopWords() {
 }
 
 function prepareText(string) {
-    let words = string.replace(/[.,;:!?"]+/g, '').split(/[\s/]+/g);
+    let words = string.replace(/[.,;:!?"\[\]\(\)\{\}]+/g, '').split(/[\s/]+/g);
     
     //check for and remove symbols
     const new_words = [];

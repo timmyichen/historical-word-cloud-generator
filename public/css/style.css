@@ -149,6 +149,31 @@ textarea {
   fill: #f00 !important;
   cursor: pointer;
 }
+#cloud-elements #date-inputs-all {
+  display: flex;
+}
+#cloud-elements #date-inputs-all > div {
+  width: 50%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+#cloud-elements #date-inputs-all > div input {
+  font-size: 24px;
+  width: 220px;
+}
+#cloud-elements #date-inputs-all > div ul {
+  list-style: none;
+}
+#choose-papers {
+  height: 500px !important;
+  overflow-y: scroll;
+}
+#choose-papers .ui.radio.checkbox {
+  padding-top: 6px;
+}
 .ui.page.dimmer {
   position: absolute !important;
 }
@@ -346,7 +371,4 @@ textarea {
 }
 #tab-about .right {
   margin-left: 20px;
-}
-#choose-papers .ui.radio.checkbox {
-  padding-top: 6px;
 }

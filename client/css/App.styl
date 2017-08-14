@@ -147,6 +147,25 @@ textarea
             &:hover
                 fill red !important
                 cursor pointer
+    #date-inputs-all
+        display flex
+        & > div
+            width 50%
+            height 200px
+            display flex
+            flex-direction column
+            justify-content space-around
+            align-items center
+            input
+                font-size 24px
+                width 220px
+            ul
+                list-style none
+#choose-papers
+    height 500px !important
+    overflow-y scroll
+    .ui.radio.checkbox
+        padding-top 6px
     
 .ui.page.dimmer
     // background purple
@@ -285,7 +304,3 @@ textarea
         margin-right 20px
     .right
         margin-left 20px
-
-#choose-papers
-    .ui.radio.checkbox
-        padding-top 6px
