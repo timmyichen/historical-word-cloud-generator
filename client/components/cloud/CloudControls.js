@@ -4,6 +4,7 @@ import { Button, Checkbox, TextArea, Popup, Icon } from 'semantic-ui-react';
 import HighlightedTextarea from '../other/HighlightedTextArea';
 
 import DatePicker from './DatePicker';
+import SampleTexts from './SampleTexts';
 
 class CloudControls extends Component {
     constructor(props) {
@@ -45,19 +46,6 @@ class CloudControls extends Component {
     render() {
         return (
             <div id="cloud-controls">
-                
-                    {/*<TextArea
-                        id="main-text-input"
-                        ref="mainText"
-                        onScroll={this.handleScroll}
-                        placeholder="text goes here.."
-                        value={this.props.text.replace(/  /g,' \u00a0')}
-                        onChange={this.props.changeText}
-                    />
-                    <div id="main-text-input-highlight" ref="highlightText">
-                        
-                        {this.props.highlightedWord === '' ? this.props.text.replace(/  /g,' \u00a0') : this.highlightWords(this.props.highlightedWord)}
-                    </div>*/}
                 <div id="text-input">
                     <HighlightedTextarea
                         value={this.props.text}
@@ -67,6 +55,19 @@ class CloudControls extends Component {
                 </div>
                 <div id="controls">
                     <div id="buttons">
+                        <DatePicker
+                            setText={this.props.setText}
+                            setDocs={this.props.setDocs}
+                            clearCloud={this.props.clearCloud}
+                            cloudBodyDate={this.props.cloudBodyDate}
+                            cloudBodyNews={this.props.cloudBodyNews}
+                        />
+                        <Button
+                            positive
+                            id="go-button"
+                            type="submit"
+                            onClick={this.props.renderCloud}
+                        >Generate Wordcloud</Button>
                         <Button
                             toggle
                             active={this.state.editStopWords}
@@ -81,29 +82,30 @@ class CloudControls extends Component {
                                 list of stopwords below!  Type directly in the box, one word per line.
                             </Popup>
                         </Button>
-                        <Button
-                            positive
-                            id="go-button"
-                            type="submit"
-                            onClick={this.props.renderCloud}
-                        >Generate Wordcloud</Button>
-                        <DatePicker
-                            setText={this.props.setText}
-                            setDocs={this.props.setDocs}
-                            clearCloud={this.props.clearCloud}
-                            cloudBody={this.props.cloudBody}
-                            cloudBody2={this.props.cloudBody2}
-                        />
                     </div>
                     <div id="checkboxes">
                         <Checkbox
-                            label="Automatically attempt to remove nonsensical words"
+                            label="Automatically attempt to remove&nbsp;"
                             onChange={this.props.updateWordRemoval}
                             checked={this.props.wordRemoval}
                         />
+                        <span
+                            className="pointer-hover"
+                            onClick={this.props.updateWordRemoval}
+                        >
+                            <Popup
+                                trigger={<span style={{ textDecoration: 'underline', textDecorationStyle: 'dashed' }}>nonsensical words</span>}
+                                content="Words that are all lowercase, less than 4 characters, and not
+                                found within the top 10,000 most common English words will be
+                                removed automatically if this box is checked."
+                            />
+                        </span>
                     </div>
                 </div>
                 <div id='controls-bottom'>
+                    <SampleTexts
+                        setText={this.props.setText}
+                    />
                     <TextArea
                         id="stop-words-input"
                         className={this.state.editStopWords ? '' : 'hidden'}

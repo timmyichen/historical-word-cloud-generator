@@ -104,6 +104,9 @@ textarea
 #app
     margin-bottom 50px
 
+.pointer-hover
+    cursor: pointer
+
 #cloud-elements
     display flex
     justify-content space-around
@@ -129,8 +132,12 @@ textarea
             display flex
             flex-grow 1
             flex: 1
-            textarea
+            & > *
                 width 50%
+        #sample-texts
+            padding 10px 15px 0 0
+            a 
+                cursor pointer
     #cloud-output
         border 2px solid grey
         width 100%

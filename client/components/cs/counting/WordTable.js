@@ -60,7 +60,6 @@ class WordTable extends Component {
 
 WordTable.propTypes = {
     wordFreq: PropTypes.array.isRequired,
-    sendRef: PropTypes.node.isRequired,
 };
 
 export default WordTable;

@@ -128,7 +128,7 @@ class NewsPicker extends Component {
                 mountNode={this.props.mountOn}
             >
                 <Modal.Header>Choose From Available Papers</Modal.Header>
-                <Modal.Content>
+                <Modal.Content scrolling>
                     {!emptyResults ?
                         (<p>These are the newspapers available on {this.props.date}.  Please select
                         the one you would like to load.  Please note that only the front page is loaded.

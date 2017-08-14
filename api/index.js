@@ -46,6 +46,7 @@ router.get(availableRoutes[0].routename, (req, res) => {
     }
     const dateString = `${year}-${month}-${day}`;
     const query = { dateString: {$eq: dateString} };
+    console.log(`date ${dateString} requested`)
     
     const dbName = 'articles';
     const uri = credentials.db.uri;
@@ -65,8 +66,12 @@ router.get(availableRoutes[0].routename, (req, res) => {
                     res.send(data);
                 }).catch((msg) => {
                     console.log(`promise rejected: ${msg}`);
-                    res.send({ empty: true });
+                    res.send({
+                        empty: true,
+                        // uniqueID: `${year}-${month}-${day}-${paper.id}`,
+                    });
                     const emptyObject = {
+                        uniqueID: dateString,
                         dateString,
                         flag: "empty"
                     };

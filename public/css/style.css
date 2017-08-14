@@ -92,6 +92,9 @@ textarea {
 #app {
   margin-bottom: 50px;
 }
+.pointer-hover {
+  cursor: pointer;
+}
 #cloud-elements {
   display: flex;
   justify-content: space-around;
@@ -125,8 +128,14 @@ textarea {
   flex-grow: 1;
   flex: 1;
 }
-#cloud-elements #cloud-controls #controls-bottom textarea {
+#cloud-elements #cloud-controls #controls-bottom > * {
   width: 50%;
+}
+#cloud-elements #cloud-controls #sample-texts {
+  padding: 10px 15px 0 0;
+}
+#cloud-elements #cloud-controls #sample-texts a {
+  cursor: pointer;
 }
 #cloud-elements #cloud-output {
   border: 2px solid #808080;

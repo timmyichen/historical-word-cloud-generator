@@ -16,7 +16,7 @@ class AboutTab extends Component {
                         The application aims to create an educational tool for anyone looking
                         to explore American newspapers from the past.  On the surface this application
                         is only a word cloud generator, but users can also load up historical newspapers
-                        from 1836 and 1924, archived by the Library of Congress.
+                        from the years of 1836 to 1924, archived by the Library of Congress.
                     </p>
                 </div>
                 <div className="right">
