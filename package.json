@@ -49,7 +49,7 @@
     "server:watch": "nodemon app.js",
     "build:watch": "./node_modules/.bin/webpack -d --watch",
     "build": "./node_modules/.bin/webpack -p",
-    "server": "node ./app.js",
+    "server": "node ../app.js",
     "watch": "npm run build:watch & npm run server:watch",
     "dev": "concurrently \"npm run watch\" \"npm run stylus\" ",
     "start": "npm run server"
