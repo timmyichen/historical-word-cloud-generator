@@ -7,7 +7,7 @@ import { getStopWords } from '../helpers/wordTools';
 import { Header } from 'semantic-ui-react';
 
 const axios = require('axios');
-
+ 
 const defaultText = `This is a bunch of text you should probably change. Change it to whatever you want!  Or run it to see what happens.  The world is your oyster.  Or maybe just this web app.  Repeated words words words words words words will appear as larger text text text.`
 
 class App extends Component {
