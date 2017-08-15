@@ -33,8 +33,10 @@ class AboutTab extends Component {
                     <Header as="h3">Historical Newspapers</Header>
                     <p>
                         Click on "Load Historical Newspaper" and enter in a date between 1836 and
-                        1924.  Follow the instructions and then choose the newspaper you want to load
-                        (or all).
+                        1924.  Follow the instructions and then choose the newspaper(s) you want to load.
+                    </p>
+                    <p>
+                        <em>Note: Only the front page from each newspaper is loaded.</em>
                     </p>
                     <p>
                         Once the newspaper is loaded, click on "Generate Wordcloud" and allow the

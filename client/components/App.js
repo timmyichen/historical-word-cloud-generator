@@ -43,7 +43,7 @@ class App extends Component {
                 docs: currentDocs.papers,
                 type: 'empty',
             } });
-        } else if (currentDocs.selectedNews === 99) {
+        } else if (currentDocs.selectedNews.length > 1) {
             this.setState({
                 currentDocs: {
                     docs: currentDocs.papers,
@@ -53,7 +53,7 @@ class App extends Component {
         } else {
             this.setState({
                 currentDocs: {
-                    docs: currentDocs.papers[currentDocs.selectedNews],
+                    docs: currentDocs.papers[currentDocs.selectedNews[0]],
                     type: 'single',
                 }
             })

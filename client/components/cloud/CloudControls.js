@@ -95,7 +95,7 @@ class CloudControls extends Component {
                         >
                             <Popup
                                 hoverable
-                                trigger={<span style={{ textDecoration: 'underline', textDecorationStyle: 'dashed' }}>nonsensical words</span>}
+                                trigger={<span style={{ textDecoration: 'underline', textDecorationStyle: 'dotted' }}>nonsensical words</span>}
                                 content="Words that are all lowercase, less than 4 characters, and not
                                 found within the top 10,000 most common English words will be
                                 removed automatically if this box is checked."

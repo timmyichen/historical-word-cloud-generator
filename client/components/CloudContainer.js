@@ -27,7 +27,7 @@ class CloudContainer extends Component {
             cloud: null,
             words: [],
             loading: false,
-            removeErrors: false,
+            removeErrors: true,
             highlightedWord: '',
         };
         

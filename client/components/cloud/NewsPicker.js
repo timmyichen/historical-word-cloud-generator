@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Modal, Button, Radio, Loader, Icon } from 'semantic-ui-react';
+import { Modal, Button, Checkbox, Loader, Icon } from 'semantic-ui-react';
 
 const axios = require('axios');
 
@@ -10,7 +10,7 @@ class NewsPicker extends Component {
         this.state = {
             open: false,
             papers: [],
-            selectedNews: -1,
+            selectedNews: [],
             loading: false,
             emptyResults: false,
             statusResults: [],
@@ -53,34 +53,55 @@ class NewsPicker extends Component {
         this.setState({ open: false });
     }
     handleRadioChange(e, { value }) {
-        this.setState({ selectedNews: parseInt(value) })
+        let { selectedNews, papers } = this.state;
+        const intValue = parseInt(value, 10);
+        if (value === "99") {
+            if (selectedNews.length === papers.length) {
+                selectedNews = [];
+            } else {
+                selectedNews = papers.map((paper, i) => i);
+            }
+        } else {
+            if (selectedNews.includes(intValue)) {
+                selectedNews = selectedNews.filter(news => news != intValue)
+            } else {
+                selectedNews.push(intValue)
+            }
+        }
+        this.setState({ selectedNews });
     }
     toggleLoading() {
         this.setState(prevState => ({loading: !prevState.loading}))
     }
     liftResults() {
         const { selectedNews, papers } = this.state;
-        const result = {};
-        if (selectedNews === 99) {
-            result.newspaperName = 'Aggregated Newspapers'
-            result.location = 'U.S.';
-            result.contents = papers.reduce((total, paper) => {
-                return total + paper.contents + '\n';
+        
+        if (selectedNews.length === 0) return;
+        this.setState({ insertingText: true }, () => {
+            const result = {};
+            if (selectedNews.length > 1) {
+                result.newspaperName = 'Aggregated Newspapers'
+                result.location = 'U.S.';
+            } else {
+                const currentPaper = papers[selectedNews[0]];
+                result.newspaperName = currentPaper.newspaperName;
+                result.location = currentPaper.location;
+            }
+            result.contents = '';
+            
+            selectedNews.forEach((i) => {
+                result.contents += papers[i].contents;
             })
-        } else {
-            const currentPaper = papers[selectedNews];
-            result.newspaperName = currentPaper.newspaperName;
-            result.location = currentPaper.location;
-            result.contents = currentPaper.contents;
-        }
-        this.props.setText(result);
-        if (!this.state.emptyResults) {
-            this.props.setDocs({ papers, selectedNews });
-        } else {
-            this.props.setDocs({ papers: { empty: true }, selectedNews: -1 });
-        }
-        this.props.closeParent();
-        this.close();
+            
+            this.props.setText(result);
+            if (!this.state.emptyResults) {
+                this.props.setDocs({ papers, selectedNews });
+            } else {
+                this.props.setDocs({ papers: { empty: true }, selectedNews: [-1] });
+            }
+            this.props.closeParent();
+            this.close();
+        });
     }
     renderPaperChoices() {
         const { selectedNews } = this.state;
@@ -91,11 +112,11 @@ class NewsPicker extends Component {
         papers.forEach((paper, i) => {
             paperArray.push(
                 <div key={`paper-${i}`}>
-                    <Radio
+                    <Checkbox
                         label={`${i+1}: ${paper.newspaperName} (${paper.location})`}
                         name="article-group"
                         value={i}
-                        checked={selectedNews === i}
+                        checked={selectedNews.includes(i)}
                         onChange={this.handleRadioChange}
                     />
                     &nbsp;&nbsp;<a href={paper.url.slice(0,-4)} target="_blank">Link
@@ -107,7 +128,7 @@ class NewsPicker extends Component {
         
     }
     render() {
-        const { loading, open, emptyResults, selectedNews } = this.state
+        const { loading, open, emptyResults, selectedNews, insertingText } = this.state
         const papers = this.state.papers || [];
         return (
             <Modal
@@ -141,11 +162,11 @@ class NewsPicker extends Component {
                     {this.renderPaperChoices()}
                     {papers.length === 0 ? '' : (
                         <div>
-                            <Radio
+                            <Checkbox
                                 label={`Select all ${papers.length} newspapers`}
                                 name="article-group"
                                 value="99"
-                                checked={selectedNews === 99}
+                                checked={selectedNews.length === papers.length}
                                 onChange={this.handleRadioChange}
                             />
                         </div>
@@ -153,7 +174,7 @@ class NewsPicker extends Component {
                 </Modal.Content>
                 <Modal.Actions>
                     <Button negative onClick={this.close}>{emptyResults ? 'Cancel' : 'Go Back'}</Button>
-                    {emptyResults ? '' : (<Button positive onClick={this.liftResults}>Load front page</Button>)}
+                    {emptyResults ? '' : (<Button positive onClick={this.liftResults}>Load</Button>)}
                 </Modal.Actions>
             </Modal>
         );

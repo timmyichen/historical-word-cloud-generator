@@ -32,7 +32,9 @@ class DatePicker extends Component {
         this.setDate = this.setDate.bind(this);
     }
     open() {
-        this.setState({ open: true });
+        this.setState({ open: true }, () => {
+            this.dateInput.focus();
+        });
     }
     close() {
         this.setState({ open: false });
@@ -64,7 +66,6 @@ class DatePicker extends Component {
         const { open, year, month, day, showSuggestions } = this.state;
         return (
             <Modal
-            
                 trigger={<Button>Load Historical Newspaper</Button>}
                 open={open}
                 size="tiny"
@@ -79,6 +80,7 @@ class DatePicker extends Component {
                     <div id="date-inputs-all">
                         <div id="date-input">
                             <input
+                                ref={(input) => {this.dateInput = input; }}
                                 type="date"
                                 value={this.state.date}
                                 onChange={this.handleDateChange}
@@ -123,7 +125,6 @@ class DatePicker extends Component {
                         date={this.state.dateFull}
                         clearCloud={this.props.clearCloud}
                         mountOn={this.props.cloudBodyNews}
-                        
                     />
                 </Modal.Actions>
             </Modal>

@@ -77,10 +77,17 @@ function removeStopWords(wordsObj, stopWords) {
 }
 
 function removePossibleErrors(wordsObj, charThreshold, wordsList) {
+    // return wordsObj.filter(word => 
+    //     !(word.text.length <= charThreshold &&
+    //     word.text.toLowerCase() === word.text &&
+    //     !wordsList[word.text])
+    // );
     return wordsObj.filter(word => 
-        !(word.text.length <= charThreshold &&
+        !((word.text.length <= 3 &&
+        word.text.toLowerCase() === word.text) ||
+        ( word.text.length <= charThreshold &&
         word.text.toLowerCase() === word.text &&
-        !wordsList[word.text])
+        !wordsList[word.text]))
     );
 }
 
