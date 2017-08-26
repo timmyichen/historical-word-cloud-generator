@@ -4,6 +4,10 @@ This is a project developed by Tim Chen at MongoDB, Inc. as part of their Teache
 
 The application aims to create an educational tool for anyone looking to explore American newspapers from the past. On the surface this application is only a word cloud generator, but users can also load up historical newspapers from the years of 1836 to 1924, archived by the [Library of Congress](http://chroniclingamerica.loc.gov/).
 
+## Demo
+
+The live version can be seen here: [historical-word-cloud.herokuapp.com](https://historical-word-cloud.herokuapp.com)
+
 ## Features
 
 ### Word Cloud Generation
@@ -24,6 +28,3 @@ Various CS concepts are also given explanations for students who are interested 
 * Web Scraping
 * Databases
 
-## Demo
-
-The live version can be seen here: [historical-word-cloud.herokuapp.com](https://historical-word-cloud.herokuapp.com)
