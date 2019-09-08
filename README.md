@@ -12,7 +12,7 @@ The live version can be seen here: [historical-word-cloud.herokuapp.com](https:/
 
 ### Word Cloud Generation
 
-Using the [d3-cloud] library(https://github.com/jasondavies/d3-cloud) by jasondavies, word clouds can be generated from any text, regardless of context.
+Using the [d3-cloud library](https://github.com/jasondavies/d3-cloud) by jasondavies, word clouds can be generated from any text, regardless of context.
 
 ### Load Data from Past Newspapers
 
