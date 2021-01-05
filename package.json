@@ -12,7 +12,7 @@
   "description": "todo",
   "main": "app.js",
   "dependencies": {
-    "axios": "^0.16.2",
+    "axios": "^0.21.1",
     "body-parser": "^1.17.2",
     "cheerio": "^1.0.0-rc.2",
     "consolidate": "^0.14.5",
