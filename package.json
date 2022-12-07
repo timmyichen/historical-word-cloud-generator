@@ -20,7 +20,7 @@
     "d3-cloud": "^1.2.4",
     "d3-scale": "^1.0.6",
     "d3-tip": "^0.7.1",
-    "express": "^4.15.3",
+    "express": "^4.17.3",
     "mongodb": "^2.2.30",
     "nunjucks": "^3.0.1",
     "prop-types": "^15.5.10",
